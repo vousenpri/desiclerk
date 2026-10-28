@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Desi Clerk</title>
+<meta name="description" content="Your agent knows the rules. Desi Clerk knows the counter. Indian passport surrender and OCI from the USA, as a skill your AI agent loads. Free. A Lexiglass page.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20200%20200%22%20role=%22img%22%20aria-label=%22Desi%20Clerk%22%3E%0A%3Cg%20fill=%22#3B3F8F%22%3E%0A%3Ccircle%20cx=%22100%22%20cy=%22100%22%20r=%2296%22%20fill=%22none%22%20stroke=%22#3B3F8F%22%20stroke-width=%226%22/%3E%0A%3Ccircle%20cx=%22100%22%20cy=%22100%22%20r=%2264%22%20fill=%22none%22%20stroke=%22#3B3F8F%22%20stroke-width=%223%22/%3E%0A%3Ccircle%20cx=%2231%22%20cy=%22100%22%20r=%222.4%22/%3E%3Ccircle%20cx=%22169%22%20cy=%22100%22%20r=%222.4%22/%3E%0A%3Cg%20transform=%22rotate(-14%20100%2098)%22%3E%3Ccircle%20cx=%22100%22%20cy=%2254%22%20r=%223.2%22/%3E%3Crect%20x=%2297.5%22%20y=%2257%22%20width=%225%22%20height=%2230%22/%3E%3Cellipse%20cx=%22100%22%20cy=%2270%22%20rx=%227%22%20ry=%222.8%22/%3E%3Crect%20x=%2292%22%20y=%2285%22%20width=%2216%22%20height=%224%22%20rx=%222%22/%3E%3Cpath%20d=%22M86%2089%20H114%20Q114%20100%20122%20112%20Q128%20122%20132%20126%20Q134%20128%20130%20128%20H70%20Q66%20128%2068%20126%20Q72%20122%2078%20112%20Q86%20100%2086%2089%20Z%22/%3E%3Crect%20x=%2266%22%20y=%22129%22%20width=%2268%22%20height=%225%22/%3E%3Cg%20transform=%22rotate(14%20100%20130)%22%3E%3Crect%20x=%2298.6%22%20y=%22134%22%20width=%222.8%22%20height=%224%22/%3E%3Ccircle%20cx=%22100%22%20cy=%22140.5%22%20r=%223.4%22/%3E%3C/g%3E%3C/g%3E%0A%3C/g%3E%0A%3C/svg%3E">
+<meta property="og:title" content="Desi Clerk">
+<meta property="og:description" content="Your agent knows the rules. Desi Clerk knows the counter.">
+<meta property="og:image" content="https://desiclerk.com/card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap">
+<style>
+/* Lexiglass system (as in Deep Time / Rome): Cormorant Garamond body, DM Sans labels, paper/cream/ink/rule palette, gold eyebrows, pill buttons, 14px radius.
+   Desi Clerk: the register of the Indian office. One added colour, stamp ink, used only for stamp-like elements (the mark, ORIGINAL/COPY, RECEIVED/RETURNED, ticks). Brass for counter plates. Copper margin rules on the ledger. */
+:root{
+  --bg:#F4F2EE;--paper:#FFFFFF;--cream:#FAF6EE;--ink:#16170B;--ink-soft:#5E5A4E;--rule:#C8B89A;
+  --gold:#B8922A;--copper:#B8651E;--green:#3E6A5A;--red:#9E2F2F;
+  --stamp:#3B3F8F;--stamp-on:#FAF6EE;--rule-faint:#E4DCC8;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1C1B17;--paper:#25241F;--cream:#2C2A24;--ink:#F1EDE3;--ink-soft:#B3AC9C;--rule:#5C5443;--gold:#CBA94B;--copper:#D98A4A;--green:#7fb8a2;--red:#d47a68;--stamp:#A3A7E8;--stamp-on:#1C1B17;--rule-faint:#3A3529;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1C1B17;--paper:#25241F;--cream:#2C2A24;--ink:#F1EDE3;--ink-soft:#B3AC9C;--rule:#5C5443;--gold:#CBA94B;--copper:#D98A4A;--green:#7fb8a2;--red:#d47a68;--stamp:#A3A7E8;--stamp-on:#1C1B17;--rule-faint:#3A3529;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:1.15rem;line-height:1.45;font-weight:500}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[tabindex]:focus-visible,.drop:focus-within,.centre label:has(input:focus-visible),.pur label:has(input:focus-visible){outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+.wrap{max-width:900px;margin:0 auto;padding:26px 20px 90px}
+
+/* brand line, with the mark inked beside it */
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:22px}
+.brand .mark{width:38px;height:38px;flex:none;color:var(--stamp);transform:rotate(-9deg);margin:-4px 0}
+
+h1{font-size:3.4rem;line-height:.98;letter-spacing:-.01em;margin:0 0 14px;font-weight:600;text-wrap:balance}
+h1 em,h2 em{font-style:italic;color:var(--copper);font-weight:500}
+@media (max-width:520px){h1{font-size:2.5rem}}
+.lede{margin:0;max-width:62ch;font-size:1.2rem;color:var(--ink-soft)}
+.start{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 4px}
+.btn{font-family:var(--sans);font-size:14px;font-weight:500;padding:11px 20px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;line-height:1.2}
+.btn:hover{border-color:var(--ink)}
+.start .btn[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.start-note{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);flex-basis:100%}
+.centre{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 0;font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.centre label{font-size:13px;letter-spacing:0;text-transform:none;padding:7px 14px;border:1px solid var(--rule);border-radius:999px;cursor:pointer;color:var(--ink)}
+.centre label:has(input:checked){background:var(--cream);border-color:var(--copper);color:var(--copper)}
+.centre input{position:absolute;opacity:0;width:0;height:0}
+
+/* the paste line: a counter slip. Ruled cream, side notches, perforation before the stub. */
+.paste{position:relative;display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:16px 0 0;padding:17px 22px 17px 24px;background-color:var(--cream);border:1px solid var(--rule);border-radius:14px;
+  background-image:repeating-linear-gradient(0deg,transparent 0 27px,var(--rule-faint) 27px 28px);background-position:0 9px;background-origin:padding-box}
+.paste::before,.paste::after{content:"";position:absolute;top:50%;width:18px;height:18px;border-radius:50%;background:var(--bg);border:1px solid var(--rule);transform:translateY(-50%)}
+.paste::before{left:-10px;clip-path:inset(-2px -2px -2px 9px)}
+.paste::after{right:-10px;clip-path:inset(-2px 9px -2px -2px)}
+.paste code{flex:1;min-width:260px;font-family:var(--serif);font-size:1.1rem;font-weight:500;line-height:28px;color:var(--ink);letter-spacing:.005em}
+.paste .btn{flex:none;border-color:var(--stamp);color:var(--stamp);font-weight:600;letter-spacing:.04em}
+.paste .btn:hover{background:var(--stamp);color:var(--stamp-on)}
+@media (min-width:640px){.paste code{border-right:1px dashed var(--rule);padding-right:18px;margin-right:4px}}
+.small{font-family:var(--sans);font-size:12px;color:var(--ink-soft);margin:10px 0 0;line-height:1.5}
+
+section{margin-top:38px;padding-top:24px;border-top:1px solid var(--rule)}
+.eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+h2{font-size:2.2rem;line-height:1.02;margin:6px 0 10px;font-weight:600;text-wrap:balance}
+h3{font-size:1.35rem;margin:24px 0 6px;font-weight:600}
+
+/* fee: a receipt strip */
+.fee{display:flex;gap:26px;flex-wrap:wrap;margin:16px 0 6px;padding:14px 18px;background:var(--cream);border:1px solid var(--rule);border-radius:14px}
+.fee div{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.fee strong{display:block;font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:0;text-transform:none;line-height:1.1;font-variant-numeric:tabular-nums}
+.fee div:last-of-type:not(.fn) strong{color:var(--copper)}
+.fee .fn{flex-basis:100%;font-family:var(--serif);font-size:1.02rem;letter-spacing:0;text-transform:none;color:var(--ink-soft);border-top:1px dashed var(--rule);padding-top:10px;margin-top:2px}
+
+.pre{margin:8px 0 0;padding:0;list-style:none}
+.pre li{padding:9px 0 9px 26px;position:relative;border-top:1px solid var(--rule-faint);max-width:66ch}
+.pre li:first-child{border-top:0}
+.pre li::before{content:"";position:absolute;left:4px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+
+/* the stack: a numbered register. ORIGINAL / COPY are small stamps, not pills. */
+ol.stack{margin:6px 0 0;padding:0;list-style:none;counter-reset:s}
+ol.stack li{counter-increment:s;display:grid;grid-template-columns:44px 1fr auto;gap:2px 12px;padding:13px 0;border-top:1px solid var(--rule-faint);align-items:baseline}
+ol.stack li::before{content:counter(s);font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--copper);font-variant-numeric:tabular-nums;line-height:1}
+ol.stack .t{font-weight:600;font-size:1.2rem;line-height:1.2}
+ol.stack .d{grid-column:2/4;color:var(--ink-soft);font-size:1.02rem;margin-top:2px;max-width:64ch;line-height:1.4}
+ol.stack li.cond{opacity:.62}
+ol.stack li.cond .t::after{content:" · only if it applies";color:var(--ink-soft);font-weight:500;font-style:italic;font-size:1rem}
+
+/* stamp impressions: shared by the stack chips, the original in the flow, and the custody marks */
+ol.stack .k,.st .need span.orig,.st .cust::before,.st.done b::after{
+  display:inline-block;font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;line-height:1.1;white-space:nowrap;
+  color:var(--stamp);background:transparent;border:1.5px solid var(--stamp);border-radius:3px;padding:5px 9px 4px;
+  box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 3px var(--stamp);transform:rotate(-2.5deg);transform-origin:center;vertical-align:middle}
+ol.stack li:nth-child(even) .k{transform:rotate(1.5deg)}
+ol.stack .k.orig,.st .need span.orig,.st .cust::before{color:var(--stamp-on);background:var(--stamp);box-shadow:inset 0 0 0 2px var(--stamp),inset 0 0 0 3px var(--stamp-on)}
+
+.side{margin-top:22px;border:1px solid var(--rule);border-left:4px solid var(--copper);border-radius:0 14px 14px 0;background:var(--cream);padding:12px 16px 14px;max-width:70ch;font-size:1.05rem}
+
+/* photo check: the affix-here box */
+.drop{display:block;margin:14px 0 0;border:1.5px dashed var(--rule);border-radius:14px;padding:30px 18px;text-align:center;color:var(--ink-soft);background:var(--paper);cursor:pointer;
+  background-image:linear-gradient(var(--rule),var(--rule)),linear-gradient(var(--rule),var(--rule)),linear-gradient(var(--rule),var(--rule)),linear-gradient(var(--rule),var(--rule));
+  background-repeat:no-repeat;background-size:14px 1px,1px 14px,14px 1px,1px 14px;background-position:10px 10px,10px 10px,calc(100% - 10px) calc(100% - 10px),calc(100% - 10px) calc(100% - 10px)}
+.drop.on{border-color:var(--copper);background-color:var(--cream)}
+.drop input{display:none}
+.drop b{color:var(--ink);font-weight:600}
+.pur{display:flex;gap:16px;margin:10px 0 0;font-family:var(--sans);font-size:13px}
+.pur label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.pur input{accent-color:var(--stamp)}
+.res{margin:20px 0 0;display:none}
+.res.show{display:block;animation:in .28s ease-out}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.res.show{animation:none}}
+.verdict{font-size:2rem;line-height:1.05;margin:0 0 10px;font-weight:600}
+.verdict.ok{color:var(--green)}.verdict.no{color:var(--red)}
+.checks{margin:0;padding:0;list-style:none;font-size:1.05rem}
+.checks li{padding:6px 0 6px 26px;position:relative;border-top:1px solid var(--rule-faint)}
+.checks li::before{position:absolute;left:0;top:6px;font-family:var(--sans);font-weight:600}
+.checks li.ok::before{content:"✓";color:var(--green)}
+.checks li.no::before{content:"✕";color:var(--red)}
+.checks li.wa::before{content:"!";color:var(--gold)}
+.out{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 0}
+@media(max-width:560px){.out{grid-template-columns:1fr}}
+.out a{display:block;padding:12px;border:1px solid var(--rule);border-radius:14px;text-decoration:none;background:var(--cream)}
+.out a:hover{border-color:var(--ink)}
+.out a span{display:block;font-size:.98rem;color:var(--ink-soft);margin-top:2px;line-height:1.35}
+.out img{width:96px;height:96px;object-fit:cover;border-radius:8px;display:block;margin-bottom:10px;border:1px solid var(--rule);background:var(--rule)}
+
+/* timing */
+.choose{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.choose{grid-template-columns:1fr}}
+label.f{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:5px}
+input[type=date]{width:100%;padding:9px 12px;font-family:var(--sans);font-size:14px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:10px}
+.tl{margin:14px 0 0;padding:0;list-style:none}
+.tl li{display:grid;grid-template-columns:236px 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--rule-faint)}
+.tl li:first-child{border-top:0}
+.tl b{font-weight:600;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.tl i{font-style:normal;color:var(--ink-soft);font-size:1.02rem;display:block;max-width:60ch;line-height:1.4}
+@media(max-width:560px){.tl li{grid-template-columns:1fr;gap:2px}}
+.got p{max-width:66ch;margin:10px 0}
+.got p b{font-weight:600}
+
+/* the three sites */
+.sites{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 0}
+@media(max-width:700px){.sites{grid-template-columns:1fr}}
+.sites a{display:block;padding:14px 16px;background:var(--paper);border:1px solid var(--rule);border-radius:14px;text-decoration:none}
+.sites a:hover{border-color:var(--ink)}
+.sites a b{display:block;font-size:1.2rem;font-weight:600}
+.sites a span{display:block;color:var(--ink-soft);font-size:1rem;line-height:1.35;margin-top:2px}
+.sites a i{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+
+/* the three windows: counter plates. Brass header, engraved, two screws. */
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 0;align-items:start}
+@media(max-width:820px){.flow{grid-template-columns:1fr}}
+.col{background:var(--cream);border:1px solid var(--rule);border-radius:14px;padding:14px 14px 8px}
+.col h4{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);font-weight:500;margin:0 0 6px}
+.flow .col{padding:0 14px 8px;overflow:hidden}
+.flow .col h4{position:relative;margin:0 -14px 12px;padding:10px 26px 9px;text-align:center;color:#2A2008;font-weight:600;letter-spacing:.18em;font-size:10.5px;
+  background:linear-gradient(180deg,#E2C46E 0%,#C9A23D 45%,#B8922A 70%,#A68020 100%);border-bottom:1px solid #8E6E1C;text-shadow:0 1px 0 rgba(255,248,230,.35)}
+.flow .col h4::before,.flow .col h4::after{content:"";position:absolute;top:50%;width:7px;height:7px;border-radius:50%;transform:translateY(-50%);background:radial-gradient(circle at 35% 35%,#F6E6A8,#7E5F12 70%);box-shadow:0 0 0 1px rgba(60,40,0,.25)}
+.flow .col h4::before{left:10px}.flow .col h4::after{right:10px}
+.st{position:relative;padding:10px 0 12px 18px;border-left:2px solid var(--rule)}
+.st::before{content:"";position:absolute;left:-6px;top:16px;width:10px;height:10px;border-radius:50%;background:var(--copper);border:2px solid var(--cream)}
+.st.wait{border-left-style:dashed}.st.wait::before{background:var(--gold)}
+.st.done::before{background:var(--stamp)}
+.st b{display:block;font-size:1.15rem;font-weight:600;line-height:1.2}
+.st.done b,.st.wait b{display:block;width:100%}
+.st .n{display:block;width:100%;color:var(--ink-soft);font-size:.98rem;line-height:1.35;margin-top:2px}
+.st .need{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px;align-items:center}
+.st .need span{font-family:var(--sans);font-size:10.5px;letter-spacing:.03em;padding:3px 8px;border:1px solid var(--rule);border-radius:999px;background:var(--paper);color:var(--ink-soft)}
+.st .need span.orig{box-shadow:inset 0 0 0 2px var(--stamp),inset 0 0 0 3px var(--stamp-on);border-radius:3px;padding:5px 9px 4px;margin:2px 4px 2px 0}
+.st .need span.key{border-color:var(--green);color:var(--green)}
+/* custody: what leaves your hands is RECEIVED; what comes back is RETURNED */
+.st .cust{display:block;margin-top:9px;font-size:.95rem;color:var(--copper);font-style:italic;line-height:1.4}
+.st .cust::before{content:"Received";margin:0 9px 2px 0;font-style:normal;transform:rotate(-5deg)}
+.st.done b::after{content:"Returned";margin:0 0 0 9px;transform:rotate(3deg);box-shadow:inset 0 0 0 2px var(--cream),inset 0 0 0 3px var(--stamp)}
+.gate{margin:12px 0 2px;padding:10px 12px;border:1px dashed var(--green);border-radius:10px;color:var(--green);font-size:1rem;font-style:italic}
+
+/* getting it done: a ruled ledger page, two columns, copper margin rule */
+.gtd{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 0}
+@media(max-width:700px){.gtd{grid-template-columns:1fr}}
+.gtd .col{background-color:var(--paper);padding:0 16px 8px;
+  background-image:linear-gradient(90deg,transparent 41px,var(--copper) 41px,var(--copper) 42px,transparent 42px,transparent 44px,var(--copper) 44px,var(--copper) 45px,transparent 45px);background-repeat:no-repeat}
+.gtd .col h4{margin:0 -16px 4px;padding:11px 16px 9px;border-bottom:1px solid var(--rule);background:var(--cream)}
+.gtd ul{margin:0;padding:0;list-style:none}
+.gtd li{display:grid;grid-template-columns:22px 1fr auto;gap:0 12px;align-items:start;padding:9px 0;border-top:1px solid var(--rule-faint);font-size:1.05rem;line-height:1.35}
+.gtd li:first-child{border-top:0}
+.gtd input[type=checkbox]{appearance:none;-webkit-appearance:none;margin:4px 0 0;width:15px;height:15px;border:1.5px solid var(--stamp);border-radius:2px;background:var(--paper);cursor:pointer;display:block}
+.gtd input[type=checkbox]:checked{background:var(--stamp) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.2l2.6 2.6L10 3.4' fill='none' stroke='%23FAF6EE' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat}
+.gtd li.done span{text-decoration:line-through;text-decoration-color:var(--stamp);color:var(--ink-soft)}
+.gtd .due{font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--copper);white-space:nowrap;padding-top:4px;font-variant-numeric:tabular-nums}
+.gtd .empty{color:var(--ink-soft);font-style:italic;padding:8px 0}
+#gtd .ctl{display:flex;gap:16px;align-items:center;margin:12px 0 0;font-family:var(--sans);font-size:13px;color:var(--ink-soft)}
+#gtd .ctl label{display:flex;gap:6px;align-items:center;cursor:pointer}
+#gtd .ctl input{accent-color:var(--stamp)}
+#gtd .ctl button{font:inherit;font-size:12px;background:none;border:0;color:var(--ink-soft);text-decoration:underline;cursor:pointer;padding:0;margin-left:auto}
+
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:1.02rem;max-width:66ch}
+footer ul{padding-left:18px;margin:8px 0}
+footer .sign{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-top:18px}
+
+/* phone */
+@media (max-width:520px){
+  .wrap{padding:20px 16px 70px}
+  .brand{margin-bottom:16px;font-size:10px;letter-spacing:.14em}
+  .paste{padding:14px 16px}
+  .paste code{min-width:0;flex-basis:100%;font-size:1.05rem}
+  .paste .btn{margin-left:auto}
+  ol.stack li{grid-template-columns:30px 1fr;gap:4px 10px}
+  ol.stack li::before{font-size:1.35rem}
+  ol.stack .k{grid-column:2;justify-self:start;margin-top:2px}
+  ol.stack .d{grid-column:2}
+  .flow .col{padding:0 12px 6px}
+  .st{padding-left:16px}
+  .st .need span{font-size:10px}
+  .gtd li{grid-template-columns:22px 1fr;gap:2px 12px}
+  .gtd .due{grid-column:2;padding-top:0}
+  .fee{gap:18px;padding:12px 14px}
+  .fee strong{font-size:1.45rem}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="mark" aria-hidden="true" focusable="false"><g fill="currentColor"><circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="3.5"/><circle cx="100" cy="100" r="64" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M42.5 49.67Q42.05 50.18 41.32 50.89Q40.6 51.6 40.04 52.24Q39.52 52.81 39.07 53.35Q38.62 53.89 38.24 54.32Q38.21 54.35 38.11 54.26Q38.01 54.17 38.04 54.14Q38.52 53.6 38.69 53.25Q38.85 52.9 38.69 52.59Q38.52 52.28 38.05 51.85L30.44 45.08Q29.97 44.65 29.65 44.53Q29.33 44.41 29 44.59Q28.67 44.78 28.2 45.31Q28.16 45.36 28.06 45.27Q27.96 45.18 28 45.14Q28.38 44.72 28.86 44.23Q29.34 43.73 29.86 43.16Q30.37 42.58 30.94 41.86Q31.5 41.15 31.93 40.66Q33.47 38.94 35.26 38.25Q37.06 37.55 38.83 37.85Q40.6 38.15 42.01 39.41Q43.24 40.51 43.85 41.83Q44.46 43.15 44.48 44.53Q44.5 45.91 43.99 47.24Q43.48 48.57 42.5 49.67ZM42.02 49.54Q43.03 48.4 43.27 47.05Q43.51 45.7 42.91 44.27Q42.31 42.83 40.8 41.49Q39.39 40.23 37.84 39.68Q36.28 39.13 34.86 39.38Q33.44 39.62 32.4 40.79Q31.53 41.76 31.35 42.34Q31.17 42.92 31.87 43.54L39.26 50.13Q39.89 50.7 40.49 50.65Q41.08 50.6 42.02 49.54Z M58.98 35.28 51.22 40.85Q51.17 40.88 51.1 40.78Q51.02 40.67 51.07 40.63Q51.66 40.21 51.88 39.91Q52.1 39.62 52.01 39.28Q51.91 38.94 51.54 38.43L45.6 30.15Q45.22 29.64 44.94 29.45Q44.66 29.26 44.3 29.36Q43.94 29.47 43.35 29.9Q43.3 29.93 43.23 29.82Q43.15 29.72 43.2 29.68L50.64 24.34Q50.81 24.21 50.93 24.37L52.63 26.66Q52.66 26.71 52.57 26.78Q52.49 26.86 52.43 26.83Q51.49 25.96 50.5 25.91Q49.52 25.85 48.5 26.59L47.77 27.11Q47.33 27.43 47.14 27.71Q46.95 27.99 47 28.29Q47.05 28.6 47.32 28.98L53.19 37.13Q53.46 37.52 53.73 37.69Q54 37.85 54.29 37.8Q54.58 37.74 54.97 37.46L55.85 36.83Q57.06 35.96 57.39 34.84Q57.72 33.71 57.21 32.33Q57.19 32.27 57.3 32.22Q57.42 32.17 57.45 32.21Q57.74 32.76 58.19 33.49Q58.63 34.22 59.06 34.81Q59.25 35.08 58.98 35.28ZM55.07 31.95Q54.53 31.2 53.75 31.16Q52.98 31.13 51.96 31.85L49.46 33.65L49.13 33.2L51.66 31.38Q52.65 30.67 52.89 29.98Q53.13 29.29 52.67 28.65Q52.63 28.6 52.74 28.53Q52.84 28.45 52.87 28.5Q53.28 29.07 53.5 29.4Q53.72 29.72 53.97 30.07Q54.28 30.5 54.6 30.9Q54.93 31.3 55.29 31.8Q55.31 31.83 55.2 31.91Q55.1 31.99 55.07 31.95Z M61.47 20.96Q61.83 21.74 62.49 22.14Q63.15 22.53 63.99 22.69Q64.84 22.85 65.75 22.98Q66.72 23.1 67.64 23.29Q68.56 23.49 69.32 23.96Q70.08 24.43 70.53 25.39Q71 26.41 70.82 27.45Q70.65 28.49 69.91 29.38Q69.17 30.27 67.89 30.85Q67.34 31.11 66.7 31.28Q66.07 31.44 65.48 31.51Q64.89 31.57 64.48 31.5Q64.36 31.48 64.28 31.43Q64.19 31.37 64.11 31.21L62.59 28.25Q62.53 28.16 62.63 28.1Q62.74 28.04 62.79 28.11Q63.32 28.61 63.95 29.12Q64.58 29.64 65.28 29.99Q65.97 30.35 66.71 30.44Q67.44 30.53 68.19 30.19Q68.69 29.95 69.07 29.56Q69.46 29.17 69.55 28.58Q69.64 28 69.28 27.22Q68.84 26.27 68.11 25.8Q67.39 25.33 66.5 25.13Q65.61 24.94 64.68 24.82Q63.77 24.7 62.9 24.51Q62.04 24.33 61.35 23.88Q60.65 23.44 60.24 22.54Q59.74 21.44 60.01 20.46Q60.29 19.48 61.06 18.72Q61.84 17.95 62.81 17.5Q63.47 17.2 64.21 17.01Q64.94 16.82 65.51 16.8Q65.73 16.79 65.83 16.86Q65.93 16.93 65.99 17.05L67.28 19.74Q67.31 19.8 67.23 19.87Q67.14 19.94 67.08 19.89Q66.85 19.64 66.4 19.2Q65.95 18.77 65.35 18.39Q64.74 18.01 64.02 17.88Q63.3 17.75 62.52 18.1Q61.93 18.38 61.6 18.82Q61.28 19.27 61.23 19.81Q61.19 20.35 61.47 20.96Z M80.19 24.26Q80.36 24.87 80.56 25.16Q80.76 25.45 81.13 25.46Q81.5 25.47 82.2 25.28Q82.26 25.26 82.29 25.39Q82.33 25.52 82.27 25.53Q81.73 25.68 81.06 25.84Q80.4 26 79.61 26.22Q78.86 26.43 78.19 26.64Q77.52 26.84 76.98 26.99Q76.93 27.01 76.89 26.88Q76.86 26.75 76.91 26.74Q77.6 26.55 77.93 26.34Q78.25 26.14 78.28 25.79Q78.32 25.44 78.15 24.82L75.44 15Q75.27 14.39 75.07 14.11Q74.86 13.84 74.47 13.82Q74.08 13.8 73.39 13.99Q73.34 14.01 73.3 13.88Q73.27 13.75 73.32 13.74Q73.86 13.59 74.55 13.44Q75.23 13.28 75.98 13.07Q76.77 12.85 77.43 12.64Q78.09 12.42 78.61 12.28Q78.67 12.26 78.71 12.39Q78.74 12.52 78.68 12.53Q78 12.72 77.69 12.94Q77.38 13.17 77.35 13.52Q77.32 13.87 77.49 14.48Z M104.06 9.58Q104.81 9.6 105.53 9.69Q106.24 9.78 106.87 9.95Q107.49 10.12 107.99 10.37Q108.17 10.45 108.22 10.54Q108.27 10.63 108.28 10.88L108.49 13.79Q108.49 13.85 108.37 13.88Q108.26 13.9 108.22 13.81Q107.69 12 106.59 11.02Q105.48 10.04 103.8 10Q102.17 9.95 100.9 10.73Q99.63 11.5 98.88 12.96Q98.14 14.42 98.09 16.46Q98.05 17.97 98.45 19.24Q98.84 20.5 99.6 21.42Q100.35 22.35 101.38 22.87Q102.4 23.39 103.63 23.42Q105.28 23.46 106.36 22.62Q107.43 21.78 108.27 19.98Q108.31 19.92 108.41 19.94Q108.52 19.97 108.51 20.03L108.16 22.64Q108.13 22.9 108.08 22.97Q108.02 23.04 107.84 23.13Q106.75 23.54 105.71 23.7Q104.67 23.86 103.61 23.84Q101.25 23.78 99.45 22.83Q97.64 21.89 96.64 20.25Q95.63 18.62 95.69 16.52Q95.73 14.94 96.38 13.64Q97.02 12.34 98.16 11.42Q99.3 10.5 100.81 10.02Q102.31 9.54 104.06 9.58Z M119.74 13.77 117.33 23.55Q117.19 24.1 117.22 24.4Q117.26 24.69 117.54 24.86Q117.81 25.02 118.4 25.17L119.68 25.48Q121.2 25.86 122.46 25.26Q123.71 24.66 124.41 23.33Q124.44 23.27 124.54 23.31Q124.65 23.36 124.63 23.42Q124.4 24.07 124.11 24.99Q123.82 25.9 123.62 26.69Q123.54 27.01 123.22 26.93L113.21 24.47Q113.17 24.46 113.2 24.33Q113.23 24.2 113.27 24.21Q113.97 24.38 114.35 24.36Q114.72 24.34 114.92 24.05Q115.12 23.76 115.27 23.14L117.71 13.25Q117.86 12.63 117.82 12.29Q117.78 11.95 117.46 11.75Q117.14 11.54 116.44 11.37Q116.39 11.36 116.43 11.23Q116.46 11.11 116.5 11.12Q117.01 11.24 117.69 11.44Q118.37 11.65 119.12 11.83Q119.92 12.03 120.59 12.16Q121.27 12.29 121.79 12.42Q121.85 12.43 121.82 12.56Q121.79 12.69 121.73 12.68Q121.04 12.51 120.66 12.54Q120.28 12.57 120.09 12.86Q119.89 13.15 119.74 13.77Z M136.51 32.62 127.86 28.57Q127.81 28.55 127.86 28.43Q127.92 28.31 127.97 28.33Q128.63 28.64 129 28.69Q129.36 28.74 129.61 28.49Q129.86 28.24 130.13 27.67L134.45 18.44Q134.72 17.87 134.75 17.53Q134.78 17.19 134.51 16.93Q134.24 16.67 133.58 16.36Q133.53 16.34 133.59 16.22Q133.64 16.1 133.7 16.12L141.99 20.01Q142.18 20.1 142.1 20.28L140.93 22.88Q140.91 22.93 140.8 22.89Q140.69 22.86 140.69 22.79Q140.99 21.54 140.55 20.66Q140.12 19.77 138.98 19.24L138.17 18.86Q137.68 18.63 137.34 18.6Q137 18.57 136.76 18.77Q136.52 18.96 136.32 19.38L132.06 28.48Q131.86 28.9 131.84 29.22Q131.83 29.53 132.02 29.76Q132.21 29.99 132.65 30.19L133.63 30.65Q134.97 31.29 136.12 31.02Q137.26 30.76 138.22 29.65Q138.26 29.6 138.36 29.67Q138.46 29.75 138.44 29.8Q138.1 30.32 137.68 31.06Q137.26 31.81 136.95 32.47Q136.81 32.77 136.51 32.62ZM137.5 27.59Q137.9 26.76 137.55 26.06Q137.2 25.36 136.07 24.83L133.28 23.52L133.52 23.01L136.34 24.34Q137.45 24.86 138.17 24.73Q138.88 24.6 139.22 23.89Q139.24 23.83 139.36 23.88Q139.47 23.94 139.44 23.99Q139.14 24.63 138.97 24.98Q138.79 25.33 138.61 25.71Q138.38 26.2 138.19 26.67Q138 27.15 137.74 27.71Q137.72 27.75 137.6 27.69Q137.48 27.63 137.5 27.59Z M150.06 42Q149.79 41.79 149.69 40.66Q149.59 39.53 149.69 37.62Q149.79 35.72 150.05 33.17L151.77 33.81Q151.57 37.02 151.6 39.06Q151.62 41.09 151.97 42.25Q152.32 43.4 153.03 43.95Q153.07 43.98 152.99 44.09Q152.91 44.19 152.87 44.16Q151.77 43.31 151.07 42.78Q150.38 42.25 150.06 42ZM154.53 28Q156.06 29.18 156.41 30.41Q156.77 31.64 155.97 32.68Q155.2 33.68 154.03 34.03Q152.87 34.37 151.63 34.12Q150.4 33.86 149.38 33.08Q149.16 32.91 148.92 32.72Q148.69 32.53 148.5 32.36L145.51 36.24Q145.12 36.75 145.01 37.08Q144.9 37.41 145.12 37.72Q145.33 38.02 145.91 38.46Q145.95 38.49 145.86 38.6Q145.78 38.7 145.74 38.67Q145.3 38.33 144.77 37.9Q144.25 37.46 143.6 36.96Q142.99 36.49 142.42 36.09Q141.85 35.68 141.41 35.33Q141.36 35.3 141.44 35.19Q141.52 35.09 141.57 35.12Q142.15 35.57 142.5 35.7Q142.85 35.83 143.15 35.65Q143.45 35.46 143.84 34.96L150.06 26.89Q150.45 26.38 150.55 26.06Q150.65 25.73 150.44 25.42Q150.24 25.11 149.66 24.67Q149.62 24.64 149.7 24.53Q149.78 24.43 149.82 24.46Q150.26 24.8 150.79 25.24Q151.31 25.69 151.92 26.16Q152.49 26.59 153.22 27.08Q153.96 27.56 154.53 28ZM153.79 31.98Q154.57 30.97 154.75 30.24Q154.93 29.52 154.68 28.98Q154.42 28.44 153.86 28.01Q153.18 27.48 152.7 27.51Q152.21 27.54 151.7 28.21L148.86 31.89Q149.08 32.11 149.35 32.34Q149.62 32.58 149.83 32.74Q150.99 33.63 151.92 33.42Q152.84 33.21 153.79 31.98Z M157.8 46.99 165.72 40.58Q166.21 40.18 166.39 39.89Q166.56 39.59 166.42 39.23Q166.29 38.88 165.84 38.33Q165.81 38.28 165.91 38.2Q166.01 38.11 166.05 38.16Q166.4 38.6 166.81 39.15Q167.22 39.71 167.7 40.3Q168.22 40.94 168.67 41.45Q169.13 41.96 169.47 42.38Q169.51 42.43 169.41 42.51Q169.3 42.59 169.27 42.55Q168.82 42 168.49 41.8Q168.17 41.61 167.83 41.72Q167.5 41.83 167 42.23L159.12 48.62Q158.63 49.02 158.44 49.32Q158.26 49.62 158.4 49.96Q158.54 50.31 158.99 50.87Q159.04 50.93 158.94 51.01Q158.84 51.1 158.79 51.04Q158.44 50.6 158.03 50.07Q157.62 49.53 157.11 48.89Q156.62 48.3 156.16 47.76Q155.7 47.22 155.34 46.79Q155.32 46.75 155.42 46.67Q155.52 46.59 155.55 46.62Q156 47.19 156.32 47.4Q156.64 47.61 156.97 47.51Q157.31 47.4 157.8 46.99ZM162.49 50.54 163.74 45.44 165.8 45.74 164.48 51.07Q164.09 52.55 163.88 53.53Q163.66 54.52 163.59 55.13Q163.51 55.74 163.57 56.11Q163.63 56.48 163.8 56.74Q163.97 57.01 164.2 57.29Q164.24 57.34 164.14 57.43Q164.03 57.51 163.99 57.46Q163.38 56.7 163.01 56.24Q162.63 55.78 162.44 55.55Q162.26 55.33 162.12 55.18Q161.98 55.04 161.88 54.91Q161.7 54.69 161.65 54.46Q161.61 54.23 161.69 53.8Q161.77 53.38 161.97 52.61Q162.16 51.84 162.49 50.54ZM161.47 44.99 169.52 45.77Q170.67 45.89 170.95 45.43Q171.23 44.97 170.53 44.1Q170.49 44.06 170.59 43.97Q170.69 43.89 170.73 43.94Q171.09 44.38 171.44 44.87Q171.79 45.35 172.41 46.11Q173.03 46.88 173.42 47.3Q173.81 47.73 174.14 48.15Q174.19 48.2 174.08 48.28Q173.98 48.36 173.94 48.31Q173.35 47.58 172.23 47.01Q171.11 46.44 169.76 46.28L161.8 45.46Z"/><path d="M44.8 168.61Q44.47 168.35 44.01 167.93Q43.55 167.51 43.15 167.18Q42.78 166.89 42.43 166.63Q42.08 166.37 41.81 166.16Q41.79 166.14 41.84 166.07Q41.89 166.01 41.91 166.03Q42.26 166.3 42.48 166.39Q42.7 166.48 42.88 166.37Q43.07 166.26 43.31 165.95L47.21 161.06Q47.45 160.76 47.51 160.56Q47.58 160.36 47.45 160.16Q47.33 159.97 46.99 159.7Q46.96 159.67 47.01 159.61Q47.06 159.55 47.09 159.57Q47.35 159.78 47.67 160.06Q47.99 160.34 48.36 160.64Q48.74 160.94 49.19 161.26Q49.65 161.58 49.96 161.83Q51.07 162.71 51.55 163.78Q52.04 164.86 51.92 165.96Q51.79 167.05 51.07 167.96Q50.44 168.75 49.65 169.17Q48.87 169.58 48.02 169.64Q47.17 169.7 46.34 169.44Q45.51 169.17 44.8 168.61ZM44.87 168.31Q45.6 168.89 46.43 168.99Q47.27 169.09 48.13 168.67Q48.99 168.26 49.76 167.29Q50.48 166.38 50.76 165.41Q51.05 164.44 50.85 163.57Q50.65 162.71 49.9 162.11Q49.28 161.62 48.91 161.52Q48.55 161.43 48.19 161.88L44.41 166.64Q44.08 167.04 44.14 167.41Q44.19 167.77 44.87 168.31Z M56.15 176.34 51.16 173.27Q51.13 173.25 51.17 173.18Q51.21 173.11 51.24 173.13Q51.62 173.36 51.84 173.42Q52.06 173.48 52.23 173.34Q52.4 173.21 52.61 172.88L55.89 167.56Q56.09 167.22 56.13 167.02Q56.17 166.81 56.03 166.64Q55.88 166.46 55.5 166.22Q55.47 166.21 55.51 166.14Q55.56 166.07 55.59 166.09L60.37 169.04Q60.48 169.1 60.42 169.21L59.52 170.71Q59.51 170.74 59.44 170.71Q59.38 170.68 59.38 170.64Q59.65 169.9 59.45 169.33Q59.25 168.76 58.59 168.36L58.12 168.07Q57.84 167.89 57.64 167.85Q57.43 167.81 57.27 167.91Q57.11 168.01 56.96 168.26L53.73 173.5Q53.57 173.75 53.54 173.94Q53.51 174.13 53.61 174.29Q53.71 174.44 53.96 174.59L54.53 174.94Q55.31 175.42 56.02 175.34Q56.74 175.26 57.4 174.65Q57.43 174.62 57.48 174.67Q57.54 174.73 57.52 174.75Q57.28 175.05 56.97 175.47Q56.66 175.9 56.43 176.28Q56.32 176.45 56.15 176.34ZM57.11 173.35Q57.4 172.86 57.24 172.41Q57.08 171.96 56.43 171.56L54.82 170.57L55 170.28L56.63 171.28Q57.26 171.67 57.71 171.65Q58.16 171.62 58.41 171.21Q58.43 171.17 58.49 171.21Q58.56 171.25 58.54 171.29Q58.31 171.65 58.18 171.85Q58.05 172.05 57.91 172.28Q57.74 172.56 57.59 172.83Q57.44 173.11 57.24 173.43Q57.23 173.45 57.16 173.41Q57.09 173.37 57.11 173.35Z M63.9 172.52Q63.67 172.99 63.74 173.46Q63.81 173.93 64.07 174.39Q64.32 174.85 64.62 175.33Q64.94 175.83 65.21 176.34Q65.48 176.86 65.56 177.4Q65.63 177.95 65.35 178.53Q65.05 179.15 64.5 179.48Q63.94 179.8 63.23 179.8Q62.52 179.8 61.74 179.43Q61.4 179.27 61.08 179.03Q60.75 178.8 60.49 178.54Q60.23 178.29 60.1 178.07Q60.06 178.01 60.05 177.94Q60.05 177.88 60.09 177.78L60.9 175.9Q60.91 175.84 60.98 175.86Q61.05 175.89 61.04 175.94Q61.01 176.39 61.01 176.89Q61.02 177.39 61.12 177.86Q61.23 178.32 61.47 178.71Q61.72 179.09 62.17 179.31Q62.48 179.45 62.81 179.48Q63.15 179.51 63.46 179.32Q63.77 179.13 64 178.66Q64.28 178.08 64.22 177.55Q64.15 177.02 63.9 176.53Q63.64 176.03 63.33 175.55Q63.03 175.07 62.78 174.59Q62.53 174.1 62.47 173.6Q62.41 173.1 62.67 172.56Q62.99 171.89 63.56 171.64Q64.13 171.38 64.8 171.45Q65.46 171.51 66.05 171.79Q66.46 171.99 66.84 172.26Q67.21 172.54 67.44 172.8Q67.54 172.9 67.54 172.97Q67.55 173.05 67.51 173.12L66.75 174.79Q66.73 174.83 66.67 174.81Q66.6 174.8 66.6 174.75Q66.63 174.54 66.66 174.16Q66.69 173.78 66.63 173.34Q66.58 172.91 66.35 172.52Q66.13 172.12 65.66 171.9Q65.29 171.72 64.96 171.74Q64.62 171.76 64.35 171.96Q64.07 172.15 63.9 172.52Z M70.19 181.64Q70.05 182 70.04 182.22Q70.04 182.43 70.22 182.57Q70.4 182.71 70.82 182.87Q70.85 182.88 70.83 182.96Q70.8 183.03 70.76 183.02Q70.44 182.9 70.05 182.74Q69.67 182.58 69.19 182.4Q68.74 182.23 68.34 182.1Q67.93 181.96 67.61 181.84Q67.58 181.83 67.61 181.75Q67.63 181.68 67.67 181.69Q68.08 181.84 68.31 181.86Q68.55 181.87 68.69 181.71Q68.83 181.55 68.97 181.18L71.16 175.33Q71.3 174.96 71.29 174.75Q71.29 174.54 71.1 174.39Q70.92 174.24 70.5 174.09Q70.47 174.08 70.5 174Q70.53 173.92 70.56 173.93Q70.89 174.06 71.28 174.23Q71.67 174.39 72.12 174.56Q72.6 174.74 73 174.87Q73.41 175 73.72 175.11Q73.75 175.13 73.72 175.2Q73.69 175.28 73.66 175.27Q73.25 175.11 73.02 175.11Q72.78 175.11 72.64 175.28Q72.5 175.44 72.36 175.81Z M81.04 177.12Q81.49 177.24 81.9 177.39Q82.31 177.55 82.66 177.74Q83.02 177.92 83.28 178.15Q83.37 178.22 83.39 178.28Q83.41 178.33 83.38 178.49L83.1 180.26Q83.09 180.29 83.02 180.29Q82.95 180.29 82.94 180.23Q82.87 179.08 82.35 178.34Q81.83 177.6 80.82 177.33Q79.86 177.08 78.99 177.37Q78.12 177.65 77.47 178.42Q76.82 179.19 76.51 180.4Q76.28 181.3 76.34 182.11Q76.4 182.92 76.72 183.58Q77.04 184.24 77.58 184.69Q78.12 185.14 78.85 185.33Q79.83 185.59 80.59 185.24Q81.35 184.89 82.1 183.93Q82.14 183.89 82.19 183.92Q82.25 183.95 82.24 183.99L81.67 185.5Q81.61 185.65 81.57 185.69Q81.53 185.72 81.41 185.75Q80.7 185.84 80.05 185.79Q79.41 185.74 78.78 185.58Q77.38 185.22 76.43 184.4Q75.49 183.58 75.11 182.47Q74.74 181.35 75.07 180.1Q75.31 179.16 75.88 178.48Q76.45 177.79 77.26 177.4Q78.07 177.01 79.03 176.93Q80 176.85 81.04 177.12Z M88.15 179.8 87.31 185.92Q87.26 186.27 87.3 186.44Q87.34 186.62 87.52 186.71Q87.7 186.79 88.07 186.84L88.87 186.95Q89.82 187.08 90.55 186.63Q91.28 186.19 91.61 185.33Q91.63 185.29 91.69 185.31Q91.76 185.33 91.76 185.37Q91.66 185.78 91.54 186.36Q91.42 186.94 91.35 187.43Q91.32 187.63 91.12 187.61L84.85 186.75Q84.83 186.74 84.84 186.66Q84.85 186.58 84.88 186.59Q85.31 186.65 85.54 186.61Q85.77 186.57 85.87 186.38Q85.98 186.19 86.03 185.8L86.88 179.61Q86.93 179.22 86.88 179.02Q86.83 178.82 86.63 178.71Q86.42 178.61 85.98 178.55Q85.95 178.54 85.96 178.46Q85.97 178.38 86 178.39Q86.32 178.43 86.75 178.51Q87.18 178.59 87.65 178.65Q88.14 178.72 88.56 178.76Q88.99 178.8 89.31 178.84Q89.35 178.85 89.34 178.93Q89.33 179.01 89.29 179Q88.86 178.94 88.63 178.99Q88.4 179.03 88.3 179.22Q88.2 179.41 88.15 179.8Z M100.25 188.04 94.39 187.88Q94.35 187.88 94.36 187.79Q94.36 187.71 94.39 187.71Q94.84 187.73 95.06 187.67Q95.28 187.6 95.36 187.4Q95.43 187.2 95.45 186.81L95.62 180.56Q95.63 180.17 95.57 179.98Q95.5 179.78 95.28 179.7Q95.07 179.62 94.62 179.6Q94.59 179.6 94.59 179.52Q94.59 179.44 94.63 179.44L100.25 179.6Q100.38 179.6 100.37 179.73L100.35 181.48Q100.35 181.51 100.28 181.52Q100.21 181.52 100.19 181.48Q100.06 180.71 99.6 180.32Q99.14 179.92 98.37 179.9L97.82 179.89Q97.48 179.88 97.29 179.94Q97.09 180.01 97 180.18Q96.91 180.35 96.9 180.63L96.73 186.79Q96.72 187.08 96.79 187.27Q96.86 187.45 97.02 187.53Q97.19 187.61 97.48 187.62L98.14 187.64Q99.06 187.66 99.64 187.24Q100.22 186.81 100.48 185.95Q100.49 185.91 100.57 185.93Q100.64 185.95 100.64 185.98Q100.58 186.36 100.52 186.88Q100.47 187.4 100.46 187.85Q100.45 188.05 100.25 188.04ZM99.58 184.97Q99.59 184.4 99.23 184.09Q98.86 183.78 98.1 183.76L96.21 183.71L96.21 183.36L98.13 183.42Q98.88 183.44 99.25 183.19Q99.62 182.94 99.63 182.46Q99.64 182.42 99.71 182.43Q99.79 182.43 99.79 182.47Q99.77 182.9 99.76 183.14Q99.75 183.38 99.74 183.64Q99.73 183.96 99.74 184.28Q99.75 184.59 99.74 184.97Q99.74 185 99.66 185Q99.58 184.99 99.58 184.97Z M110.61 187.4Q110.4 187.42 109.89 186.95Q109.37 186.48 108.62 185.58Q107.87 184.68 106.92 183.43L107.97 183Q109.21 184.53 110.07 185.43Q110.94 186.34 111.57 186.71Q112.21 187.09 112.76 187.04Q112.79 187.04 112.8 187.12Q112.81 187.2 112.78 187.2Q111.93 187.28 111.39 187.33Q110.86 187.37 110.61 187.4ZM106.78 179.23Q107.96 179.13 108.64 179.53Q109.31 179.94 109.38 180.74Q109.45 181.51 109.07 182.15Q108.69 182.8 108.03 183.19Q107.37 183.59 106.58 183.67Q106.41 183.68 106.23 183.69Q106.04 183.71 105.89 183.71L106.16 186.71Q106.2 187.1 106.29 187.29Q106.38 187.49 106.6 187.53Q106.82 187.58 107.27 187.54Q107.3 187.54 107.31 187.62Q107.31 187.7 107.28 187.7Q106.94 187.73 106.52 187.76Q106.1 187.78 105.6 187.83Q105.13 187.87 104.71 187.92Q104.28 187.98 103.94 188.01Q103.9 188.01 103.89 187.93Q103.89 187.85 103.92 187.85Q104.37 187.8 104.58 187.72Q104.79 187.63 104.85 187.42Q104.91 187.21 104.88 186.82L104.31 180.6Q104.27 180.21 104.18 180.02Q104.09 179.83 103.87 179.78Q103.65 179.72 103.2 179.76Q103.17 179.77 103.16 179.69Q103.16 179.61 103.19 179.6Q103.53 179.57 103.95 179.55Q104.37 179.54 104.84 179.49Q105.28 179.45 105.81 179.36Q106.34 179.27 106.78 179.23ZM108.11 181.33Q108.04 180.56 107.82 180.15Q107.6 179.75 107.26 179.61Q106.92 179.48 106.49 179.52Q105.96 179.56 105.76 179.78Q105.55 179.99 105.6 180.51L105.85 183.35Q106.05 183.36 106.26 183.35Q106.48 183.34 106.65 183.33Q107.54 183.25 107.87 182.76Q108.2 182.28 108.11 181.33Z M115.99 185.47 114.63 179.37Q114.54 178.99 114.43 178.81Q114.32 178.64 114.08 178.62Q113.85 178.59 113.43 178.69Q113.39 178.69 113.37 178.61Q113.36 178.54 113.39 178.53Q113.73 178.45 114.14 178.38Q114.56 178.31 115.02 178.21Q115.51 178.1 115.92 177.99Q116.32 177.88 116.65 177.8Q116.68 177.8 116.7 177.88Q116.72 177.95 116.68 177.96Q116.26 178.06 116.06 178.18Q115.87 178.31 115.84 178.52Q115.8 178.74 115.89 179.12L117.24 185.2Q117.32 185.58 117.44 185.76Q117.55 185.94 117.78 185.96Q118.01 185.98 118.44 185.88Q118.49 185.87 118.5 185.95Q118.52 186.03 118.48 186.04Q118.14 186.12 117.73 186.19Q117.33 186.27 116.84 186.38Q116.38 186.48 115.96 186.59Q115.53 186.69 115.2 186.77Q115.17 186.77 115.15 186.7Q115.14 186.62 115.16 186.61Q115.6 186.51 115.8 186.4Q116.01 186.29 116.04 186.07Q116.07 185.86 115.99 185.47ZM119.22 183.87 116.76 181.79 117.48 180.74 120.05 182.92Q120.76 183.54 121.24 183.93Q121.72 184.32 122.03 184.53Q122.35 184.73 122.57 184.8Q122.79 184.87 122.98 184.85Q123.17 184.83 123.39 184.78Q123.43 184.77 123.45 184.85Q123.47 184.93 123.43 184.94Q122.84 185.07 122.49 185.15Q122.13 185.23 121.95 185.27Q121.78 185.31 121.66 185.34Q121.54 185.38 121.45 185.4Q121.28 185.44 121.14 185.4Q121 185.37 120.79 185.21Q120.58 185.05 120.21 184.73Q119.84 184.41 119.22 183.87ZM115.89 182.91 118.52 178.71Q118.9 178.11 118.73 177.83Q118.55 177.55 117.88 177.7Q117.85 177.7 117.83 177.62Q117.81 177.55 117.85 177.54Q118.19 177.46 118.55 177.4Q118.91 177.34 119.5 177.21Q120.09 177.08 120.43 176.98Q120.77 176.89 121.09 176.82Q121.13 176.81 121.15 176.89Q121.17 176.97 121.13 176.97Q120.57 177.1 119.94 177.56Q119.32 178.01 118.87 178.71L116.24 182.86Z M126.81 183.97Q126.49 184.08 126.23 183.95Q125.98 183.82 125.88 183.5Q125.78 183.19 125.91 182.94Q126.05 182.7 126.37 182.59Q126.71 182.49 126.94 182.61Q127.18 182.74 127.27 183.05Q127.38 183.37 127.26 183.62Q127.15 183.87 126.81 183.97Z M132.03 172.68Q132.45 172.5 132.87 172.37Q133.29 172.24 133.69 172.17Q134.08 172.11 134.42 172.12Q134.54 172.12 134.59 172.16Q134.64 172.19 134.71 172.33L135.57 173.91Q135.58 173.94 135.53 173.98Q135.47 174.02 135.42 173.98Q134.67 173.11 133.8 172.84Q132.94 172.57 131.98 172.98Q131.07 173.36 130.55 174.12Q130.04 174.88 129.99 175.88Q129.95 176.89 130.44 178.04Q130.8 178.89 131.34 179.5Q131.89 180.1 132.54 180.43Q133.2 180.75 133.9 180.78Q134.61 180.81 135.3 180.52Q136.23 180.12 136.62 179.38Q137.01 178.64 137.02 177.42Q137.02 177.37 137.09 177.36Q137.15 177.35 137.17 177.38L137.63 178.93Q137.68 179.08 137.67 179.14Q137.66 179.19 137.58 179.28Q137.07 179.79 136.53 180.15Q136 180.5 135.4 180.75Q134.06 181.32 132.82 181.25Q131.57 181.18 130.59 180.53Q129.62 179.87 129.11 178.68Q128.73 177.79 128.76 176.9Q128.8 176 129.2 175.2Q129.6 174.4 130.32 173.75Q131.04 173.1 132.03 172.68Z M144.92 175.86Q144.08 176.36 143.23 176.47Q142.37 176.58 141.58 176.34Q140.79 176.11 140.12 175.58Q139.46 175.06 139 174.29Q138.44 173.36 138.38 172.43Q138.33 171.51 138.65 170.68Q138.98 169.85 139.56 169.19Q140.14 168.53 140.84 168.11Q141.7 167.59 142.56 167.5Q143.43 167.4 144.21 167.64Q145 167.88 145.64 168.39Q146.29 168.9 146.7 169.6Q147.18 170.41 147.27 171.3Q147.36 172.19 147.11 173.05Q146.86 173.9 146.3 174.64Q145.74 175.37 144.92 175.86ZM145.14 175.36Q145.84 174.94 146.17 174.24Q146.5 173.54 146.39 172.62Q146.28 171.71 145.66 170.67Q145.02 169.59 144.17 168.97Q143.32 168.34 142.38 168.24Q141.45 168.15 140.55 168.68Q139.42 169.36 139.28 170.54Q139.14 171.72 139.99 173.14Q140.49 173.97 141.12 174.56Q141.75 175.15 142.45 175.46Q143.14 175.76 143.83 175.74Q144.53 175.72 145.14 175.36Z M151.48 169.48 147.47 164.36 147.77 164.15 151.76 169.25Q152.2 169.81 152.66 169.92Q153.12 170.03 153.57 169.66Q153.6 169.64 153.65 169.7Q153.7 169.76 153.67 169.79Q153.44 169.97 153.19 170.16Q152.94 170.35 152.64 170.59Q152.33 170.85 152.08 171.07Q151.83 171.3 151.6 171.48Q151.58 171.5 151.52 171.44Q151.47 171.38 151.5 171.35Q151.93 171 151.93 170.52Q151.92 170.03 151.48 169.48ZM159.81 164.56Q159.83 164.54 159.88 164.6Q159.93 164.67 159.91 164.69Q159.64 164.9 159.3 165.17Q158.96 165.43 158.59 165.73Q158.22 166.03 157.91 166.3Q157.6 166.57 157.34 166.78Q157.32 166.81 157.27 166.74Q157.21 166.68 157.24 166.66Q157.74 166.25 157.77 166Q157.81 165.74 157.41 165.32L153.28 160.72L153.16 159.62L155.6 168.09Q155.63 168.14 155.56 168.19Q155.49 168.25 155.43 168.22L148.03 164.95Q147.04 164.52 146.44 165.01Q146.41 165.04 146.36 164.97Q146.31 164.91 146.34 164.89Q146.54 164.72 146.77 164.55Q147 164.38 147.15 164.25Q147.39 164.06 147.56 163.9Q147.74 163.74 147.84 163.66Q147.98 163.54 148.15 163.58Q148.31 163.61 148.76 163.81L154.89 166.49L155.09 167.66L152.91 159.94Q152.86 159.76 152.88 159.63Q152.91 159.51 153.01 159.42Q153.1 159.35 153.22 159.27Q153.35 159.19 153.5 159.07Q153.81 158.81 154.02 158.62Q154.23 158.43 154.45 158.25Q154.48 158.23 154.53 158.29Q154.58 158.35 154.55 158.38Q154.06 158.78 153.98 159.14Q153.9 159.51 154.26 159.92L158.4 164.5Q158.67 164.79 158.86 164.9Q159.05 165.01 159.26 164.92Q159.47 164.84 159.81 164.56Z"/><circle cx="31" cy="100" r="2.4"/><circle cx="169" cy="100" r="2.4"/><g transform="rotate(-14 100 98)"><circle cx="100" cy="54" r="3.2"/><rect x="97.5" y="57" width="5" height="30"/><ellipse cx="100" cy="70" rx="7" ry="2.8"/><rect x="92" y="85" width="16" height="4" rx="2"/><path d="M86 89 H114 Q114 100 122 112 Q128 122 132 126 Q134 128 130 128 H70 Q66 128 68 126 Q72 122 78 112 Q86 100 86 89 Z"/><rect x="66" y="129" width="68" height="5"/><g transform="rotate(14 100 130)"><rect x="98.6" y="134" width="2.8" height="4"/><circle cx="100" cy="140.5" r="3.4"/></g></g></g></svg><span>Desi Clerk &nbsp;·&nbsp; Passport &amp; OCI from the USA</span></div>
+<header>
+  <h1>Call my <em>agent</em>.</h1>
+  <p class="lede">Your agent knows the rules. Desi Clerk knows the counter. Got a Dot, a Duet or a Muse working for you? Hand it this loop-engineered skill so it doesn't drop any bureaucratic balls: the photo spec, the affidavit the desk never asked for, the form that expires at 90 days. Three applications: surrender your Indian passport, OCI for you, OCI for your child.</p>
+  <div class="paste"><code id="pasteline">Load the India consular skill from github.com/vousenpri/desiclerk/tree/main/skill and prepare my VFS applications: surrender, OCI for me, OCI for my child. Tell me the preconditions before any form, then tell me whether to mail it or walk in at my centre, check VFS appointment availability if walk-in, pick a slot that fits my calendar, and put the deadlines on it.</code><button class="btn" type="button" id="copyBtn">Copy</button></div>
+  <p class="small">If it has your browser and calendar, it works out mail-in versus walk-in, checks VFS slot availability if you need one, picks it around your week and puts the 90-day form expiry and the 3-month passport-upload window on it. Your passport scans stay with your agent. Desi Clerk never receives them. Free, no account.</p>
+  <div class="start" style="margin-top:28px">
+    <span class="start-note">No agent? Use the page</span>
+    <button class="btn" type="button" data-app="surrender" aria-pressed="true">Surrender my passport</button>
+    <button class="btn" type="button" data-app="oci" aria-pressed="false">OCI for me</button>
+    <button class="btn" type="button" data-app="minor" aria-pressed="false">OCI for my child</button>
+  </div>
+  <div class="centre">Centre
+    <label><input type="radio" name="centre" value="nyc" checked>New York</label>
+    <label><input type="radio" name="centre" value="edison">New Jersey</label>
+    <label><input type="radio" name="centre" value="other">Elsewhere</label>
+  </div>
+  <select id="app" hidden><option value="surrender" selected>s</option><option value="oci">o</option><option value="minor">m</option></select>
+</header>
+
+<main>
+<section id="flow">
+  <div class="eyebrow">The three sites, and what each one needs</div>
+  <h2>Where you are, and what you're <em>waiting</em> for.</h2>
+  <p class="lede">Three government sites, three VFS submissions, one dependency: nothing about OCI can start until the surrender certificate is physically back. Your US passport never leaves you.</p>
+  <div class="side"><b>Walk in or mail it?</b> At the counter they check the stack in front of you, so anything wrong gets fixed there. By courier the same gap is a deficiency email a week later, a 7-day clock, and a 20-day abandonment behind it. First time through, a name variation, or a child: walk in. A clean repeat: mail it.</div>
+  <div class="sites">
+    <a href="https://embassy.passportindia.gov.in/"><b>Passport Seva</b><span>The surrender form. Needs your Indian passport number, US passport number, US address.</span><i>embassy.passportindia.gov.in</i></a>
+    <a href="https://services.vfsglobal.com/usa/en/ind/"><b>VFS Global</b><span>Registration, payment, courier, appointment. Every application passes through here.</span><i>services.vfsglobal.com/usa/en/ind</i></a>
+    <a href="https://ociservices.gov.in/"><b>OCI Services</b><span>The OCI form. Needs your photo, signature and every document as PDF before you start.</span><i>ociservices.gov.in</i></a>
+  </div>
+  <div class="flow">
+    <div class="col"><h4>Window 1 · Surrender</h4>
+      <div class="st"><b>Passport Seva form</b><span class="n">Print in Safari after the photo loads. US address as present address.</span><div class="need"><span>Indian passport number</span><span>US passport number</span></div></div>
+      <div class="st"><b>VFS registration, $62</b><span class="n">Confirmation receipt goes in the envelope.</span></div>
+      <div class="st"><b>Send or hand in at VFS</b><span class="n">Courier is the default: VFS label or your own UPS/USPS label with no expiry, FedEx refused, one application per envelope, return address matching your address proof. Walk-in needs an appointment.</span><div class="need"><span class="orig">Indian passport, original</span><span>2 photos, white</span><span>2 certificate forms</span><span>US passport copy</span><span>Naturalization copy</span><span>Address proof</span><span>Checklist as cover</span></div><span class="cust">Your Indian passport leaves here and comes back cancelled. Your US passport stays in your pocket.</span></div>
+      <div class="st wait"><b>7–21 working days</b><span class="n">You can travel on the US passport the whole time.</span></div>
+      <div class="st done"><b>Surrender certificate + cancelled passport</b><span class="n">Scan both the day they arrive.</span></div>
+    </div>
+    <div class="col"><h4>Window 2 · OCI for you</h4>
+      <div class="gate">Needs the surrender certificate in hand. Prepare everything else during the wait; fill the form last.</div>
+      <div class="st"><b>OCI Services form</b><span class="n">Expires 90 days after you fill it.</span><div class="need"><span class="key">Surrender certificate scan</span><span>Photo JPEG, light bg</span><span>Signature JPEG</span><span>US passport scan</span><span>Naturalization scan</span><span>Marriage certificate scan</span><span>Address proof scan</span></div></div>
+      <div class="st"><b>VFS registration, $297</b></div>
+      <div class="st"><b>Send or hand in at VFS</b><div class="need"><span>Printed form, photo affixed</span><span>Copies of everything</span><span>Affidavits, wet-ink notarized</span><span>Voter-card undertaking</span></div><span class="cust">Nothing original goes in. Keep travelling on the US passport; use a visa if you need India before it's granted.</span></div>
+      <div class="st wait"><b>8–10 weeks</b></div>
+      <div class="st done"><b>e-OCI PDF</b><span class="n">Download when the portal says Granted. No card in the mail.</span></div>
+    </div>
+    <div class="col"><h4>Window 3 · OCI for your child</h4>
+      <div class="gate">Needs one proof of Indian origin: a parent's cancelled Indian passport stamped on acquiring foreign citizenship, a parent's OCI, or a grandparent's Indian passport with the birth certificates that connect them. Does not wait for your own OCI.</div>
+      <div class="st"><b>OCI Services form</b><span class="n">Thumbprint under 5. Both parents sign Part B.</span><div class="need"><span class="key">Parent's cancelled Indian passport or OCI</span><span>Child's photo, light bg</span><span>Child's US passport, 9+ months</span><span>Birth certificate, long form, apostilled</span><span>Marriage certificate, apostilled</span></div></div>
+      <div class="st"><b>VFS registration, $297</b></div>
+      <div class="st"><b>Send or hand in at VFS</b><div class="need"><span>Printed form</span><span>Parental authorization, wet-ink notarized</span><span>Copies of everything</span></div><span class="cust">Child's passport stays with you.</span></div>
+      <div class="st wait"><b>8–10 weeks</b></div>
+      <div class="st done"><b>Child's e-OCI</b></div>
+    </div>
+  </div>
+</section>
+<section id="stack">
+  <div class="eyebrow">Your stack</div>
+  <h2 id="stackTitle">Surrender</h2>
+  <p class="lede">What must be true before you print anything, then what the desk takes from you, in the order it reads it.</p>
+<div class="fee" id="fee"></div>
+  <h3>Before you print anything</h3>
+  <ul class="pre" id="pre"></ul>
+  <h3>Hand over, in this order</h3>
+  <ol class="stack" id="list"></ol>
+  <div class="side" id="centrenote"></div>
+</section>
+
+<section id="photo">
+  <div class="eyebrow">Photo check</div>
+  <h2>One photo will <em>not</em> do for both.</h2>
+  <p class="lede">Surrender wants a white background. OCI wants a light background that is not white. If you're doing both, you need two photos. Drop the digital file here and get the upload and the print made from it.</p>
+  <label class="drop" id="drop"><input type="file" id="file" accept="image/*"><b>Drop a photo</b> or tap to choose. JPEG or PNG, straight from the camera is fine.</label>
+  <div class="pur">
+    <label><input type="radio" name="pur" value="oci" checked> OCI</label>
+    <label><input type="radio" name="pur" value="surrender"> Surrender</label>
+  </div>
+  <div class="res" id="res"></div>
+</section>
+
+<section id="timing">
+  <div class="eyebrow">When</div>
+  <h2>The clocks don't agree with each other.</h2>
+  <p class="lede">Enter the day you hand in the surrender and the rest follows.</p>
+  <div class="choose"><div><label class="f" for="sdate">Surrender submitted on</label><input type="date" id="sdate"></div><div><label class="f" for="ddate">Deficiency email received on (if any)</label><input type="date" id="ddate"></div></div>
+  <ul class="tl" id="tl"></ul>
+</section>
+
+<section id="gtd">
+  <div class="eyebrow">Getting it done</div>
+  <h2>Next actions, and what you're <em>waiting</em> for.</h2>
+  <p class="lede">Yours to do now on the left; in someone else's hands on the right, with the day it's due back. Built from the windows you pick and the surrender date above. Ticks are remembered on this device only.</p>
+  <div class="gtd">
+    <div class="col"><h4>Next actions</h4><ul id="na"></ul></div>
+    <div class="col"><h4>Waiting for</h4><ul id="wf"></ul></div>
+  </div>
+  <div class="ctl"><label><input type="checkbox" id="g_oci" checked> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><button type="button" id="g_reset">Clear ticks</button></div>
+</section>
+<section id="gotchas" class="got">
+  <div class="eyebrow">Gotchas</div>
+  <h2>What the checklist <em>doesn't</em> say.</h2>
+  <p><b>Print from Safari or Firefox, not Chrome.</b> The Passport Seva PDF loads the photo late and Chrome prints it blank. Wait until you can see the photo, then print. One applicant's experience, October 2026; cheap to avoid either way.</p>
+  <p><b>The notarized appearance or signature-change affidavit is not on the VFS checklist.</b> It has been reported at the New York centre and was not asked for at the New Jersey centre in October 2026. If a guide tells you to get it, ask the centre you're actually using before paying a notary.</p>
+  <p><b>The fee is $62 flat.</b> Older guides split it by whether you naturalized before June 2010. VFS dropped that.</p>
+  <p><b>Two upload specs exist on VFS's own site</b>, one says 500 KB, the other 30 KB. A 600 × 600 JPEG under 30 KB satisfies both. The photo check above makes one.</p>
+  <p><b>You can't file OCI until the surrender certificate is physically back</b>, and the OCI form expires 90 days after you fill it. Don't fill it early to feel ready.</p>
+  <p><b>No physical OCI card any more.</b> Since July 2026 the grant is a PDF you download from ociservices.gov.in when the status says Granted. Existing booklets stay valid. <a href="https://www.cgichicago.gov.in/">Consulate General of India, Chicago, notice of 9 July 2026</a>.</p>
+  <p><b>For a child born in the US, the birth certificate has to be apostilled.</b> The VFS minor checklist says a certificate issued outside India must be apostilled by the issuing government, and the same applies to a US marriage certificate. Hospital certificates and the short form are refused outright. In New York that is three offices: the long form with letter of exemplification from NYC Health (45 Lafayette Street, Room 133, by appointment, or VitalChek, reason "Apostille/Authentication"), the County Clerk at 60 Centre Street to authenticate the signature, and the Department of State at 123 William Street for the apostille. All three are within a ten-minute walk; often one morning, subject to office hours and appointments. Submit a self-attested copy of the apostilled certificate, never the original. Then check the mother's name is spelled the same way on it as on her passport; that mismatch is the single most common minor-OCI rejection.</p>
+  <p><b>Any name difference at all</b>, a dropped middle name, a single letter, surname at marriage, must go in the OCI form as a previous name with a notarized affidavit. Leaving it out is a listed rejection cause.</p>
+</section>
+
+<footer>
+  <p>Desi Clerk is a checklist and a browser-side photo check. It doesn't file anything, store anything, or stand in for the consulate.</p>
+  Checked against these on 27 October 2026:
+  <ul>
+    <li><a href="https://www.vfsglobal.com/one-pager/india/united-states-of-america/renunciation-of-indian-citizenship/">VFS USA surrender one-pager</a> and its adult checklist dated 20 Oct 2026</li>
+    <li><a href="https://www.vfsglobal.com/one-pager/india/united-states-of-america/oci-services/pdf/New-OCI-Adult-Foreign-National-by-Naturalization.pdf">VFS USA new OCI adult checklist</a></li>
+    <li><a href="https://indianembassyusa.gov.in/pages/NjI">Embassy of India, Washington: OCI re-issue guidelines</a></li>
+  </ul>
+  Rules change. The receipt in your hand beats this page.
+  <div class="sign">Seek less. Do more. &nbsp;·&nbsp; Desi Clerk</div>
+</footer>
+</main>
+</div>
+
+<script>
+const DATA = {
+  surrender: {
+    fee: [["Surrender fee","$40"],["ICWF","$3"],["VFS service","$19"],["Total","$62"]],
+    feenote: "Visa or Mastercard only, and card adds 3.75%. To skip that, a money order or banker's draft payable to VFS Services (USA) Inc. No personal checks, no Amex. Source: <a href=\"https://www.vfsglobal.com/one-pager/india/united-states-of-america/renunciation-of-indian-citizenship/\">VFS one-pager</a>, read 27 Oct 2026.",
+    pre: [
+      "Complete VFS online registration first. A physical application without it is returned unprocessed.",
+      "Fill the government form at embassy.passportindia.gov.in. Print in portrait, single-sided, from Safari or Firefox, after the photo renders.",
+      "Two 2 × 2 inch colour photos, white background only, on photo paper, under six months old.",
+      "Present address on the Passport Seva form is your US address, even though the form prompts for India. Houston has rejected applications for this.",
+      "The VFS surrender certificate fillable PDF truncates fields. If it does, retype it in Word, print, sign in blue ink. One form per applicant; leave the minors section blank on an adult's.",
+      "Mailing in? Buy the VFS courier label or use a UPS or USPS prepaid label with no expiry date. FedEx labels are refused. One application per envelope, superscribed with the application type. Walking in? Book the slot on the VFS site first.",
+      "Nothing handwritten. No staples. No double-sided printing."
+    ],
+    items: [
+      ["Government application form, printed and signed","orig","From embassy.passportindia.gov.in. Must show your photo."],
+      ["Two photos, 2 × 2, white background","orig","Not older than six months."],
+      ["Two Surrender of Indian Passport Certificate forms, filled and signed","orig","Fillable PDF on the VFS page."],
+      ["Proof of address","copy","State ID, driver's licence (don't crop it), utility bill under three months, lease, mortgage or tax return. No PO Box. Must match the address on the form."],
+      ["US passport","copy","Information page plus the last two amendment pages."],
+      ["Affidavit of naturalization after Indian passport expired","orig, notarized","Only if you naturalized after your Indian passport had expired.","cond"],
+      ["Name change document","copy","Only if your name differs in any way from the Indian passport, including a middle name dropped at naturalization. This is the most repeated surrender blocker. Marriage certificate, court order, or a notarized one-and-the-same-person affidavit.","cond"],
+      ["Most recent Indian passport","orig","The actual booklet, plus copies of the first three and last two pages."],
+      ["Naturalization certificate","copy","Every nationality you've held. If naturalized through parents, their certificates plus a notarized statement from both."],
+      ["VFS payment confirmation and courier label","orig","UPS or USPS label with no expiry. FedEx refused. Return address must match the address proof."],
+      ["This checklist, printed and signed, as the cover page","orig","The VFS PDF itself, on top."]
+    ]
+  },
+  oci: {
+    fee: [["New OCI card","$275"],["ICWF","$3"],["VFS service","$19"],["Total","$297"]],
+    feenote: "Visa or Mastercard only, and card adds 3.75%. To skip that, a money order or banker's draft payable to VFS Services (USA) Inc. No personal checks, no Amex. Source: <a href=\"https://www.vfsglobal.com/one-pager/india/united-states-of-america/oci-services/pdf/New-OCI-Adult-Foreign-National-by-Naturalization.pdf\">VFS adult OCI checklist</a>, read 27 Oct 2026.",
+    pre: [
+      "Have the surrender certificate in hand. OCI cannot be filed alongside surrender.",
+      "US passport valid for at least nine months at submission. The adult checklist says six, the child and spouse checklists say nine; nine satisfies all of them.",
+      "Photo and signature JPEGs made to spec before you open the form. Photo: light background, not white. Use the check below.",
+      "Every supporting document scanned to one PDF per category, under 500 KB each. All must be uploaded or the application is returned.",
+      "Date of birth on your US passport must match the Indian passport exactly. A mismatch is a rejection with no fix.",
+      "Any name difference at all goes in the form as a previous name, backed by a notarized affidavit.",
+      "The form expires 90 days after you fill it. Fill it within a week of submitting."
+    ],
+    items: [
+      ["OCI application form from ociservices.gov.in, Part B signed","orig","Photo affixed. Printed and uploaded photo must be identical."],
+      ["Two photos, 2 × 2, light background, not white","orig","Head and shoulders, 80% face, dark clothing."],
+      ["US passport information page","copy, self-attested","Do not send the original. Nine months validity satisfies every checklist."],
+      ["Last Indian passport","copy","First two and last two pages."],
+      ["Surrender or renunciation certificate","copy","Or the cancelled passport with the foreign-citizenship stamp if surrendered on or before 31 May 2010."],
+      ["Naturalization certificate","copy","Signed at the designated space."],
+      ["Proof of marital status","copy","Marriage certificate, divorce decree, or spouse's death certificate. Notarized affidavit if unavailable."],
+      ["Name change affidavit or court order","orig, notarized","Only if any name differs from the Indian passport. This is triggered more often than people expect.","cond"],
+      ["Employment letter","copy","Or proof of self-employment, retirement, admission, or a signed statement if never employed."],
+      ["OCI cards of parents and spouse","copy","Only if they have them.","cond"],
+      ["Previous Indian visa","copy","Only if you ever had one.","cond"],
+      ["Proof of address","copy","Same rules as surrender. No PO Box, nothing expired, don't crop the licence."],
+      ["Affidavit in lieu of originals","orig, notarized","VFS format."],
+      ["Undertaking by the applicant","orig","VFS format."],
+      ["Undertaking for surrender of Indian voter card and ration card","orig","Separate VFS form. Applications have been held for its absence even when the applicant never held either; sign it anyway."],
+      ["Consent letter for corrections","orig, signed","VFS format. Lets the consulate fix small errors. Not a guarantee."],
+      ["VFS payment confirmation and courier label","orig","UPS or USPS, no expiry. FedEx refused."],
+      ["The VFS checklist, printed and signed, as cover page","orig",""]
+    ]
+  },
+  minor: {
+    fee: [["New OCI card","$275"],["ICWF","$3"],["VFS service","$19"],["Total","$297"]],
+    feenote: "Visa or Mastercard only, and card adds 3.75%. To skip that, a money order or banker's draft payable to VFS Services (USA) Inc. No personal checks, no Amex. Grant is an e-OCI PDF; no physical card since July 2026. Source: VFS minor checklist (Sep 2026), read 27 Oct 2026.",
+    pre: [
+      "A US-born child never held Indian citizenship, so there is nothing to surrender. A parent's cancelled Indian passport, or a parent's OCI, is what proves origin.",
+      "Child's US passport valid for at least nine months at submission (this checklist asks for more than the adult one).",
+      "Birth certificate must be the long form naming both parents, with the letter of exemplification, and then apostilled: the VFS minor checklist says a certificate issued outside India must be apostilled by the issuing government. Hospital certificates and the short form are refused. You submit a self-attested copy of the apostilled certificate, never the original.",
+      "Parents' marriage certificate issued outside India must also be apostilled. Self-attested copy.",
+      "Mother's name must match across the birth certificate, her US passport and her cancelled Indian passport or OCI. Maiden versus married name is the most reported rejection.",
+      "Photo: light background, not white. Under 5, a left thumb impression is uploaded instead of a signature; 5 and over, the child signs in ink. Infant thumbprints get held for clarity: ink pad, firm press, scan at 300 dpi, and check it reads before you upload.",
+      "Both parents sign Part B and a notarized parental authorization. Parents never sign in the child's box.",
+      "Every supporting document scanned to one PDF per category, under 500 KB, uploaded before the form is submitted. Form expires at 90 days."
+    ],
+    items: [
+      ["OCI application form from ociservices.gov.in, Part B signed by both parents","orig","Child's thumbprint (under 5) or signature (5+) in the applicant box only."],
+      ["Two photos, 2 × 2, light background, not white","orig","Physical and uploaded photo identical."],
+      ["Child's US passport information page","copy, self-attested","Valid nine months or more. Do not send the original."],
+      ["Birth certificate, long form with letter of exemplification, apostilled","copy, self-attested","Three NYC offices: the long form at 45 Lafayette St Room 133 or via VitalChek with Apostille/Authentication as the reason ($15); the County Clerk at 60 Centre St Room 141B authenticates the signature ($3); the NY Department of State at 123 William St issues the apostille ($10). Copy the finished document and self-attest the copy; VFS refuses original apostilled documents."],
+      ["Parental authorization form","orig, wet-ink notarized","Both parents, unless a sole-custody order, death certificate or single-parent adoption says otherwise. E-notary and e-signatures have been refused; use a physical notary."],
+      ["Indian-origin parent's proof: cancelled Indian passport, or OCI card","copy","First and last pages of the passport showing the cancelled-on-acquiring-foreign-citizenship stamp. The surrender certificate is not what they ask for here."],
+      ["Both parents' current passports","copy","Information pages."],
+      ["Parents' marriage certificate, apostilled if issued outside India","copy, self-attested","Registrar-issued. Religious certificates refused. A US marriage certificate needs the state apostille too. Joint notarized affidavit if applicable."],
+      ["Parents' US status if not US citizens","copy, notarized","Green card, EAD or visa, front and back."],
+      ["Proof of address","copy","Parent's address proof plus the child's birth certificate to connect them. No PO Box."],
+      ["Affidavit in lieu of originals, undertaking, consent letter","orig","VFS formats."],
+      ["VFS payment confirmation and courier label","orig","UPS or USPS, no expiry. FedEx refused."],
+      ["The VFS minor checklist, printed and signed, as cover page","orig",""]
+    ]
+  }
+};
+const CENTRE = {
+  edison: "New Jersey centre, 2035 Lincoln Hwy, Suite 1080. A New York consulate sub-centre. October 2026: no appearance affidavit asked; photo and form help available at the desk.",
+  nyc: "128 E 32nd St, Floor 2. The consulate itself is on E 64th. Reported to ask for a notarized appearance or signature-change affidavit on surrender; not on the VFS checklist. Confirm before paying a notary.",
+  other: "Checklists and fees are national. What the desk actually asks for varies. If you learn something at your centre, it belongs on this page."
+};
+const $ = s => document.querySelector(s);
+const TITLES={surrender:'Surrender your Indian passport',oci:'OCI for yourself',minor:'OCI for your child'};
+document.querySelectorAll('.start .btn').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.start .btn').forEach(x=>x.setAttribute('aria-pressed','false'));t.setAttribute('aria-pressed','true');$('#app').value=t.dataset.app;render();document.getElementById('stack').scrollIntoView({behavior:'smooth',block:'start'})}));
+document.querySelectorAll('input[name=centre]').forEach(r=>r.addEventListener('change',render));
+function render(){
+  const a = DATA[$('#app').value];
+  $('#fee').innerHTML = a.fee.map(([k,v])=>`<div>${k}<strong>${v}</strong></div>`).join('') + `<div class="fn">${a.feenote}</div>`;
+  $('#pre').innerHTML = a.pre.map(t=>`<li>${t}</li>`).join('');
+  $('#list').innerHTML = a.items.map(([t,k,d,c])=>`<li class="${c||''}"><span class="t">${t}</span><span class="k ${/orig/.test(k)?'orig':''}">${k}</span>${d?`<span class="d">${d}</span>`:''}</li>`).join('');
+  $('#centrenote').textContent = CENTRE[document.querySelector('input[name=centre]:checked').value];
+  $('#stackTitle').textContent = TITLES[$('#app').value];
+}
+render();
+document.getElementById('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('pasteline').textContent);document.getElementById('copyBtn').textContent='Copied'}catch(e){}});
+
+/* ---------- photo check ---------- */
+const drop=$('#drop'), file=$('#file'), res=$('#res');
+['dragenter','dragover'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.add('on')}));
+['dragleave','drop'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.remove('on')}));
+drop.addEventListener('drop',ev=>{const f=ev.dataTransfer.files[0]; if(f) check(f)});
+file.addEventListener('change',()=>{if(file.files[0]) check(file.files[0])});
+document.querySelectorAll('input[name=pur]').forEach(r=>r.addEventListener('change',()=>{if(window._last) check(window._last)}));
+
+function loadImg(f){return new Promise((ok,no)=>{const u=URL.createObjectURL(f);const i=new Image();i.onload=()=>{ok(i)};i.onerror=no;i.src=u})}
+function border(cv){
+  const w=cv.width,h=cv.height,b=Math.max(2,Math.floor(Math.min(w,h)*.06));
+  const ctx=cv.getContext('2d'),d=ctx.getImageData(0,0,w,h).data; let n=0,lum=0,sat=0;
+  const px=(x,y)=>{const i=(y*w+x)*4,r=d[i],g=d[i+1],bb=d[i+2];lum+=.299*r+.587*g+.114*bb;sat+=Math.max(r,g,bb)-Math.min(r,g,bb);n++};
+  for(let x=0;x<w;x++){for(let y=0;y<b;y++)px(x,y);for(let y=h-b;y<h;y++)px(x,y)}
+  for(let y=b;y<h-b;y++){for(let x=0;x<b;x++)px(x,y);for(let x=w-b;x<w;x++)px(x,y)}
+  return {lum:lum/n,sat:sat/n};
+}
+function square(img){const s=Math.min(img.width,img.height),l=Math.floor((img.width-s)/2),t=Math.max(0,Math.floor((img.height-s)/3));const c=document.createElement('canvas');c.width=600;c.height=600;c.getContext('2d').drawImage(img,l,t,s,s,0,0,600,600);return c}
+function toBlob(c,q){return new Promise(ok=>c.toBlob(ok,'image/jpeg',q))}
+async function under(c,max){let q=.92,b;for(;q>.3;q-=.04){b=await toBlob(c,q);if(b.size<=max)break}return {blob:b,q}}
+function withDpi(buf,dpi){ // patch JFIF APP0 density
+  const u=new Uint8Array(buf);
+  if(u[2]===0xFF&&u[3]===0xE0&&u[6]===0x4A&&u[7]===0x46){u[13]=1;u[14]=dpi>>8;u[15]=dpi&255;u[16]=dpi>>8;u[17]=dpi&255;return new Blob([u],{type:'image/jpeg'})}
+  // no JFIF: build one
+  const app0=new Uint8Array([0xFF,0xE0,0,16,0x4A,0x46,0x49,0x46,0,1,1,1,dpi>>8,dpi&255,dpi>>8,dpi&255,0,0]);
+  return new Blob([u.slice(0,2),app0,u.slice(2)],{type:'image/jpeg'});
+}
+async function check(f){
+  window._last=f; const pur=document.querySelector('input[name=pur]:checked').value;
+  const img=await loadImg(f); const w=img.naturalWidth,h=img.naturalHeight;
+  const full=document.createElement('canvas');full.width=w;full.height=h;full.getContext('2d').drawImage(img,0,0);
+  const {lum,sat}=border(full);
+  const rows=[]; const isJ=/jpe?g$/i.test(f.type)||/\.jpe?g$/i.test(f.name);
+  rows.push([isJ,`${isJ?'JPEG':'Not JPEG'} (portal takes JPEG only)`]);
+  rows.push([w===h,`${w===h?'Square':'Not square'}: ${w} × ${h}`]);
+  rows.push([w>=360&&w<=900&&h>=360&&h<=900,`${w>=360&&w<=900&&h>=360&&h<=900?'Within':'Outside'} 360–900 px`]);
+  rows.push([f.size<=30*1024,`${Math.round(f.size/1024)} KB (${f.size<=30*1024?'under':'over'} 30 KB)`]);
+  let bg;
+  if(pur==='surrender'){bg=lum>=215&&sat<=18;rows.push([bg,bg?'Background is white':'Background is not white. Surrender requires white only.'])}
+  else{const white=lum>=225&&sat<12,dark=lum<170;bg=!white&&!dark;rows.push([bg,white?'Background reads as white. OCI wants light, not white.':dark?'Background too dark. OCI wants a plain light background.':'Background is light and not white'])}
+  if(Math.min(w,h)<600) rows.push([null,'Under 600 px on the short side; the 2 × 2 print will be soft']);
+  const fails=rows.filter(r=>r[0]===false).length, ok=fails===0;
+  const sq=square(img); const up=await under(sq,30*1024); const tooBig=up.blob.size>30*1024; const pr=withDpi(await (await toBlob(sq,.95)).arrayBuffer(),300);
+  const base=f.name.replace(/\.[^.]+$/,'');
+  const upURL=URL.createObjectURL(up.blob), prURL=URL.createObjectURL(pr);
+  res.innerHTML=`<p class="verdict ${ok?'ok':'no'}">${ok?'File checks passed. The portal judges the face.':bg===false?'Retake this one.':'Fixed versions below.'}</p>
+   <ul class="checks">${rows.map(([s,t])=>`<li class="${s===true?'ok':s===false?'no':'wa'}">${t}</li>`).join('')}</ul>
+   ${bg===false?`<p class="note">Resizing can't fix the background. Take it again against ${pur==='surrender'?'a white wall':'a pale blue or grey wall'} and come back.</p>`:''}
+   <div class="out">
+     ${tooBig?`<div class="side">Couldn't get the upload under 30 KB (best was ${Math.round(up.blob.size/1024)} KB). Busy backgrounds and patterned clothing do this. Retake against a plain wall; no file is offered.</div>`:`<a href="${upURL}" download="${base}_upload.jpg"><img src="${upURL}" alt="">Upload file<span>600 × 600 JPEG, ${Math.round(up.blob.size/1024)} KB. For ociservices.gov.in.</span></a>`}
+     <a href="${prURL}" download="${base}_print_2x2.jpg"><img src="${prURL}" alt="">Print file<span>600 px at 300 dpi, exactly 2 × 2 inches. Take this to a photo counter.</span></a>
+   </div>`;
+  res.classList.add('show');
+}
+
+/* ---------- timing ---------- */
+const sd=$('#sdate'); sd.valueAsDate=new Date();
+function addBiz(d,n){const x=new Date(d);let c=0;while(c<n){x.setDate(x.getDate()+1);const k=x.getDay();if(k!==0&&k!==6)c++}return x}
+function addDays(d,n){const x=new Date(d);x.setDate(x.getDate()+n);return x}
+const fmt=d=>d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+function tl(){
+  const s=sd.valueAsDate||new Date(); const dd=document.getElementById('ddate').valueAsDate;
+  const r=[
+    [`${fmt(addBiz(s,2))}–${fmt(addBiz(s,3))}`,'VFS status first updates','48–72 business hours after delivery. Don\'t chase before this.'],
+    ...(dd?[[`by ${fmt(addDays(dd,7))}`,'Deficiency fix deadline','7 days from the VFS email. Abandoned at 20 days; then you restart.']]:[['only if VFS emails you','Deficiency clock','Starts on the notice, not on submission. Enter the date above if one arrives.']]),
+    [`${fmt(addBiz(addBiz(s,3),7))}–${fmt(addBiz(addBiz(s,3),21))}`,'Surrender certificate back','7–21 working days after it reaches the consulate, consulate holidays excluded. Scan it the day it arrives.'],
+    [`from ${fmt(addBiz(addBiz(s,3),7))}`,'Prepare OCI documents','Photos (light background), PDFs under 500 KB, affidavits, address proof dated within 3 months. Not the form yet.'],
+    [`~${fmt(addDays(addBiz(addBiz(s,3),21),-5))} onward`,'Fill the OCI form','Within a week of submitting. It expires 90 days after you fill it; VFS wants it under 70.'],
+    [`${fmt(addDays(addBiz(addBiz(s,3),21),56))}–${fmt(addDays(addBiz(addBiz(s,3),21),70))}`,'e-OCI granted','About 8–10 weeks after VFS intake. No physical card since July 2026; download the e-OCI from ociservices.gov.in when status shows Granted.']
+  ];
+  $('#tl').innerHTML=r.map(([d,t,n])=>`<li><b>${d}</b><div>${t}<i>${n}</i></div></li>`).join('');
+}
+sd.addEventListener('change',tl); document.getElementById('ddate').addEventListener('change',tl); tl();
+
+
+
+/* ---------- getting it done ---------- */
+const GK='desiclerk.gtd';
+function gload(){try{return JSON.parse(localStorage.getItem(GK)||'{}')}catch(e){return {}}}
+function gsave(o){try{localStorage.setItem(GK,JSON.stringify(o))}catch(e){}}
+function gtd(){
+  const st=gload(); const s=sd.valueAsDate||new Date(); const dd=document.getElementById('ddate').valueAsDate;
+  const oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked;
+  const certBack=addBiz(addBiz(s,3),21);
+  const na=[
+    ['s1','Fill Passport Seva form with your US address as present address'],
+    ['s2','Print it from Safari after the photo renders; portrait, single-sided'],
+    ['s3','Two 2×2 photos, white background'],
+    ['s4','Fill and sign two Surrender Certificate forms (retype in Word if the PDF truncates)'],
+    ['s5','Name-change affidavit, wet-ink notarized, if any name differs from the Indian passport'],
+    ['s6','VFS registration and payment; print the receipt'],
+    ['s7','Assemble the stack in checklist order; checklist on top; send or hand in'],
+  ];
+  const wf=[['w1','Surrender certificate and cancelled passport back from the consulate',`by ${fmt(certBack)}`]];
+  if(dd) wf.unshift(['w0','Your reply to the deficiency email reaches VFS',`by ${fmt(addDays(dd,7))}`]);
+  if(oci||minor){
+    na.push(['o1','Light-background photo JPEG and signature JPEG, checked above']);
+    na.push(['o2','Scan every supporting document to PDF under 500 KB, one per category']);
+    na.push(['o3','Marriage certificate and divorce decree, apostilled if US-issued; self-attested copies']);
+    na.push(['o4','Affidavit in lieu of originals, undertaking, consent letter, voter-card undertaking: signed, notarized where marked']);
+  }
+  if(oci){
+    na.push(['o5','After the certificate is back: fill the OCI form within a week of submitting; it expires at 90 days']);
+    wf.push(['w2','Your e-OCI shows Granted on the portal',`${fmt(addDays(certBack,56))}–${fmt(addDays(certBack,70))}`]);
+  }
+  if(minor){
+    na.push(['m1','Long-form birth certificate with letter of exemplification (NYC: reason Apostille/Authentication)']);
+    na.push(['m2','County Clerk authentication, then Department of State apostille on the birth certificate']);
+    na.push(['m3','Parental authorization, both parents, wet-ink notarized']);
+    na.push(['m4','Child\'s photo, light background; thumbprint if under 5']);
+    na.push(['m5','Child\'s OCI form once a parent\'s cancelled passport or OCI is in hand']);
+    wf.push(['w3','Child\'s e-OCI shows Granted',`${fmt(addDays(certBack,56))}–${fmt(addDays(certBack,70))}`]);
+  }
+  const row=(k,t,d)=>`<li class="${st[k]?'done':''}"><input type="checkbox" data-k="${k}" ${st[k]?'checked':''}><span>${t}</span>${d?`<em class="due">${d}</em>`:''}</li>`;
+  document.getElementById('na').innerHTML=na.map(([k,t])=>row(k,t)).join('');
+  document.getElementById('wf').innerHTML=wf.map(([k,t,d])=>row(k,t,d)).join('');
+  document.querySelectorAll('#gtd input[data-k]').forEach(c=>c.addEventListener('change',()=>{const o=gload();o[c.dataset.k]=c.checked;gsave(o);c.closest('li').classList.toggle('done',c.checked)}));
+}
+['g_oci','g_minor'].forEach(id=>document.getElementById(id).addEventListener('change',gtd));
+document.getElementById('g_reset').addEventListener('click',()=>{gsave({});gtd()});
+sd.addEventListener('change',gtd); document.getElementById('ddate').addEventListener('change',gtd); gtd();
+</script>
+</body>
+</html>

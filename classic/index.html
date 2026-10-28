@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Desi Clerk</title>
+<meta name="description" content="Your agent knows the rules. Desi Clerk knows the counter. Indian passport surrender and OCI from the USA, as a skill your AI agent loads. Free. A Lexiglass page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap">
+<style>
+/* Lexiglass system (as in Deep Time / Rome): Cormorant Garamond body, DM Sans labels, paper/cream/ink/rule palette, gold eyebrows, pill buttons. Desi Clerk accents: copper for stamps, ink for originals. */
+:root{
+  --bg:#F4F2EE;--paper:#FFFFFF;--cream:#FAF6EE;--ink:#16170B;--ink-soft:#5E5A4E;--rule:#C8B89A;
+  --gold:#B8922A;--copper:#B8651E;--green:#3E6A5A;--red:#9E2F2F;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1C1B17;--paper:#25241F;--cream:#2C2A24;--ink:#F1EDE3;--ink-soft:#B3AC9C;--rule:#5C5443;--gold:#CBA94B;--copper:#D98A4A;--green:#7fb8a2;--red:#d47a68;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1C1B17;--paper:#25241F;--cream:#2C2A24;--ink:#F1EDE3;--ink-soft:#B3AC9C;--rule:#5C5443;--gold:#CBA94B;--copper:#D98A4A;--green:#7fb8a2;--red:#d47a68;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:1.15rem;line-height:1.45}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:26px 20px 90px}
+.brand{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:10px}
+h1{font-size:3rem;line-height:1;letter-spacing:-.01em;margin:0 0 12px;font-weight:600}
+h1 em,h2 em{font-style:italic;color:var(--copper);font-weight:500}
+@media (max-width:520px){h1{font-size:2.3rem}}
+.lede{margin:0;max-width:62ch;font-size:1.2rem;color:var(--ink-soft)}
+.start{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 4px}
+.btn{font-family:var(--sans);font-size:14px;font-weight:500;padding:11px 20px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--ink)}
+.start .btn[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.start-note{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);flex-basis:100%}
+.paste{margin-top:18px}
+.centre{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 0;font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.centre label{font-size:13px;letter-spacing:0;text-transform:none;padding:7px 14px;border:1px solid var(--rule);border-radius:999px;cursor:pointer;color:var(--ink)}
+.centre label:has(input:checked){background:var(--cream);border-color:var(--copper);color:var(--copper)}
+.centre input{position:absolute;opacity:0;width:0;height:0}
+.centre label:has(input:focus-visible),button:focus-visible,input:focus-visible,.drop:focus-within{outline:2px solid var(--gold);outline-offset:2px}
+section{margin-top:34px;padding-top:22px;border-top:1px solid var(--rule)}
+.eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+h2{font-size:2rem;line-height:1.05;margin:4px 0 8px;font-weight:600}
+h3{font-size:1.35rem;margin:22px 0 6px;font-weight:600}
+.fee{display:flex;gap:26px;flex-wrap:wrap;margin:14px 0 6px;padding:14px 18px;background:var(--cream);border:1px solid var(--rule);border-radius:14px}
+.fee div{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.fee strong{display:block;font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--ink);letter-spacing:0;text-transform:none;line-height:1.1}
+.fee .fn{flex-basis:100%;font-family:var(--serif);font-size:1.02rem;letter-spacing:0;text-transform:none;color:var(--ink-soft)}
+.pre{margin:8px 0 0;padding:0;list-style:none}
+.pre li{padding:9px 0 9px 26px;position:relative;border-top:1px solid var(--rule);max-width:66ch}
+.pre li:first-child{border-top:0}
+.pre li::before{content:"";position:absolute;left:4px;top:19px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+ol.stack{margin:6px 0 0;padding:0;list-style:none;counter-reset:s}
+ol.stack li{counter-increment:s;display:grid;grid-template-columns:44px 1fr auto;gap:0 12px;padding:13px 0;border-top:1px solid var(--rule);align-items:baseline}
+ol.stack li::before{content:counter(s);font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--copper);font-variant-numeric:tabular-nums;line-height:1}
+ol.stack .t{font-weight:600;font-size:1.2rem}
+ol.stack .k{font-family:var(--sans);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;padding:4px 9px;border:1px solid var(--rule);border-radius:999px;background:var(--paper)}
+ol.stack .k.orig{color:#fff;background:var(--ink);border-color:var(--ink)}
+ol.stack .d{grid-column:2/4;color:var(--ink-soft);font-size:1.02rem;margin-top:2px;max-width:64ch;line-height:1.4}
+ol.stack li.cond{opacity:.6}
+ol.stack li.cond .t::after{content:" · only if it applies";color:var(--ink-soft);font-weight:500;font-style:italic;font-size:1rem}
+.side{margin-top:22px;border:1px solid var(--rule);border-left:4px solid var(--copper);border-radius:0 14px 14px 0;background:var(--cream);padding:12px 16px 14px;max-width:70ch;font-size:1.05rem}
+.drop{display:block;margin:14px 0 0;border:1px dashed var(--rule);border-radius:14px;padding:30px 18px;text-align:center;color:var(--ink-soft);background:var(--paper);cursor:pointer}
+.drop.on{border-color:var(--copper);background:var(--cream)}
+.drop input{display:none}
+.drop b{color:var(--ink);font-weight:600}
+.pur{display:flex;gap:16px;margin:10px 0 0;font-family:var(--sans);font-size:13px}
+.pur label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.res{margin:20px 0 0;display:none}
+.res.show{display:block;animation:in .28s ease-out}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.res.show{animation:none}}
+.verdict{font-size:2rem;line-height:1.05;margin:0 0 10px;font-weight:600}
+.verdict.ok{color:var(--green)}.verdict.no{color:var(--red)}
+.checks{margin:0;padding:0;list-style:none;font-size:1.05rem}
+.checks li{padding:6px 0 6px 26px;position:relative;border-top:1px solid var(--rule)}
+.checks li::before{position:absolute;left:0;top:6px;font-family:var(--sans);font-weight:600}
+.checks li.ok::before{content:"✓";color:var(--green)}
+.checks li.no::before{content:"✕";color:var(--red)}
+.checks li.wa::before{content:"!";color:var(--gold)}
+.out{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 0}
+@media(max-width:560px){.out{grid-template-columns:1fr}}
+.out a{display:block;padding:12px;border:1px solid var(--rule);border-radius:10px;text-decoration:none;background:var(--cream)}
+.out a:hover{border-color:var(--ink)}
+.out a span{display:block;font-size:.98rem;color:var(--ink-soft);margin-top:2px;line-height:1.35}
+.out img{width:96px;height:96px;object-fit:cover;border-radius:8px;display:block;margin-bottom:10px;border:1px solid var(--rule);background:var(--rule)}
+.choose{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.choose{grid-template-columns:1fr}}
+label.f{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:5px}
+input[type=date]{width:100%;padding:9px 12px;font-family:var(--sans);font-size:14px;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:10px}
+.tl{margin:14px 0 0;padding:0;list-style:none}
+.tl li{display:grid;grid-template-columns:180px 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--rule)}
+.tl li:first-child{border-top:0}
+.tl b{font-weight:600;font-size:1.15rem}
+.tl i{font-style:normal;color:var(--ink-soft);font-size:1.02rem;display:block;max-width:60ch;line-height:1.4}
+@media(max-width:560px){.tl li{grid-template-columns:1fr}}
+.got p{max-width:66ch;margin:10px 0}
+.got p b{font-weight:600}
+.paste{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:14px 0 0;padding:12px 14px;background:var(--cream);border:1px solid var(--rule);border-radius:14px}
+.paste code{flex:1;min-width:260px;font-family:var(--sans);font-size:13.5px;line-height:1.45;color:var(--ink)}
+.small{font-family:var(--sans);font-size:12px;color:var(--ink-soft);margin:10px 0 0}
+.sites{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 0}
+@media(max-width:700px){.sites{grid-template-columns:1fr}}
+.sites a{display:block;padding:14px 16px;background:var(--paper);border:1px solid var(--rule);border-radius:12px;text-decoration:none}
+.sites a b{display:block;font-size:1.2rem;font-weight:600}
+.sites a span{display:block;color:var(--ink-soft);font-size:1rem;line-height:1.35;margin-top:2px}
+.sites a i{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 0;align-items:start}
+@media(max-width:820px){.flow{grid-template-columns:1fr}}
+.col{background:var(--cream);border:1px solid var(--rule);border-radius:14px;padding:14px 14px 8px}
+.col h4{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);font-weight:500;margin:0 0 6px}
+.st{position:relative;padding:10px 0 12px 18px;border-left:2px solid var(--rule)}
+.st::before{content:"";position:absolute;left:-6px;top:16px;width:10px;height:10px;border-radius:50%;background:var(--copper);border:2px solid var(--cream)}
+.st.wait{border-left-style:dashed}.st.wait::before{background:var(--gold)}
+.st.done::before{background:var(--green)}
+.st b{display:block;font-size:1.15rem;font-weight:600;line-height:1.2}
+.st.done b,.st.wait b{display:block;width:100%}
+.st .n{display:block;width:100%}
+.st .n{display:block;color:var(--ink-soft);font-size:.98rem;line-height:1.35;margin-top:2px}
+.st .need{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
+.st .need span{font-family:var(--sans);font-size:10.5px;letter-spacing:.03em;padding:3px 8px;border:1px solid var(--rule);border-radius:999px;background:var(--paper);color:var(--ink-soft)}
+.st .need span.orig{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.st .need span.key{border-color:var(--green);color:var(--green)}
+.st .cust{display:block;margin-top:6px;font-size:.95rem;color:var(--copper);font-style:italic}
+.gate{margin:10px 0 2px;padding:10px 12px;border:1px dashed var(--green);border-radius:10px;color:var(--green);font-size:1rem;font-style:italic}
+.gtd{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 0}
+@media(max-width:700px){.gtd{grid-template-columns:1fr}}
+.gtd .col h4{margin:0 0 8px}
+.gtd ul{margin:0;padding:0;list-style:none}
+.gtd li{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:start;padding:9px 0;border-top:1px solid var(--rule);font-size:1.05rem;line-height:1.35}
+.gtd li:first-child{border-top:0}
+.gtd input{margin:5px 0 0;accent-color:var(--copper)}
+.gtd li.done span{text-decoration:line-through;color:var(--ink-soft)}
+.gtd .due{font-family:var(--sans);font-size:11px;letter-spacing:.06em;color:var(--copper);white-space:nowrap;padding-top:4px}
+.gtd .empty{color:var(--ink-soft);font-style:italic;padding:8px 0}
+#gtd .ctl{display:flex;gap:16px;align-items:center;margin:12px 0 0;font-family:var(--sans);font-size:13px;color:var(--ink-soft)}
+#gtd .ctl label{display:flex;gap:6px;align-items:center;cursor:pointer}
+#gtd .ctl input{accent-color:var(--copper)}
+#gtd .ctl button{font:inherit;font-size:12px;background:none;border:0;color:var(--ink-soft);text-decoration:underline;cursor:pointer;padding:0;margin-left:auto}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--rule);color:var(--ink-soft);font-size:1.02rem;max-width:66ch}
+footer ul{padding-left:18px;margin:8px 0}
+footer .sign{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="brand">Desi Clerk &nbsp;·&nbsp; Passport &amp; OCI from the USA</div>
+<header>
+  <h1>Call my <em>agent</em>.</h1>
+  <p class="lede">Your agent knows the rules. Desi Clerk knows the counter. Got a Dot, a Duet or a Muse working for you? Hand it this loop-engineered skill so it doesn't drop any bureaucratic balls: the photo spec, the affidavit the desk never asked for, the form that expires at 90 days. Three applications: surrender your Indian passport, OCI for you, OCI for your child.</p>
+  <div class="paste"><code id="pasteline">Load the India consular skill from github.com/vousenpri/desiclerk/tree/main/skill and prepare my VFS applications: surrender, OCI for me, OCI for my child. Tell me the preconditions before any form, then tell me whether to mail it or walk in at my centre, check VFS appointment availability if walk-in, pick a slot that fits my calendar, and put the deadlines on it.</code><button class="btn" type="button" id="copyBtn">Copy</button></div>
+  <p class="small">If it has your browser and calendar, it works out mail-in versus walk-in, checks VFS slot availability if you need one, picks it around your week and puts the 90-day form expiry and the 3-month passport-upload window on it. Your passport scans stay with your agent. Desi Clerk never receives them. Free, no account.</p>
+  <div class="start" style="margin-top:28px">
+    <span class="start-note">No agent? Use the page</span>
+    <button class="btn" type="button" data-app="surrender" aria-pressed="true">Surrender my passport</button>
+    <button class="btn" type="button" data-app="oci" aria-pressed="false">OCI for me</button>
+    <button class="btn" type="button" data-app="minor" aria-pressed="false">OCI for my child</button>
+  </div>
+  <div class="centre">Centre
+    <label><input type="radio" name="centre" value="nyc" checked>New York</label>
+    <label><input type="radio" name="centre" value="edison">New Jersey</label>
+    <label><input type="radio" name="centre" value="other">Elsewhere</label>
+  </div>
+  <select id="app" hidden><option value="surrender" selected>s</option><option value="oci">o</option><option value="minor">m</option></select>
+</header>
+
+<main>
+<section id="flow">
+  <div class="eyebrow">The three sites, and what each one needs</div>
+  <h2>Where you are, and what you're <em>waiting</em> for.</h2>
+  <p class="lede">Three government sites, three VFS submissions, one dependency: nothing about OCI can start until the surrender certificate is physically back. Your US passport never leaves you.</p>
+  <div class="side"><b>Walk in or mail it?</b> At the counter they check the stack in front of you, so anything wrong gets fixed there. By courier the same gap is a deficiency email a week later, a 7-day clock, and a 20-day abandonment behind it. First time through, a name variation, or a child: walk in. A clean repeat: mail it.</div>
+  <div class="sites">
+    <a href="https://embassy.passportindia.gov.in/"><b>Passport Seva</b><span>The surrender form. Needs your Indian passport number, US passport number, US address.</span><i>embassy.passportindia.gov.in</i></a>
+    <a href="https://services.vfsglobal.com/usa/en/ind/"><b>VFS Global</b><span>Registration, payment, courier, appointment. Every application passes through here.</span><i>services.vfsglobal.com/usa/en/ind</i></a>
+    <a href="https://ociservices.gov.in/"><b>OCI Services</b><span>The OCI form. Needs your photo, signature and every document as PDF before you start.</span><i>ociservices.gov.in</i></a>
+  </div>
+  <div class="flow">
+    <div class="col"><h4>Window 1 · Surrender</h4>
+      <div class="st"><b>Passport Seva form</b><span class="n">Print in Safari after the photo loads. US address as present address.</span><div class="need"><span>Indian passport number</span><span>US passport number</span></div></div>
+      <div class="st"><b>VFS registration, $62</b><span class="n">Confirmation receipt goes in the envelope.</span></div>
+      <div class="st"><b>Send or hand in at VFS</b><span class="n">Courier is the default: VFS label or your own UPS/USPS label with no expiry, FedEx refused, one application per envelope, return address matching your address proof. Walk-in needs an appointment.</span><div class="need"><span class="orig">Indian passport, original</span><span>2 photos, white</span><span>2 certificate forms</span><span>US passport copy</span><span>Naturalization copy</span><span>Address proof</span><span>Checklist as cover</span></div><span class="cust">Your Indian passport leaves here and comes back cancelled. Your US passport stays in your pocket.</span></div>
+      <div class="st wait"><b>7–21 working days</b><span class="n">You can travel on the US passport the whole time.</span></div>
+      <div class="st done"><b>Surrender certificate + cancelled passport</b><span class="n">Scan both the day they arrive.</span></div>
+    </div>
+    <div class="col"><h4>Window 2 · OCI for you</h4>
+      <div class="gate">Needs the surrender certificate in hand. Prepare everything else during the wait; fill the form last.</div>
+      <div class="st"><b>OCI Services form</b><span class="n">Expires 90 days after you fill it.</span><div class="need"><span class="key">Surrender certificate scan</span><span>Photo JPEG, light bg</span><span>Signature JPEG</span><span>US passport scan</span><span>Naturalization scan</span><span>Marriage certificate scan</span><span>Address proof scan</span></div></div>
+      <div class="st"><b>VFS registration, $297</b></div>
+      <div class="st"><b>Send or hand in at VFS</b><div class="need"><span>Printed form, photo affixed</span><span>Copies of everything</span><span>Affidavits, wet-ink notarized</span><span>Voter-card undertaking</span></div><span class="cust">Nothing original goes in. Keep travelling on the US passport; use a visa if you need India before it's granted.</span></div>
+      <div class="st wait"><b>8–10 weeks</b></div>
+      <div class="st done"><b>e-OCI PDF</b><span class="n">Download when the portal says Granted. No card in the mail.</span></div>
+    </div>
+    <div class="col"><h4>Window 3 · OCI for your child</h4>
+      <div class="gate">Needs one proof of Indian origin: a parent's cancelled Indian passport stamped on acquiring foreign citizenship, a parent's OCI, or a grandparent's Indian passport with the birth certificates that connect them. Does not wait for your own OCI.</div>
+      <div class="st"><b>OCI Services form</b><span class="n">Thumbprint under 5. Both parents sign Part B.</span><div class="need"><span class="key">Parent's cancelled Indian passport or OCI</span><span>Child's photo, light bg</span><span>Child's US passport, 9+ months</span><span>Birth certificate, long form, apostilled</span><span>Marriage certificate, apostilled</span></div></div>
+      <div class="st"><b>VFS registration, $297</b></div>
+      <div class="st"><b>Send or hand in at VFS</b><div class="need"><span>Printed form</span><span>Parental authorization, wet-ink notarized</span><span>Copies of everything</span></div><span class="cust">Child's passport stays with you.</span></div>
+      <div class="st wait"><b>8–10 weeks</b></div>
+      <div class="st done"><b>Child's e-OCI</b></div>
+    </div>
+  </div>
+</section>
+<section id="stack">
+  <div class="eyebrow">Your stack</div>
+  <h2 id="stackTitle">Surrender</h2>
+  <p class="lede">What must be true before you print anything, then what the desk takes from you, in the order it reads it.</p>
+<div class="fee" id="fee"></div>
+  <h3>Before you print anything</h3>
+  <ul class="pre" id="pre"></ul>
+  <h3>Hand over, in this order</h3>
+  <ol class="stack" id="list"></ol>
+  <div class="side" id="centrenote"></div>
+</section>
+
+<section id="photo">
+  <div class="eyebrow">Photo check</div>
+  <h2>One photo will <em>not</em> do for both.</h2>
+  <p class="lede">Surrender wants a white background. OCI wants a light background that is not white. If you're doing both, you need two photos. Drop the digital file here and get the upload and the print made from it.</p>
+  <label class="drop" id="drop"><input type="file" id="file" accept="image/*"><b>Drop a photo</b> or tap to choose. JPEG or PNG, straight from the camera is fine.</label>
+  <div class="pur">
+    <label><input type="radio" name="pur" value="oci" checked> OCI</label>
+    <label><input type="radio" name="pur" value="surrender"> Surrender</label>
+  </div>
+  <div class="res" id="res"></div>
+</section>
+
+<section id="timing">
+  <div class="eyebrow">When</div>
+  <h2>The clocks don't agree with each other.</h2>
+  <p class="lede">Enter the day you hand in the surrender and the rest follows.</p>
+  <div class="choose"><div><label class="f" for="sdate">Surrender submitted on</label><input type="date" id="sdate"></div><div><label class="f" for="ddate">Deficiency email received on (if any)</label><input type="date" id="ddate"></div></div>
+  <ul class="tl" id="tl"></ul>
+</section>
+
+<section id="gtd">
+  <div class="eyebrow">Getting it done</div>
+  <h2>Next actions, and what you're <em>waiting</em> for.</h2>
+  <p class="lede">Yours to do now on the left; in someone else's hands on the right, with the day it's due back. Built from the windows you pick and the surrender date above. Ticks are remembered on this device only.</p>
+  <div class="gtd">
+    <div class="col"><h4>Next actions</h4><ul id="na"></ul></div>
+    <div class="col"><h4>Waiting for</h4><ul id="wf"></ul></div>
+  </div>
+  <div class="ctl"><label><input type="checkbox" id="g_oci" checked> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><button type="button" id="g_reset">Clear ticks</button></div>
+</section>
+<section id="gotchas" class="got">
+  <div class="eyebrow">Gotchas</div>
+  <h2>What the checklist <em>doesn't</em> say.</h2>
+  <p><b>Print from Safari or Firefox, not Chrome.</b> The Passport Seva PDF loads the photo late and Chrome prints it blank. Wait until you can see the photo, then print. One applicant's experience, October 2026; cheap to avoid either way.</p>
+  <p><b>The notarized appearance or signature-change affidavit is not on the VFS checklist.</b> It has been reported at the New York centre and was not asked for at the New Jersey centre in October 2026. If a guide tells you to get it, ask the centre you're actually using before paying a notary.</p>
+  <p><b>The fee is $62 flat.</b> Older guides split it by whether you naturalized before June 2010. VFS dropped that.</p>
+  <p><b>Two upload specs exist on VFS's own site</b>, one says 500 KB, the other 30 KB. A 600 × 600 JPEG under 30 KB satisfies both. The photo check above makes one.</p>
+  <p><b>You can't file OCI until the surrender certificate is physically back</b>, and the OCI form expires 90 days after you fill it. Don't fill it early to feel ready.</p>
+  <p><b>No physical OCI card any more.</b> Since July 2026 the grant is a PDF you download from ociservices.gov.in when the status says Granted. Existing booklets stay valid. <a href="https://www.cgichicago.gov.in/">Consulate General of India, Chicago, notice of 9 July 2026</a>.</p>
+  <p><b>For a child born in the US, the birth certificate has to be apostilled.</b> The VFS minor checklist says a certificate issued outside India must be apostilled by the issuing government, and the same applies to a US marriage certificate. Hospital certificates and the short form are refused outright. In New York that is three offices: the long form with letter of exemplification from NYC Health (45 Lafayette Street, Room 133, by appointment, or VitalChek, reason "Apostille/Authentication"), the County Clerk at 60 Centre Street to authenticate the signature, and the Department of State at 123 William Street for the apostille. All three are within a ten-minute walk; often one morning, subject to office hours and appointments. Submit a self-attested copy of the apostilled certificate, never the original. Then check the mother's name is spelled the same way on it as on her passport; that mismatch is the single most common minor-OCI rejection.</p>
+  <p><b>Any name difference at all</b>, a dropped middle name, a single letter, surname at marriage, must go in the OCI form as a previous name with a notarized affidavit. Leaving it out is a listed rejection cause.</p>
+</section>
+
+<footer>
+  <p>Desi Clerk is a checklist and a browser-side photo check. It doesn't file anything, store anything, or stand in for the consulate.</p>
+  Checked against these on 27 October 2026:
+  <ul>
+    <li><a href="https://www.vfsglobal.com/one-pager/india/united-states-of-america/renunciation-of-indian-citizenship/">VFS USA surrender one-pager</a> and its adult checklist dated 20 Oct 2026</li>
+    <li><a href="https://www.vfsglobal.com/one-pager/india/united-states-of-america/oci-services/pdf/New-OCI-Adult-Foreign-National-by-Naturalization.pdf">VFS USA new OCI adult checklist</a></li>
+    <li><a href="https://indianembassyusa.gov.in/pages/NjI">Embassy of India, Washington: OCI re-issue guidelines</a></li>
+  </ul>
+  Rules change. The receipt in your hand beats this page.
+  <div class="sign">Seek less. Do more. &nbsp;·&nbsp; Desi Clerk</div>
+</footer>
+</main>
+</div>
+
+<script>
+const DATA = {
+  surrender: {
+    fee: [["Surrender fee","$40"],["ICWF","$3"],["VFS service","$19"],["Total","$62"]],
+    feenote: "Visa or Mastercard only, and card adds 3.75%. To skip that, a money order or banker's draft payable to VFS Services (USA) Inc. No personal checks, no Amex. Source: <a href=\"https://www.vfsglobal.com/one-pager/india/united-states-of-america/renunciation-of-indian-citizenship/\">VFS one-pager</a>, read 27 Oct 2026.",
+    pre: [
+      "Complete VFS online registration first. A physical application without it is returned unprocessed.",
+      "Fill the government form at embassy.passportindia.gov.in. Print in portrait, single-sided, from Safari or Firefox, after the photo renders.",
+      "Two 2 × 2 inch colour photos, white background only, on photo paper, under six months old.",
+      "Present address on the Passport Seva form is your US address, even though the form prompts for India. Houston has rejected applications for this.",
+      "The VFS surrender certificate fillable PDF truncates fields. If it does, retype it in Word, print, sign in blue ink. One form per applicant; leave the minors section blank on an adult's.",
+      "Mailing in? Buy the VFS courier label or use a UPS or USPS prepaid label with no expiry date. FedEx labels are refused. One application per envelope, superscribed with the application type. Walking in? Book the slot on the VFS site first.",
+      "Nothing handwritten. No staples. No double-sided printing."
+    ],
+    items: [
+      ["Government application form, printed and signed","orig","From embassy.passportindia.gov.in. Must show your photo."],
+      ["Two photos, 2 × 2, white background","orig","Not older than six months."],
+      ["Two Surrender of Indian Passport Certificate forms, filled and signed","orig","Fillable PDF on the VFS page."],
+      ["Proof of address","copy","State ID, driver's licence (don't crop it), utility bill under three months, lease, mortgage or tax return. No PO Box. Must match the address on the form."],
+      ["US passport","copy","Information page plus the last two amendment pages."],
+      ["Affidavit of naturalization after Indian passport expired","orig, notarized","Only if you naturalized after your Indian passport had expired.","cond"],
+      ["Name change document","copy","Only if your name differs in any way from the Indian passport, including a middle name dropped at naturalization. This is the most repeated surrender blocker. Marriage certificate, court order, or a notarized one-and-the-same-person affidavit.","cond"],
+      ["Most recent Indian passport","orig","The actual booklet, plus copies of the first three and last two pages."],
+      ["Naturalization certificate","copy","Every nationality you've held. If naturalized through parents, their certificates plus a notarized statement from both."],
+      ["VFS payment confirmation and courier label","orig","UPS or USPS label with no expiry. FedEx refused. Return address must match the address proof."],
+      ["This checklist, printed and signed, as the cover page","orig","The VFS PDF itself, on top."]
+    ]
+  },
+  oci: {
+    fee: [["New OCI card","$275"],["ICWF","$3"],["VFS service","$19"],["Total","$297"]],
+    feenote: "Visa or Mastercard only, and card adds 3.75%. To skip that, a money order or banker's draft payable to VFS Services (USA) Inc. No personal checks, no Amex. Source: <a href=\"https://www.vfsglobal.com/one-pager/india/united-states-of-america/oci-services/pdf/New-OCI-Adult-Foreign-National-by-Naturalization.pdf\">VFS adult OCI checklist</a>, read 27 Oct 2026.",
+    pre: [
+      "Have the surrender certificate in hand. OCI cannot be filed alongside surrender.",
+      "US passport valid for at least nine months at submission. The adult checklist says six, the child and spouse checklists say nine; nine satisfies all of them.",
+      "Photo and signature JPEGs made to spec before you open the form. Photo: light background, not white. Use the check below.",
+      "Every supporting document scanned to one PDF per category, under 500 KB each. All must be uploaded or the application is returned.",
+      "Date of birth on your US passport must match the Indian passport exactly. A mismatch is a rejection with no fix.",
+      "Any name difference at all goes in the form as a previous name, backed by a notarized affidavit.",
+      "The form expires 90 days after you fill it. Fill it within a week of submitting."
+    ],
+    items: [
+      ["OCI application form from ociservices.gov.in, Part B signed","orig","Photo affixed. Printed and uploaded photo must be identical."],
+      ["Two photos, 2 × 2, light background, not white","orig","Head and shoulders, 80% face, dark clothing."],
+      ["US passport information page","copy, self-attested","Do not send the original. Nine months validity satisfies every checklist."],
+      ["Last Indian passport","copy","First two and last two pages."],
+      ["Surrender or renunciation certificate","copy","Or the cancelled passport with the foreign-citizenship stamp if surrendered on or before 31 May 2010."],
+      ["Naturalization certificate","copy","Signed at the designated space."],
+      ["Proof of marital status","copy","Marriage certificate, divorce decree, or spouse's death certificate. Notarized affidavit if unavailable."],
+      ["Name change affidavit or court order","orig, notarized","Only if any name differs from the Indian passport. This is triggered more often than people expect.","cond"],
+      ["Employment letter","copy","Or proof of self-employment, retirement, admission, or a signed statement if never employed."],
+      ["OCI cards of parents and spouse","copy","Only if they have them.","cond"],
+      ["Previous Indian visa","copy","Only if you ever had one.","cond"],
+      ["Proof of address","copy","Same rules as surrender. No PO Box, nothing expired, don't crop the licence."],
+      ["Affidavit in lieu of originals","orig, notarized","VFS format."],
+      ["Undertaking by the applicant","orig","VFS format."],
+      ["Undertaking for surrender of Indian voter card and ration card","orig","Separate VFS form. Applications have been held for its absence even when the applicant never held either; sign it anyway."],
+      ["Consent letter for corrections","orig, signed","VFS format. Lets the consulate fix small errors. Not a guarantee."],
+      ["VFS payment confirmation and courier label","orig","UPS or USPS, no expiry. FedEx refused."],
+      ["The VFS checklist, printed and signed, as cover page","orig",""]
+    ]
+  },
+  minor: {
+    fee: [["New OCI card","$275"],["ICWF","$3"],["VFS service","$19"],["Total","$297"]],
+    feenote: "Visa or Mastercard only, and card adds 3.75%. To skip that, a money order or banker's draft payable to VFS Services (USA) Inc. No personal checks, no Amex. Grant is an e-OCI PDF; no physical card since July 2026. Source: VFS minor checklist (Sep 2026), read 27 Oct 2026.",
+    pre: [
+      "A US-born child never held Indian citizenship, so there is nothing to surrender. A parent's cancelled Indian passport, or a parent's OCI, is what proves origin.",
+      "Child's US passport valid for at least nine months at submission (this checklist asks for more than the adult one).",
+      "Birth certificate must be the long form naming both parents, with the letter of exemplification, and then apostilled: the VFS minor checklist says a certificate issued outside India must be apostilled by the issuing government. Hospital certificates and the short form are refused. You submit a self-attested copy of the apostilled certificate, never the original.",
+      "Parents' marriage certificate issued outside India must also be apostilled. Self-attested copy.",
+      "Mother's name must match across the birth certificate, her US passport and her cancelled Indian passport or OCI. Maiden versus married name is the most reported rejection.",
+      "Photo: light background, not white. Under 5, a left thumb impression is uploaded instead of a signature; 5 and over, the child signs in ink. Infant thumbprints get held for clarity: ink pad, firm press, scan at 300 dpi, and check it reads before you upload.",
+      "Both parents sign Part B and a notarized parental authorization. Parents never sign in the child's box.",
+      "Every supporting document scanned to one PDF per category, under 500 KB, uploaded before the form is submitted. Form expires at 90 days."
+    ],
+    items: [
+      ["OCI application form from ociservices.gov.in, Part B signed by both parents","orig","Child's thumbprint (under 5) or signature (5+) in the applicant box only."],
+      ["Two photos, 2 × 2, light background, not white","orig","Physical and uploaded photo identical."],
+      ["Child's US passport information page","copy, self-attested","Valid nine months or more. Do not send the original."],
+      ["Birth certificate, long form with letter of exemplification, apostilled","copy, self-attested","Three NYC offices: the long form at 45 Lafayette St Room 133 or via VitalChek with Apostille/Authentication as the reason ($15); the County Clerk at 60 Centre St Room 141B authenticates the signature ($3); the NY Department of State at 123 William St issues the apostille ($10). Copy the finished document and self-attest the copy; VFS refuses original apostilled documents."],
+      ["Parental authorization form","orig, wet-ink notarized","Both parents, unless a sole-custody order, death certificate or single-parent adoption says otherwise. E-notary and e-signatures have been refused; use a physical notary."],
+      ["Indian-origin parent's proof: cancelled Indian passport, or OCI card","copy","First and last pages of the passport showing the cancelled-on-acquiring-foreign-citizenship stamp. The surrender certificate is not what they ask for here."],
+      ["Both parents' current passports","copy","Information pages."],
+      ["Parents' marriage certificate, apostilled if issued outside India","copy, self-attested","Registrar-issued. Religious certificates refused. A US marriage certificate needs the state apostille too. Joint notarized affidavit if applicable."],
+      ["Parents' US status if not US citizens","copy, notarized","Green card, EAD or visa, front and back."],
+      ["Proof of address","copy","Parent's address proof plus the child's birth certificate to connect them. No PO Box."],
+      ["Affidavit in lieu of originals, undertaking, consent letter","orig","VFS formats."],
+      ["VFS payment confirmation and courier label","orig","UPS or USPS, no expiry. FedEx refused."],
+      ["The VFS minor checklist, printed and signed, as cover page","orig",""]
+    ]
+  }
+};
+const CENTRE = {
+  edison: "New Jersey centre, 2035 Lincoln Hwy, Suite 1080. A New York consulate sub-centre. October 2026: no appearance affidavit asked; photo and form help available at the desk.",
+  nyc: "128 E 32nd St, Floor 2. The consulate itself is on E 64th. Reported to ask for a notarized appearance or signature-change affidavit on surrender; not on the VFS checklist. Confirm before paying a notary.",
+  other: "Checklists and fees are national. What the desk actually asks for varies. If you learn something at your centre, it belongs on this page."
+};
+const $ = s => document.querySelector(s);
+const TITLES={surrender:'Surrender your Indian passport',oci:'OCI for yourself',minor:'OCI for your child'};
+document.querySelectorAll('.start .btn').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.start .btn').forEach(x=>x.setAttribute('aria-pressed','false'));t.setAttribute('aria-pressed','true');$('#app').value=t.dataset.app;render();document.getElementById('stack').scrollIntoView({behavior:'smooth',block:'start'})}));
+document.querySelectorAll('input[name=centre]').forEach(r=>r.addEventListener('change',render));
+function render(){
+  const a = DATA[$('#app').value];
+  $('#fee').innerHTML = a.fee.map(([k,v])=>`<div>${k}<strong>${v}</strong></div>`).join('') + `<div class="fn">${a.feenote}</div>`;
+  $('#pre').innerHTML = a.pre.map(t=>`<li>${t}</li>`).join('');
+  $('#list').innerHTML = a.items.map(([t,k,d,c])=>`<li class="${c||''}"><span class="t">${t}</span><span class="k ${/orig/.test(k)?'orig':''}">${k}</span>${d?`<span class="d">${d}</span>`:''}</li>`).join('');
+  $('#centrenote').textContent = CENTRE[document.querySelector('input[name=centre]:checked').value];
+  $('#stackTitle').textContent = TITLES[$('#app').value];
+}
+render();
+document.getElementById('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('pasteline').textContent);document.getElementById('copyBtn').textContent='Copied'}catch(e){}});
+
+/* ---------- photo check ---------- */
+const drop=$('#drop'), file=$('#file'), res=$('#res');
+['dragenter','dragover'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.add('on')}));
+['dragleave','drop'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.remove('on')}));
+drop.addEventListener('drop',ev=>{const f=ev.dataTransfer.files[0]; if(f) check(f)});
+file.addEventListener('change',()=>{if(file.files[0]) check(file.files[0])});
+document.querySelectorAll('input[name=pur]').forEach(r=>r.addEventListener('change',()=>{if(window._last) check(window._last)}));
+
+function loadImg(f){return new Promise((ok,no)=>{const u=URL.createObjectURL(f);const i=new Image();i.onload=()=>{ok(i)};i.onerror=no;i.src=u})}
+function border(cv){
+  const w=cv.width,h=cv.height,b=Math.max(2,Math.floor(Math.min(w,h)*.06));
+  const ctx=cv.getContext('2d'),d=ctx.getImageData(0,0,w,h).data; let n=0,lum=0,sat=0;
+  const px=(x,y)=>{const i=(y*w+x)*4,r=d[i],g=d[i+1],bb=d[i+2];lum+=.299*r+.587*g+.114*bb;sat+=Math.max(r,g,bb)-Math.min(r,g,bb);n++};
+  for(let x=0;x<w;x++){for(let y=0;y<b;y++)px(x,y);for(let y=h-b;y<h;y++)px(x,y)}
+  for(let y=b;y<h-b;y++){for(let x=0;x<b;x++)px(x,y);for(let x=w-b;x<w;x++)px(x,y)}
+  return {lum:lum/n,sat:sat/n};
+}
+function square(img){const s=Math.min(img.width,img.height),l=Math.floor((img.width-s)/2),t=Math.max(0,Math.floor((img.height-s)/3));const c=document.createElement('canvas');c.width=600;c.height=600;c.getContext('2d').drawImage(img,l,t,s,s,0,0,600,600);return c}
+function toBlob(c,q){return new Promise(ok=>c.toBlob(ok,'image/jpeg',q))}
+async function under(c,max){let q=.92,b;for(;q>.3;q-=.04){b=await toBlob(c,q);if(b.size<=max)break}return {blob:b,q}}
+function withDpi(buf,dpi){ // patch JFIF APP0 density
+  const u=new Uint8Array(buf);
+  if(u[2]===0xFF&&u[3]===0xE0&&u[6]===0x4A&&u[7]===0x46){u[13]=1;u[14]=dpi>>8;u[15]=dpi&255;u[16]=dpi>>8;u[17]=dpi&255;return new Blob([u],{type:'image/jpeg'})}
+  // no JFIF: build one
+  const app0=new Uint8Array([0xFF,0xE0,0,16,0x4A,0x46,0x49,0x46,0,1,1,1,dpi>>8,dpi&255,dpi>>8,dpi&255,0,0]);
+  return new Blob([u.slice(0,2),app0,u.slice(2)],{type:'image/jpeg'});
+}
+async function check(f){
+  window._last=f; const pur=document.querySelector('input[name=pur]:checked').value;
+  const img=await loadImg(f); const w=img.naturalWidth,h=img.naturalHeight;
+  const full=document.createElement('canvas');full.width=w;full.height=h;full.getContext('2d').drawImage(img,0,0);
+  const {lum,sat}=border(full);
+  const rows=[]; const isJ=/jpe?g$/i.test(f.type)||/\.jpe?g$/i.test(f.name);
+  rows.push([isJ,`${isJ?'JPEG':'Not JPEG'} (portal takes JPEG only)`]);
+  rows.push([w===h,`${w===h?'Square':'Not square'}: ${w} × ${h}`]);
+  rows.push([w>=360&&w<=900&&h>=360&&h<=900,`${w>=360&&w<=900&&h>=360&&h<=900?'Within':'Outside'} 360–900 px`]);
+  rows.push([f.size<=30*1024,`${Math.round(f.size/1024)} KB (${f.size<=30*1024?'under':'over'} 30 KB)`]);
+  let bg;
+  if(pur==='surrender'){bg=lum>=215&&sat<=18;rows.push([bg,bg?'Background is white':'Background is not white. Surrender requires white only.'])}
+  else{const white=lum>=225&&sat<12,dark=lum<170;bg=!white&&!dark;rows.push([bg,white?'Background reads as white. OCI wants light, not white.':dark?'Background too dark. OCI wants a plain light background.':'Background is light and not white'])}
+  if(Math.min(w,h)<600) rows.push([null,'Under 600 px on the short side; the 2 × 2 print will be soft']);
+  const fails=rows.filter(r=>r[0]===false).length, ok=fails===0;
+  const sq=square(img); const up=await under(sq,30*1024); const tooBig=up.blob.size>30*1024; const pr=withDpi(await (await toBlob(sq,.95)).arrayBuffer(),300);
+  const base=f.name.replace(/\.[^.]+$/,'');
+  const upURL=URL.createObjectURL(up.blob), prURL=URL.createObjectURL(pr);
+  res.innerHTML=`<p class="verdict ${ok?'ok':'no'}">${ok?'File checks passed. The portal judges the face.':bg===false?'Retake this one.':'Fixed versions below.'}</p>
+   <ul class="checks">${rows.map(([s,t])=>`<li class="${s===true?'ok':s===false?'no':'wa'}">${t}</li>`).join('')}</ul>
+   ${bg===false?`<p class="note">Resizing can't fix the background. Take it again against ${pur==='surrender'?'a white wall':'a pale blue or grey wall'} and come back.</p>`:''}
+   <div class="out">
+     ${tooBig?`<div class="side">Couldn't get the upload under 30 KB (best was ${Math.round(up.blob.size/1024)} KB). Busy backgrounds and patterned clothing do this. Retake against a plain wall; no file is offered.</div>`:`<a href="${upURL}" download="${base}_upload.jpg"><img src="${upURL}" alt="">Upload file<span>600 × 600 JPEG, ${Math.round(up.blob.size/1024)} KB. For ociservices.gov.in.</span></a>`}
+     <a href="${prURL}" download="${base}_print_2x2.jpg"><img src="${prURL}" alt="">Print file<span>600 px at 300 dpi, exactly 2 × 2 inches. Take this to a photo counter.</span></a>
+   </div>`;
+  res.classList.add('show');
+}
+
+/* ---------- timing ---------- */
+const sd=$('#sdate'); sd.valueAsDate=new Date();
+function addBiz(d,n){const x=new Date(d);let c=0;while(c<n){x.setDate(x.getDate()+1);const k=x.getDay();if(k!==0&&k!==6)c++}return x}
+function addDays(d,n){const x=new Date(d);x.setDate(x.getDate()+n);return x}
+const fmt=d=>d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+function tl(){
+  const s=sd.valueAsDate||new Date(); const dd=document.getElementById('ddate').valueAsDate;
+  const r=[
+    [`${fmt(addBiz(s,2))}–${fmt(addBiz(s,3))}`,'VFS status first updates','48–72 business hours after delivery. Don\'t chase before this.'],
+    ...(dd?[[`by ${fmt(addDays(dd,7))}`,'Deficiency fix deadline','7 days from the VFS email. Abandoned at 20 days; then you restart.']]:[['only if VFS emails you','Deficiency clock','Starts on the notice, not on submission. Enter the date above if one arrives.']]),
+    [`${fmt(addBiz(addBiz(s,3),7))}–${fmt(addBiz(addBiz(s,3),21))}`,'Surrender certificate back','7–21 working days after it reaches the consulate, consulate holidays excluded. Scan it the day it arrives.'],
+    [`from ${fmt(addBiz(addBiz(s,3),7))}`,'Prepare OCI documents','Photos (light background), PDFs under 500 KB, affidavits, address proof dated within 3 months. Not the form yet.'],
+    [`~${fmt(addDays(addBiz(addBiz(s,3),21),-5))} onward`,'Fill the OCI form','Within a week of submitting. It expires 90 days after you fill it; VFS wants it under 70.'],
+    [`${fmt(addDays(addBiz(addBiz(s,3),21),56))}–${fmt(addDays(addBiz(addBiz(s,3),21),70))}`,'e-OCI granted','About 8–10 weeks after VFS intake. No physical card since July 2026; download the e-OCI from ociservices.gov.in when status shows Granted.']
+  ];
+  $('#tl').innerHTML=r.map(([d,t,n])=>`<li><b>${d}</b><div>${t}<i>${n}</i></div></li>`).join('');
+}
+sd.addEventListener('change',tl); document.getElementById('ddate').addEventListener('change',tl); tl();
+
+
+
+/* ---------- getting it done ---------- */
+const GK='desiclerk.gtd';
+function gload(){try{return JSON.parse(localStorage.getItem(GK)||'{}')}catch(e){return {}}}
+function gsave(o){try{localStorage.setItem(GK,JSON.stringify(o))}catch(e){}}
+function gtd(){
+  const st=gload(); const s=sd.valueAsDate||new Date(); const dd=document.getElementById('ddate').valueAsDate;
+  const oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked;
+  const certBack=addBiz(addBiz(s,3),21);
+  const na=[
+    ['s1','Fill Passport Seva form with your US address as present address'],
+    ['s2','Print it from Safari after the photo renders; portrait, single-sided'],
+    ['s3','Two 2×2 photos, white background'],
+    ['s4','Fill and sign two Surrender Certificate forms (retype in Word if the PDF truncates)'],
+    ['s5','Name-change affidavit, wet-ink notarized, if any name differs from the Indian passport'],
+    ['s6','VFS registration and payment; print the receipt'],
+    ['s7','Assemble the stack in checklist order; checklist on top; send or hand in'],
+  ];
+  const wf=[['w1','Surrender certificate and cancelled passport back from the consulate',`by ${fmt(certBack)}`]];
+  if(dd) wf.unshift(['w0','Your reply to the deficiency email reaches VFS',`by ${fmt(addDays(dd,7))}`]);
+  if(oci||minor){
+    na.push(['o1','Light-background photo JPEG and signature JPEG, checked above']);
+    na.push(['o2','Scan every supporting document to PDF under 500 KB, one per category']);
+    na.push(['o3','Marriage certificate and divorce decree, apostilled if US-issued; self-attested copies']);
+    na.push(['o4','Affidavit in lieu of originals, undertaking, consent letter, voter-card undertaking: signed, notarized where marked']);
+  }
+  if(oci){
+    na.push(['o5','After the certificate is back: fill the OCI form within a week of submitting; it expires at 90 days']);
+    wf.push(['w2','Your e-OCI shows Granted on the portal',`${fmt(addDays(certBack,56))}–${fmt(addDays(certBack,70))}`]);
+  }
+  if(minor){
+    na.push(['m1','Long-form birth certificate with letter of exemplification (NYC: reason Apostille/Authentication)']);
+    na.push(['m2','County Clerk authentication, then Department of State apostille on the birth certificate']);
+    na.push(['m3','Parental authorization, both parents, wet-ink notarized']);
+    na.push(['m4','Child\'s photo, light background; thumbprint if under 5']);
+    na.push(['m5','Child\'s OCI form once a parent\'s cancelled passport or OCI is in hand']);
+    wf.push(['w3','Child\'s e-OCI shows Granted',`${fmt(addDays(certBack,56))}–${fmt(addDays(certBack,70))}`]);
+  }
+  const row=(k,t,d)=>`<li class="${st[k]?'done':''}"><input type="checkbox" data-k="${k}" ${st[k]?'checked':''}><span>${t}</span>${d?`<em class="due">${d}</em>`:''}</li>`;
+  document.getElementById('na').innerHTML=na.map(([k,t])=>row(k,t)).join('');
+  document.getElementById('wf').innerHTML=wf.map(([k,t,d])=>row(k,t,d)).join('');
+  document.querySelectorAll('#gtd input[data-k]').forEach(c=>c.addEventListener('change',()=>{const o=gload();o[c.dataset.k]=c.checked;gsave(o);c.closest('li').classList.toggle('done',c.checked)}));
+}
+['g_oci','g_minor'].forEach(id=>document.getElementById(id).addEventListener('change',gtd));
+document.getElementById('g_reset').addEventListener('click',()=>{gsave({});gtd()});
+sd.addEventListener('change',gtd); document.getElementById('ddate').addEventListener('change',gtd); gtd();
+</script>
+</body>
+</html>

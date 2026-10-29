@@ -15,10 +15,10 @@ Fee: $25 + $3 ICWF + $19 VFS (lost/damaged: $100 + 3 + 19). Card +3.75%.
 - **Once** after completing age 50 on the next new passport.
 - Foreign spouse of an Indian citizen or of an OCI holder: **every** new passport, plus a declaration that the marriage subsists and copies of the Indian spouse's passport / the OCI spouse's passport and card.
 - Upload: new passport bio page + recent photo (some consulates: ≤ 30 days old). Within **3 months** of receiving the new passport. Auto-acknowledgement email; details updated in records in ~5 weeks; no new card.
-- Between 20 and 50 with no name change: nothing to do after a passport renewal. Travel on the existing card + new passport.
+- Between 20 and 50 with no name change: **upload the new passport and a photo within 3 months** (free, portal only, no visit). The Embassy's current page (indianembassyusa.gov.in/pages/NjI, read 2026-10-29) says uploads apply each time a new passport is issued, irrespective of age; the older MHA wording (under 20 / once after 50) is superseded. Travel on the existing OCI + new passport meanwhile.
 
 ## Drift to watch
-- CGI San Francisco's page reads the upload rule as "each time a new passport is issued" with no age limits. The embassy and MHA text say under 20 / once after 50. Stricter reading (upload every time) is harmless and free; recommend it.
+- CGI San Francisco and the Embassy both now read the upload rule as "each time a new passport is issued", no age limits. Older MHA text said under 20 / once after 50. Rule for the agent: **upload every time**, within 3 months.
 - Travel: allowed on the existing OCI card bearing the old passport number as long as the new passport is carried, including during the upload window.
 - An OCI holder who joins foreign military or police must renounce the OCI.
 
@@ -26,6 +26,6 @@ Fee: $25 + $3 ICWF + $19 VFS (lost/damaged: $100 + 3 + 19). Card +3.75%.
 For each family member record: date of birth, current passport issue/expiry, OCI card number and the passport number printed on it, last upload/re-issue date. The event list is then derivable:
 - Child's passport renewed (every 5 years) → upload, 3-month window.
 - Child turns 20 → next passport → mandatory re-issue.
-- Adult passport renewed, age 20–49 → nothing (unless name change).
+- Adult passport renewed, age 20–49 → upload within 3 months (re-issue only if the name changed).
 - Adult passport renewed, age 50+ → upload once.
 - Foreign spouse passport renewed → upload every time, with marriage declaration.

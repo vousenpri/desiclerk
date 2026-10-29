@@ -288,7 +288,7 @@ header .lede{padding-right:0}
 
 /* section headers as file tabs on the rule */
 section{margin-top:46px;padding-top:0;border-top:1px solid var(--rule)}
-.eyebrow{position:relative;display:inline-block;margin:-15px 0 18px;padding:7px 14px 6px;background:var(--cream);border:1px solid var(--rule);border-bottom-color:var(--cream);border-radius:5px 5px 0 0;color:var(--gold);box-shadow:inset 0 -1px 0 var(--cream)}
+.eyebrow{position:relative;display:inline-block;margin:-15px 0 18px;padding:7px 14px 6px;background:var(--cream);border:1px solid var(--rule);border-bottom-color:var(--cream);border-radius:5px 5px 0 0;color:var(--gold-text);box-shadow:inset 0 -1px 0 var(--cream)}
 section:nth-of-type(even) > .eyebrow{margin-left:28%}
 @media (max-width:520px){section:nth-of-type(even) > .eyebrow{margin-left:0}}
 section > h2{margin-top:0}
@@ -409,7 +409,7 @@ ol.stack .d{grid-column:2}
       <div class="gate">You need the certificate from Step 1 first. Get everything else ready while you wait. Fill the form last.</div>
       <div class="st"><b>OCI form</b><span class="n">It expires 90 days after you fill it, so fill it just before you send.</span><div class="need"><span class="key">Surrender certificate scan</span><span>Photo JPEG, light bg</span><span>Signature JPEG</span><span>US passport scan</span><span>Naturalization scan</span><span>Marriage certificate scan</span><span>Address proof scan</span></div></div>
       <div class="st"><b>VFS registration, $297</b></div>
-      <div class="st"><b>Send or hand in at VFS</b><div class="need"><span>Printed form, photo stuck on</span><span>Copies of everything</span><span>Notarized letters</span><span>Voter card form</span></div><span class="cust">Send copies only, never originals. If you need to go to India before it's done, get a visa.</span></div>
+      <div class="st"><b>Send or hand in at VFS</b><div class="need"><span>Printed form, photo stuck on</span><span>Copies of everything</span><span>Notarized letters</span><span>Voter card form</span></div><span class="cust">Copies of your documents, not originals. The forms you sign go in as originals. If you need to go to India before it's done, get a visa.</span></div>
       <div class="st wait"><b>Wait 8 to 10 weeks</b></div>
       <div class="st done"><b>Your OCI, as a PDF</b><span class="n">Download it when the website says Granted. There is no card in the mail any more.</span></div>
     </div>
@@ -438,11 +438,11 @@ ol.stack .d{grid-column:2}
 <section id="photo">
   <div class="eyebrow">Photo check</div>
   <h2>You need two <em>different</em> photos.</h2>
-  <p class="lede">Easiest: stand in front of a plain wall and take a selfie. White wall for the passport surrender. Light wall, not white, for OCI. Daylight, no flash. Drop it here and get the file to upload and the file to print.</p>
+  <p class="lede">Easiest: stand in front of a plain wall and take a selfie. White wall for the passport surrender. Light wall, not white, for OCI. Daylight, no flash. Drop it here and get the file to upload and the file to print. It checks the size, the dimensions and the background; the portal judges the face.</p>
   <label class="drop" id="drop" tabindex="0"><input type="file" id="file" accept="image/*"><b>Drop a photo</b> or tap to choose. JPEG or PNG, straight from the camera is fine.</label>
   <div class="pur">
-    <label><input type="radio" name="pur" value="oci" checked> OCI</label>
-    <label><input type="radio" name="pur" value="surrender"> Surrender</label>
+    <label><input type="radio" name="pur" value="oci"> OCI</label>
+    <label><input type="radio" name="pur" value="surrender" checked> Surrender</label>
   </div>
   <div class="res" id="res" aria-live="polite"></div>
 </section>
@@ -463,7 +463,7 @@ ol.stack .d{grid-column:2}
     <div class="col"><h4>Next actions</h4><ul id="na"></ul></div>
     <div class="col"><h4>Waiting for</h4><ul id="wf"></ul></div>
   </div>
-  <div class="ctl"><label><input type="checkbox" id="g_sur" checked> Give back my passport</label><label><input type="checkbox" id="g_oci" checked> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><button type="button" id="g_reset">Clear ticks</button></div>
+  <div class="ctl"><label><input type="checkbox" id="g_sur" checked> Give back my passport</label><label><input type="checkbox" id="g_oci"> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><button type="button" id="g_reset">Clear ticks</button></div>
 </section>
 <section id="gotchas" class="got">
   <div class="eyebrow">Gotchas</div>
@@ -583,7 +583,7 @@ const DATA = {
     pre: [
       "A child born in the US has nothing to give back. Your cancelled Indian passport, or your OCI, is the proof that she's of Indian origin.",
       "Her US passport must have at least nine months left.",
-      "Get her long-form birth certificate with the letter of exemplification (ask for it by that name), then the apostille. Apostilled means notarised by a government. Not the hospital one, not the short one. In New York: 45 Lafayette Street for the certificate (say it's for an apostille), 60 Centre Street to check the signature, 123 William Street for the apostille.",
+      "Get her long-form birth certificate with the letter of exemplification (ask for it by that name), then the apostille. An apostille is the state's certificate that the signature on a document is real. Not the hospital one, not the short one. In New York: 45 Lafayette Street for the certificate (say it's for an apostille), 60 Centre Street to check the signature, 123 William Street for the apostille.",
       "If you were married in the US, the marriage certificate needs an apostille too.",
       "The mother's name must be spelled the same on the birth certificate, her US passport, and her Indian passport or OCI. This is a reported reason children's OCIs get sent back.",
       "Photo: light background, not white. Under 5, you upload a thumbprint instead of a signature. Use an ink pad and press firmly; faint ones get sent back. Over 5, the child signs in ink.",
@@ -634,6 +634,7 @@ document.getElementById('copyBtn').addEventListener('click',async()=>{try{await 
 
 /* ---------- photo check ---------- */
 const drop=$('#drop'), file=$('#file'), res=$('#res');
+drop.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();file.click()}});
 ['dragenter','dragover'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.add('on')}));
 ['dragleave','drop'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.remove('on')}));
 drop.addEventListener('drop',ev=>{const f=ev.dataTransfer.files[0]; if(f) check(f)});
@@ -707,6 +708,16 @@ function addDays(d,n){const x=new Date(d);x.setDate(x.getDate()+n);return x}
 const fmt=d=>d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 function tl(){
   const s=localDate(sd)||today; const dd=localDate(ddEl);
+  const sur=document.getElementById('g_sur').checked, oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked;
+  document.querySelector('label[for=sdate]').textContent=sur?'Passport sent or handed in on':'OCI sent or handed in on';
+  if(!sur){
+    const r2=[
+      [`${fmt(addBiz(s,2))}–${fmt(addBiz(s,3))}`,'VFS tracker first changes','Two or three weekdays after it arrives. Don\'t call before this.'],
+      ...(dd?[[`by ${fmt(addDays(dd,7))}`,'Send what they asked for','You have 7 days from their email. At 20 days they drop it and you start over.']]:[['only if VFS emails you','If they say something is missing','The 7 days start from their email, not from when you sent. Put that date above if you get one.']]),
+      [`${fmt(addDays(addBiz(s,3),56))}–${fmt(addDays(addBiz(s,3),70))}`,(minor&&!oci)?'Child\'s OCI granted':'OCI granted','About 8 to 10 weeks after VFS gets it. There is no card any more. Download the PDF from ociservices.gov.in when it says Granted.']
+    ];
+    $('#tl').innerHTML=r2.map(([d,t,n])=>`<li><b>${d}</b><div>${t}<i>${n}</i></div></li>`).join(''); return;
+  }
   const r=[
     [`${fmt(addBiz(s,2))}–${fmt(addBiz(s,3))}`,'VFS tracker first changes','Two or three weekdays after it arrives. Don\'t call before this.'],
     ...(dd?[[`by ${fmt(addDays(dd,7))}`,'Send what they asked for','You have 7 days from their email. At 20 days they drop it and you start over.']]:[['only if VFS emails you','If they say something is missing','The 7 days start from their email, not from when you sent. Put that date above if you get one.']]),
@@ -717,7 +728,7 @@ function tl(){
   ];
   $('#tl').innerHTML=r.map(([d,t,n])=>`<li><b>${d}</b><div>${t}<i>${n}</i></div></li>`).join('');
 }
-sd.addEventListener('change',tl); document.getElementById('ddate').addEventListener('change',tl); tl();
+sd.addEventListener('change',tl); document.getElementById('ddate').addEventListener('change',tl);
 
 
 
@@ -725,10 +736,16 @@ sd.addEventListener('change',tl); document.getElementById('ddate').addEventListe
 const GK='desiclerk.gtd';
 function gload(){try{return JSON.parse(localStorage.getItem(GK)||'{}')}catch(e){return {}}}
 function gsave(o){try{localStorage.setItem(GK,JSON.stringify(o))}catch(e){}}
+const SK='desiclerk.state';
+function sload(){try{return JSON.parse(localStorage.getItem(SK)||'{}')}catch(e){return {}}}
+function ssave(){try{localStorage.setItem(SK,JSON.stringify({s:sd.value,d:ddEl.value,sur:document.getElementById('g_sur').checked,oci:document.getElementById('g_oci').checked,minor:document.getElementById('g_minor').checked,app:$('#app').value}))}catch(e){}}
+(function(){const st=sload(); if(st.s) sd.value=st.s; if(st.d) ddEl.value=st.d; ['sur','oci','minor'].forEach(k=>{if(k in st) document.getElementById('g_'+k).checked=!!st[k]});
+  if(st.app){const t=document.querySelector(`.start .btn[data-app=${st.app}]`); if(t){document.querySelectorAll('.start .btn').forEach(x=>x.setAttribute('aria-pressed','false'));t.setAttribute('aria-pressed','true');$('#app').value=st.app;render();const pur=document.querySelector(`input[name=pur][value=${st.app==='surrender'?'surrender':'oci'}]`); if(pur) pur.checked=true}}})();
 function gtd(){
+  tl(); ssave();
   const st=gload(); const s=localDate(sd)||today; const dd=localDate(ddEl);
   const oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked, sur=document.getElementById('g_sur').checked;
-  const certBack=addBiz(addBiz(s,3),21);
+  const certBack=sur?addBiz(addBiz(s,3),21):addBiz(s,3);
   const na=[]; const wf=[];
   if(sur) na.push(
     ['s1','Fill the form at mportal.passportindia.gov.in. Present address = your US address'],
@@ -747,7 +764,7 @@ function gtd(){
     na.push(['o1','Photo file (light background) and signature file, checked above']);
     na.push(['o2','Scan every paper to PDF, under 500 KB, one file per type']);
     na.push(['o3','Marriage certificate, apostilled if from the US. Sign the copies']);
-    na.push(['o4','The four VFS letters: copies-are-true (notarized), undertaking, consent, voter card. Signed']);
+    na.push(oci?['o4','The four VFS letters: copies-are-true (notarized), undertaking, consent, voter card. Signed']:['o4m','The three VFS letters: copies-are-true, undertaking, consent. Signed']);
   }
   if(oci){
     na.push(['o5','Once the certificate is back: fill the OCI form the week you send it']);
@@ -774,10 +791,10 @@ sd.addEventListener('change',gtd); document.getElementById('ddate').addEventList
 (function(){const FK='desiclerk.float.closed';const el=document.getElementById('float');if(!el)return;
   let closed=false;try{closed=localStorage.getItem(FK)==='1'}catch(e){}
   if(closed)return;
-  const show=()=>{if(window.scrollY>600){el.hidden=false;window.removeEventListener('scroll',show)}};
+  const t0=Date.now();const show=()=>{if(window.scrollY>1800&&Date.now()-t0>8000){el.hidden=false;window.removeEventListener('scroll',show)}};
   window.addEventListener('scroll',show,{passive:true}); show();
   document.getElementById('floatX').addEventListener('click',()=>{el.hidden=true;try{localStorage.setItem(FK,'1')}catch(e){}});
-  el.querySelector('form').addEventListener('submit',()=>{setTimeout(()=>{el.hidden=true;try{localStorage.setItem(FK,'1')}catch(e){}},300)});
+  el.querySelector('form').addEventListener('submit',()=>{setTimeout(()=>{el.hidden=true},300)});
 })();
 </script>
 

@@ -90,5 +90,5 @@ Adult naturalized 2024, Indian passport name "A B", married name "A C", naturali
 4. While waiting: nothing on the OCI portal yet. Papers ready.
 5. Certificate back → fill both OCI forms the same week; adult's previous name = "A B"; child's parent name exactly as on the mother's current US passport, with marriage certificate explaining the birth-certificate version.
 6. Waiting for: OCI granted +8–10 weeks, both. Calendar.
-7. After grant: child's passport renews every 5 years → upload within 3 months each time; first renewal after 20 → re-issue. Adult: once after 50.
+7. After grant: every new passport, child or adult, → upload within 3 months. The child's first passport after turning 20 → paid re-issue.
 

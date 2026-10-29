@@ -19,7 +19,7 @@ Anyone who ever held an Indian passport and acquired another nationality. Requir
 
 ## Preconditions (before any form)
 - VFS online registration must be completed first; physical application without it is returned unprocessed.
-- Government form: `https://embassy.passportindia.gov.in/` — fill, submit, print in **portrait**, single-sided. The printed form must show the photo (see gotchas: Chrome).
+- Government form: `https://mportal.passportindia.gov.in/` — fill, submit, print in **portrait**, single-sided. The printed form must show the photo (see gotchas: Chrome).
 - Online form must be from the current year and under 320 days old at submission.
 - Two 2x2 inch colour photos, **white background only**, photographic paper, under 6 months old. (This is the opposite of the OCI upload spec. Do not reuse.)
 - Nothing handwritten. No staples. No double-sided printing.

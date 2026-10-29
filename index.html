@@ -146,6 +146,7 @@ input[type=date]{width:100%;padding:9px 12px;font-family:var(--sans);font-size:1
 @media(max-width:700px){.sites{grid-template-columns:1fr}}
 .sites a{display:block;padding:14px 16px;background:var(--paper);border:1px solid var(--rule);border-radius:14px;text-decoration:none}
 .sites a:hover{border-color:var(--ink)}
+.sites a img{display:block;width:100%;aspect-ratio:5/3;object-fit:cover;border:1px solid var(--rule);border-radius:8px;margin-bottom:10px}
 .sites a b{display:block;font-size:1.2rem;font-weight:600}
 .sites a span{display:block;color:var(--ink-soft);font-size:1rem;line-height:1.35;margin-top:2px}
 .sites a i{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:8px}
@@ -358,9 +359,9 @@ ol.stack .d{grid-column:2}
   <p class="lede">First give back the Indian passport. When the certificate comes back, apply for OCI. Your US passport stays with you the whole time.</p>
   <div class="side"><b>Go in person or mail it?</b> In person, they check your papers while you stand there, and you fix problems on the spot. By mail, a problem means an email a week later and 7 days to fix it. First time, a name change, or a child: go in person.</div>
   <div class="sites">
-    <a href="https://embassy.passportindia.gov.in/"><b>Passport Seva</b><span>Where you fill the form to give back your Indian passport.</span><i>embassy.passportindia.gov.in</i></a>
-    <a href="https://services.vfsglobal.com/usa/en/ind/"><b>VFS Global</b><span>Where you pay, book, and send everything.</span><i>services.vfsglobal.com/usa/en/ind</i></a>
-    <a href="https://ociservices.gov.in/"><b>OCI Services</b><span>Where you fill the OCI form. Have your photo, signature and scans ready first.</span><i>ociservices.gov.in</i></a>
+    <a href="https://mportal.passportindia.gov.in/"><img src="img/passportseva.jpg" alt=""><b>Passport Seva</b><span>Where you fill the form to give back your Indian passport.</span><i>mportal.passportindia.gov.in</i></a>
+    <a href="https://services.vfsglobal.com/usa/en/ind/"><img src="img/vfs.jpg" alt=""><b>VFS Global</b><span>Where you pay, book, and send everything.</span><i>services.vfsglobal.com/usa/en/ind</i></a>
+    <a href="https://ociservices.gov.in/"><img src="img/oci.jpg" alt=""><b>OCI Services</b><span>Where you fill the OCI form. Have your photo, signature and scans ready first.</span><i>ociservices.gov.in</i></a>
   </div>
   <div class="flow">
     <div class="col"><h4>Step 1 · Give back the Indian passport</h4>
@@ -464,7 +465,7 @@ const DATA = {
     feenote: "Pay by Visa or Mastercard (adds 3.75%), or by money order or banker's draft to VFS Services (USA) Inc. to avoid that. No personal checks, no Amex.",
     pre: [
       "Register on the VFS website first. If you don't, they send everything back.",
-      "Fill the form at embassy.passportindia.gov.in. Print it from Safari, after the photo shows. Portrait, one side only.",
+      "Fill the form at mportal.passportindia.gov.in. Print it from Safari, after the photo shows. Portrait, one side only.",
       "Get two 2 × 2 inch photos, white background, less than six months old.",
       "On the form, your present address is your US address. People have been rejected for putting an Indian one.",
       "The VFS certificate form may cut off your text. If it does, retype it in Word, print it, and sign in blue ink. One form per person.",
@@ -472,7 +473,7 @@ const DATA = {
       "Nothing handwritten. No staples. Nothing printed on both sides."
     ],
     items: [
-      ["The printed form, signed","orig","From embassy.passportindia.gov.in. Your photo must show on it."],
+      ["The printed form, signed","orig","From mportal.passportindia.gov.in. Your photo must show on it."],
       ["Two photos, 2 × 2, white background","orig","Less than six months old."],
       ["Two signed certificate forms","orig","The VFS form, filled in twice."],
       ["Proof of address","copy","Driver's licence (don't cut it down), state ID, a bill under three months old, lease, mortgage or tax return. No PO Box. Must match the form."],
@@ -653,7 +654,7 @@ function gtd(){
   const oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked;
   const certBack=addBiz(addBiz(s,3),21);
   const na=[
-    ['s1','Fill the form at embassy.passportindia.gov.in. Present address = your US address'],
+    ['s1','Fill the form at mportal.passportindia.gov.in. Present address = your US address'],
     ['s2','Print it from Safari, after the photo shows. One side only'],
     ['s3','Two 2 × 2 photos, white background'],
     ['s4','Fill and sign the VFS certificate form, twice. If it cuts off your text, retype it in Word'],

@@ -187,13 +187,14 @@ input[type=date]{width:100%;padding:9px 12px;font-family:var(--sans);font-size:1
 .gtd ul{margin:0;padding:0;list-style:none}
 .gtd li{display:grid;grid-template-columns:22px 1fr auto;gap:0 12px;align-items:start;padding:9px 0;border-top:1px solid var(--rule-faint);font-size:1.05rem;line-height:1.35}
 .gtd li:first-child{border-top:0}
+.gtd li>label{display:contents;cursor:pointer}
 .gtd input[type=checkbox]{appearance:none;-webkit-appearance:none;margin:4px 0 0;width:15px;height:15px;border:1.5px solid var(--stamp);border-radius:2px;background:var(--paper);cursor:pointer;display:block}
 .gtd input[type=checkbox]:checked{background:var(--stamp) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.2l2.6 2.6L10 3.4' fill='none' stroke='%23FAF6EE' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat}
 .gtd li.done span{text-decoration:line-through;text-decoration-color:var(--stamp);color:var(--ink-soft)}
 .gtd .due{font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--copper-text);white-space:nowrap;padding-top:4px;font-variant-numeric:tabular-nums}
 .gtd .empty{color:var(--ink-soft);font-style:italic;padding:8px 0}
-#gtd .ctl{display:flex;gap:16px;align-items:center;margin:12px 0 0;font-family:var(--sans);font-size:13px;color:var(--ink-soft)}
-#gtd .ctl label{display:flex;gap:6px;align-items:center;cursor:pointer}
+#gtd .ctl{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:12px 0 0;font-family:var(--sans);font-size:13px;color:var(--ink-soft)}
+#gtd .ctl label{display:flex;gap:6px;align-items:center;cursor:pointer;white-space:nowrap}
 #gtd .ctl input{accent-color:var(--stamp)}
 #gtd .ctl button{font:inherit;font-size:12px;background:none;border:0;color:var(--ink-soft);text-decoration:underline;cursor:pointer;padding:0;margin-left:auto}
 
@@ -375,7 +376,7 @@ ol.stack .d{grid-column:2}
   </div>
   <div class="flow">
     <div class="col"><h4>Step 1 · Give back the Indian passport</h4>
-      <div class="st"><b>Passport Seva form</b><span class="n">Use Safari, wait for the photo to show, then print. Put your US address as your present address.</span><div class="need"><span>Indian passport number</span><span>US passport number</span></div></div>
+      <div class="st"><b>Passport Seva form</b><span class="n">Open the PDF, check the photo is on it, then print. Put your US address as your present address.</span><div class="need"><span>Indian passport number</span><span>US passport number</span></div></div>
       <div class="st"><b>VFS registration, $62</b><span class="n">Print the receipt. It goes in the envelope.</span></div>
       <div class="st"><b>Mail it or hand it in</b><span class="n">Mail: use the VFS label, or a UPS or USPS label with no expiry date. FedEx is refused. One person per envelope. In person: book a slot first.</span><div class="need"><span class="orig">Indian passport, original</span><span>2 photos, white</span><span>2 certificate forms</span><span>US passport copy</span><span>Naturalization copy</span><span>Address proof</span><span>Checklist as cover</span></div><span class="cust">Your Indian passport goes in and comes back stamped cancelled. Your US passport stays with you.</span></div>
       <div class="st wait"><b>Wait 2 to 4 weeks</b><span class="n">You can still travel on your US passport.</span></div>
@@ -434,7 +435,7 @@ ol.stack .d{grid-column:2}
 <section id="gtd">
   <div class="eyebrow">Getting it done</div>
   <h2>To do, and <em>waiting</em> for.</h2>
-  <p class="lede">Left: things you do. Right: things you wait for, with the date. Ticks are saved on this device.</p>
+  <p class="lede">Things you do, then things you wait for, with the date. Ticks are saved on this device.</p>
   <div class="gtd">
     <div class="col"><h4>Next actions</h4><ul id="na"></ul></div>
     <div class="col"><h4>Waiting for</h4><ul id="wf"></ul></div>

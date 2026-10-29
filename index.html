@@ -19,12 +19,12 @@
    Desi Clerk: the register of the Indian office. One added colour, stamp ink, used only for stamp-like elements (the mark, ORIGINAL/COPY, RECEIVED/RETURNED, ticks). Brass for counter plates. Copper margin rules on the ledger. */
 :root{
   --bg:#F4F2EE;--paper:#FFFFFF;--cream:#FAF6EE;--ink:#16170B;--ink-soft:#5E5A4E;--rule:#C8B89A;
-  --gold:#B8922A;--copper:#B8651E;--green:#3E6A5A;--red:#9E2F2F;
+  --gold:#B8922A;--copper:#B8651E;--gold-text:#7A5E12;--copper-text:#8A4612;--green:#3E6A5A;--red:#9E2F2F;
   --stamp:#3B3F8F;--stamp-on:#FAF6EE;--rule-faint:#E4DCC8;
   --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1C1B17;--paper:#25241F;--cream:#2C2A24;--ink:#F1EDE3;--ink-soft:#B3AC9C;--rule:#5C5443;--gold:#CBA94B;--copper:#D98A4A;--green:#7fb8a2;--red:#d47a68;--stamp:#A3A7E8;--stamp-on:#1C1B17;--rule-faint:#3A3529;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#1C1B17;--paper:#25241F;--cream:#2C2A24;--ink:#F1EDE3;--ink-soft:#B3AC9C;--rule:#5C5443;--gold:#CBA94B;--copper:#D98A4A;--green:#7fb8a2;--red:#d47a68;--stamp:#A3A7E8;--stamp-on:#1C1B17;--rule-faint:#3A3529;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1C1B17;--paper:#25241F;--cream:#2C2A24;--ink:#F1EDE3;--ink-soft:#B3AC9C;--rule:#5C5443;--gold:#CBA94B;--copper:#D98A4A;--gold-text:#D9B75C;--copper-text:#E39A5E;--green:#7fb8a2;--red:#d47a68;--stamp:#A3A7E8;--stamp-on:#1C1B17;--rule-faint:#3A3529;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1C1B17;--paper:#25241F;--cream:#2C2A24;--ink:#F1EDE3;--ink-soft:#B3AC9C;--rule:#5C5443;--gold:#CBA94B;--copper:#D98A4A;--gold-text:#D9B75C;--copper-text:#E39A5E;--green:#7fb8a2;--red:#d47a68;--stamp:#A3A7E8;--stamp-on:#1C1B17;--rule-faint:#3A3529;color-scheme:dark}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:1.15rem;line-height:1.45;font-weight:500}
@@ -33,7 +33,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,[t
 .wrap{max-width:900px;margin:0 auto;padding:26px 20px 90px}
 
 /* brand line, with the mark inked beside it */
-.brand{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:22px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);font-weight:500;margin-bottom:22px}
 .brand .mark{width:38px;height:38px;flex:none;color:var(--stamp);transform:rotate(-9deg);margin:-4px 0}
 
 h1{font-size:3.4rem;line-height:.98;letter-spacing:-.01em;margin:0 0 14px;font-weight:600;text-wrap:balance}
@@ -47,7 +47,7 @@ h1 em,h2 em{font-style:italic;color:var(--copper);font-weight:500}
 .start-note{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);flex-basis:100%}
 .centre{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 0;font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
 .centre label{font-size:13px;letter-spacing:0;text-transform:none;padding:7px 14px;border:1px solid var(--rule);border-radius:999px;cursor:pointer;color:var(--ink)}
-.centre label:has(input:checked){background:var(--cream);border-color:var(--copper);color:var(--copper)}
+.centre label:has(input:checked){background:var(--cream);border-color:var(--copper);color:var(--copper-text)}
 .centre input{position:absolute;opacity:0;width:0;height:0}
 
 /* the paste line: a counter slip. Ruled cream, side notches, perforation before the stub. */
@@ -63,7 +63,7 @@ h1 em,h2 em{font-style:italic;color:var(--copper);font-weight:500}
 .small{font-family:var(--sans);font-size:12px;color:var(--ink-soft);margin:10px 0 0;line-height:1.5}
 
 section{margin-top:38px;padding-top:24px;border-top:1px solid var(--rule)}
-.eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);font-weight:500}
 h2{font-size:2.2rem;line-height:1.02;margin:6px 0 10px;font-weight:600;text-wrap:balance}
 h3{font-size:1.35rem;margin:24px 0 6px;font-weight:600}
 
@@ -149,13 +149,13 @@ input[type=date]{width:100%;padding:9px 12px;font-family:var(--sans);font-size:1
 .sites a img{display:block;width:100%;aspect-ratio:5/3;object-fit:cover;border:1px solid var(--rule);border-radius:8px;margin-bottom:10px}
 .sites a b{display:block;font-size:1.2rem;font-weight:600}
 .sites a span{display:block;color:var(--ink-soft);font-size:1rem;line-height:1.35;margin-top:2px}
-.sites a i{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.sites a i{display:block;font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-text);margin-top:8px}
 
 /* the three windows: counter plates. Brass header, engraved, two screws. */
 .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 0;align-items:start}
 @media(max-width:820px){.flow{grid-template-columns:1fr}}
 .col{background:var(--cream);border:1px solid var(--rule);border-radius:14px;padding:14px 14px 8px}
-.col h4{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);font-weight:500;margin:0 0 6px}
+.col h4{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper-text);font-weight:500;margin:0 0 6px}
 .flow .col{padding:0 14px 8px;overflow:hidden}
 .flow .col h4{position:relative;margin:0 -14px 12px;padding:10px 26px 9px;text-align:center;color:#2A2008;font-weight:600;letter-spacing:.18em;font-size:10.5px;
   background:linear-gradient(180deg,#E2C46E 0%,#C9A23D 45%,#B8922A 70%,#A68020 100%);border-bottom:1px solid #8E6E1C;text-shadow:0 1px 0 rgba(255,248,230,.35)}
@@ -173,7 +173,7 @@ input[type=date]{width:100%;padding:9px 12px;font-family:var(--sans);font-size:1
 .st .need span.orig{box-shadow:inset 0 0 0 2px var(--stamp),inset 0 0 0 3px var(--stamp-on);border-radius:3px;padding:5px 9px 4px;margin:2px 4px 2px 0}
 .st .need span.key{border-color:var(--green);color:var(--green)}
 /* custody: what leaves your hands is RECEIVED; what comes back is RETURNED */
-.st .cust{display:block;margin-top:9px;font-size:.95rem;color:var(--copper);font-style:italic;line-height:1.4}
+.st .cust{display:block;margin-top:9px;font-size:.95rem;color:var(--copper-text);font-style:italic;line-height:1.4}
 .st .cust::before{content:"Received";margin:0 9px 2px 0;font-style:normal;transform:rotate(-5deg)}
 .st.done b::after{content:"Returned";margin:0 0 0 9px;transform:rotate(3deg);box-shadow:inset 0 0 0 2px var(--cream),inset 0 0 0 3px var(--stamp)}
 .gate{margin:12px 0 2px;padding:10px 12px;border:1px dashed var(--green);border-radius:10px;color:var(--green);font-size:1rem;font-style:italic}
@@ -190,7 +190,7 @@ input[type=date]{width:100%;padding:9px 12px;font-family:var(--sans);font-size:1
 .gtd input[type=checkbox]{appearance:none;-webkit-appearance:none;margin:4px 0 0;width:15px;height:15px;border:1.5px solid var(--stamp);border-radius:2px;background:var(--paper);cursor:pointer;display:block}
 .gtd input[type=checkbox]:checked{background:var(--stamp) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.2l2.6 2.6L10 3.4' fill='none' stroke='%23FAF6EE' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat}
 .gtd li.done span{text-decoration:line-through;text-decoration-color:var(--stamp);color:var(--ink-soft)}
-.gtd .due{font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--copper);white-space:nowrap;padding-top:4px;font-variant-numeric:tabular-nums}
+.gtd .due{font-family:var(--sans);font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--copper-text);white-space:nowrap;padding-top:4px;font-variant-numeric:tabular-nums}
 .gtd .empty{color:var(--ink-soft);font-style:italic;padding:8px 0}
 #gtd .ctl{display:flex;gap:16px;align-items:center;margin:12px 0 0;font-family:var(--sans);font-size:13px;color:var(--ink-soft)}
 #gtd .ctl label{display:flex;gap:6px;align-items:center;cursor:pointer}
@@ -346,7 +346,7 @@ ol.stack .d{grid-column:2}
 </svg>
   <h1>Call my <em>agent</em>.</h1>
   <p class="lede">Getting OCI? Give this to your AI agent so nothing gets missed.</p>
-  <div class="paste"><code id="pasteline">Load the skill at <a href="https://desiclerk.com/oci/SKILL.md">desiclerk.com/oci/SKILL.md</a> and do my Indian passport surrender and OCI, for me and my child. Tell me what to get first. Put every date on my calendar and book VFS around it.</code><button class="btn" type="button" id="copyBtn">Copy</button></div>
+  <div class="paste"><code id="pasteline">Load the skill at <a href="https://desiclerk.com/oci/SKILL.md">desiclerk.com/oci/SKILL.md</a> and do my Indian passport surrender and OCI, for me and my child. Tell me what to get first. Put every date on my calendar and book VFS around it.</code><button class="btn" type="button" id="copyBtn" aria-live="polite">Copy</button></div>
   <p class="small">Your documents stay with your agent. Free, no account.</p>
   <div class="start" style="margin-top:28px">
     <span class="start-note">No agent? Pick one</span>
@@ -415,12 +415,12 @@ ol.stack .d{grid-column:2}
   <div class="eyebrow">Photo check</div>
   <h2>You need two <em>different</em> photos.</h2>
   <p class="lede">Easiest: stand in front of a plain wall and take a selfie. White wall for the passport surrender. Light wall, not white, for OCI. Daylight, no flash. Drop it here and get the file to upload and the file to print.</p>
-  <label class="drop" id="drop"><input type="file" id="file" accept="image/*"><b>Drop a photo</b> or tap to choose. JPEG or PNG, straight from the camera is fine.</label>
+  <label class="drop" id="drop" tabindex="0"><input type="file" id="file" accept="image/*"><b>Drop a photo</b> or tap to choose. JPEG or PNG, straight from the camera is fine.</label>
   <div class="pur">
     <label><input type="radio" name="pur" value="oci" checked> OCI</label>
     <label><input type="radio" name="pur" value="surrender"> Surrender</label>
   </div>
-  <div class="res" id="res"></div>
+  <div class="res" id="res" aria-live="polite"></div>
 </section>
 
 <section id="timing">
@@ -439,27 +439,27 @@ ol.stack .d{grid-column:2}
     <div class="col"><h4>Next actions</h4><ul id="na"></ul></div>
     <div class="col"><h4>Waiting for</h4><ul id="wf"></ul></div>
   </div>
-  <div class="ctl"><label><input type="checkbox" id="g_oci" checked> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><button type="button" id="g_reset">Clear ticks</button></div>
+  <div class="ctl"><label><input type="checkbox" id="g_sur" checked> Give back my passport</label><label><input type="checkbox" id="g_oci" checked> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><button type="button" id="g_reset">Clear ticks</button></div>
 </section>
 <section id="gotchas" class="got">
   <div class="eyebrow">Gotchas</div>
   <h2>Things nobody <em>tells</em> you.</h2>
-  <p><b>Don't print the form from Chrome.</b> The photo loads late and Chrome prints it blank. Use Safari or Firefox, wait until you see the photo, then print.</p>
+  <p><b>Check the photo is on the form before you print.</b> The photo loads late, and Chrome has printed it blank. Download the PDF, open it, and look for the photo. Safari and Firefox have been fine.</p>
   <p><b>You may not need the notarized "signature change" letter.</b> It isn't on the official list. New York has asked for it; New Jersey did not in October 2026. Ask your centre before paying a notary.</p>
   <p><b>The passport surrender costs $62.</b> Older guides say it depends on when you became a citizen. It doesn't any more.</p>
   <p><b>VFS gives two different photo sizes.</b> A 600 × 600 JPEG under 30 KB works for both. The photo check above makes one.</p>
   <p><b>Don't fill the OCI form early.</b> You can't send it until the certificate is back, and it expires 90 days after you fill it.</p>
   <p><b>There is no OCI card any more.</b> Since July 2026 you download a PDF when the website says Granted. Old cards still work. <a href="https://www.cgichicago.gov.in/">Consulate General of India, Chicago, notice of 9 July 2026</a>.</p>
-  <p><b>Your child's birth certificate needs an apostille.</b> Apostilled means notarised by a government. The hospital one won't do, and the short one won't do. In New York it's three offices, all close together: get the long form at 45 Lafayette Street, Room 133 (book first, and say it's for an apostille); get the signature checked at 60 Centre Street; get the apostille at 123 William Street. Then send a signed copy, not the original. Same for your marriage certificate if it's from the US. Check the mother's name is spelled the same on the birth certificate and her passport. That mismatch is the most common reason a child's OCI gets sent back.</p>
+  <p><b>Your child's birth certificate needs an apostille.</b> An apostille is a state's certificate that the signature on a document is real. The hospital one won't do, and the short one won't do. In New York it's three offices, all close together: get the long form at 45 Lafayette Street, Room 133 (book first, and say it's for an apostille); get the signature checked at 60 Centre Street; get the apostille at 123 William Street. Then send a signed copy, not the original. Same for your marriage certificate if it's from the US. Check the mother's name is spelled the same on the birth certificate and her passport. That mismatch is a reported reason children's OCIs get sent back.</p>
   <p><b>Any change to your name counts.</b> A dropped middle name, one letter, a new surname. Put the old name in the OCI form as your previous name and bring a notarized letter saying both names are you. Miss this and they send it back.</p>
 </section>
 
 <footer>
-  <p>Desi Clerk is a checklist and a photo check. It doesn't send anything, keep anything, or speak for the consulate.</p>
+  <p>Desi Clerk is a checklist and a photo check. Photos are processed in your browser and never uploaded. Your ticks are saved on this device only. It doesn't speak for the consulate.</p>
   Checked against these on 27 October 2026:
   <ul>
     <li><a href="https://www.vfsglobal.com/one-pager/india/united-states-of-america/renunciation-of-indian-citizenship/">VFS USA surrender one-pager</a> and its adult checklist dated 20 Oct 2026</li>
-    <li><a href="https://www.vfsglobal.com/one-pager/india/united-states-of-america/oci-services/pdf/New-OCI-Adult-Foreign-National-by-Naturalization.pdf">VFS USA new OCI adult checklist</a></li>
+    <li><a href="https://www.vfsglobal.com/one-pager/india/united-states-of-america/oci-services/pdf/Adult-Foreign-national-previously-Indian-passport-holder-adult-sep-2026.pdf">VFS USA OCI adult checklist, September 2026</a></li>
     <li><a href="https://indianembassyusa.gov.in/pages/NjI">Embassy of India, Washington: OCI re-issue guidelines</a></li>
   </ul>
   Rules change. What the counter tells you beats this page.
@@ -504,7 +504,7 @@ const DATA = {
       "Your US passport must have at least nine months left.",
       "Make your photo and signature files first. Photo: light background, not white. Use the check below.",
       "Scan every document to PDF, under 500 KB each, one file per type. Upload all of them or they send it back.",
-      "Your date of birth must be exactly the same on your US and Indian passports. If it isn't, it gets rejected and there's no fix.",
+      "Your date of birth must be exactly the same on your US and Indian passports. If it isn't, it gets rejected. Fix the passport first; a letter won't do it.",
       "If your name changed at all, put the old name in the form as your previous name, and bring a notarized letter.",
       "The form expires 90 days after you fill it. Fill it the week you send."
     ],
@@ -537,7 +537,7 @@ const DATA = {
       "Her US passport must have at least nine months left.",
       "Get her long-form birth certificate with the letter of exemplification (ask for it by that name), then the apostille. Apostilled means notarised by a government. Not the hospital one, not the short one. In New York: 45 Lafayette Street for the certificate (say it's for an apostille), 60 Centre Street to check the signature, 123 William Street for the apostille.",
       "If you were married in the US, the marriage certificate needs an apostille too.",
-      "The mother's name must be spelled the same on the birth certificate, her US passport, and her Indian passport or OCI. This is the most common reason a child's OCI is sent back.",
+      "The mother's name must be spelled the same on the birth certificate, her US passport, and her Indian passport or OCI. This is a reported reason children's OCIs get sent back.",
       "Photo: light background, not white. Under 5, you upload a thumbprint instead of a signature. Use an ink pad and press firmly; faint ones get sent back. Over 5, the child signs in ink.",
       "Both parents sign Part B and the parental authorization. Get it notarized in person; online notaries are refused. Don't sign in the child's box.",
       "Scan every document to PDF, under 500 KB, one per type. Upload all of them before you submit. The form expires in 90 days."
@@ -566,7 +566,12 @@ const CENTRE = {
 };
 const $ = s => document.querySelector(s);
 const TITLES={surrender:'Give back your Indian passport',oci:'OCI for you',minor:'OCI for your child'};
-document.querySelectorAll('.start .btn').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.start .btn').forEach(x=>x.setAttribute('aria-pressed','false'));t.setAttribute('aria-pressed','true');$('#app').value=t.dataset.app;render();document.getElementById('stack').scrollIntoView({behavior:'smooth',block:'start'})}));
+document.querySelectorAll('.start .btn').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.start .btn').forEach(x=>x.setAttribute('aria-pressed','false'));t.setAttribute('aria-pressed','true');$('#app').value=t.dataset.app;render();syncPlan(t.dataset.app);document.getElementById('stack').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}));
+/* one choice drives the stack, the photo purpose and the plan */
+function syncPlan(app){const o=document.getElementById('g_oci'),m=document.getElementById('g_minor'),su=document.getElementById('g_sur');
+  su.checked=(app==='surrender'||app==='oci'); o.checked=(app==='oci'); m.checked=(app==='minor');
+  const pur=document.querySelector(`input[name=pur][value=${app==='surrender'?'surrender':'oci'}]`); if(pur) pur.checked=true;
+  if(typeof gtd==='function') gtd()}
 document.querySelectorAll('input[name=centre]').forEach(r=>r.addEventListener('change',render));
 function render(){
   const a = DATA[$('#app').value];
@@ -577,7 +582,7 @@ function render(){
   $('#stackTitle').textContent = TITLES[$('#app').value];
 }
 render();
-document.getElementById('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('pasteline').textContent);document.getElementById('copyBtn').textContent='Copied'}catch(e){}});
+document.getElementById('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('pasteline').textContent);document.getElementById('copyBtn').textContent='Copied'}catch(e){document.getElementById('copyBtn').textContent='Select and copy';}});
 
 /* ---------- photo check ---------- */
 const drop=$('#drop'), file=$('#file'), res=$('#res');
@@ -606,9 +611,14 @@ function withDpi(buf,dpi){ // patch JFIF APP0 density
   const app0=new Uint8Array([0xFF,0xE0,0,16,0x4A,0x46,0x49,0x46,0,1,1,1,dpi>>8,dpi&255,dpi>>8,dpi&255,0,0]);
   return new Blob([u.slice(0,2),app0,u.slice(2)],{type:'image/jpeg'});
 }
+let _run=0;
 async function check(f){
+  const run=++_run;
   window._last=f; const pur=document.querySelector('input[name=pur]:checked').value;
-  const img=await loadImg(f); const w=img.naturalWidth,h=img.naturalHeight;
+  let img; try{ img=await loadImg(f) }catch(e){ res.innerHTML='<p class="verdict no">Can\'t read that file.</p><p class="note">It isn\'t an image the browser can open, or it\'s damaged. Try a JPEG or PNG straight from the camera.</p>'; res.classList.add('show'); return }
+  if(run!==_run) return;
+  const w=img.naturalWidth,h=img.naturalHeight;
+  if(w<8||h<8){ res.innerHTML='<p class="verdict no">That image is too small to be a photo.</p>'; res.classList.add('show'); return }
   const full=document.createElement('canvas');full.width=w;full.height=h;full.getContext('2d').drawImage(img,0,0);
   const {lum,sat}=border(full);
   const rows=[]; const isJ=/jpe?g$/i.test(f.type)||/\.jpe?g$/i.test(f.name);
@@ -623,28 +633,36 @@ async function check(f){
   const fails=rows.filter(r=>r[0]===false).length, ok=fails===0;
   const sq=square(img); const up=await under(sq,30*1024); const tooBig=up.blob.size>30*1024; const pr=withDpi(await (await toBlob(sq,.95)).arrayBuffer(),300);
   const base=f.name.replace(/\.[^.]+$/,'');
-  const upURL=URL.createObjectURL(up.blob), prURL=URL.createObjectURL(pr);
+  if(run!==_run) return;
+  (window._urls||[]).forEach(u=>URL.revokeObjectURL(u));
+  const upURL=URL.createObjectURL(up.blob), prURL=URL.createObjectURL(pr); window._urls=[upURL,prURL];
   res.innerHTML=`<p class="verdict ${ok?'ok':'no'}">${ok?'File checks passed. The portal judges the face.':bg===false?'Retake this one.':'Fixed versions below.'}</p>
+   <p class="note">The background check reads the edges of the picture only. It can't judge the face, the crop or shadows.</p>
    <ul class="checks">${rows.map(([s,t])=>`<li class="${s===true?'ok':s===false?'no':'wa'}">${t}</li>`).join('')}</ul>
    ${bg===false?`<p class="note">Resizing can't fix the background. Take it again against ${pur==='surrender'?'a white wall':'a pale blue or grey wall'} and come back.</p>`:''}
    <div class="out">
      ${tooBig?`<div class="side">Couldn't get the upload under 30 KB (best was ${Math.round(up.blob.size/1024)} KB). Busy backgrounds and patterned clothing do this. Retake against a plain wall; no file is offered.</div>`:`<a href="${upURL}" download="${base}_upload.jpg"><img src="${upURL}" alt="">Upload file<span>600 × 600 JPEG, ${Math.round(up.blob.size/1024)} KB. For ociservices.gov.in.</span></a>`}
-     <a href="${prURL}" download="${base}_print_2x2.jpg"><img src="${prURL}" alt="">Print file<span>600 px at 300 dpi, exactly 2 × 2 inches. Take this to a photo counter.</span></a>
+     <a href="${prURL}" download="${base}_print_2x2.jpg"><img src="${prURL}" alt="">Print file<span>600 px at 300 dpi, exactly 2 × 2 inches. At the kiosk choose 2 × 2 or actual size, never fit to page.</span></a>
    </div>`;
   res.classList.add('show');
 }
 
 /* ---------- timing ---------- */
-const sd=$('#sdate'); sd.valueAsDate=new Date();
+const sd=$('#sdate'); const ddEl=document.getElementById('ddate');
+const today=new Date(); today.setHours(12,0,0,0);
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+sd.value=iso(today);
+/* date inputs give UTC midnight via valueAsDate; US time zones then show the day before. Parse the text as a local date at noon instead. */
+function localDate(el){const v=el.value; if(!v) return null; const [y,m,d]=v.split('-').map(Number); return new Date(y,m-1,d,12,0,0,0)}
 function addBiz(d,n){const x=new Date(d);let c=0;while(c<n){x.setDate(x.getDate()+1);const k=x.getDay();if(k!==0&&k!==6)c++}return x}
 function addDays(d,n){const x=new Date(d);x.setDate(x.getDate()+n);return x}
 const fmt=d=>d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 function tl(){
-  const s=sd.valueAsDate||new Date(); const dd=document.getElementById('ddate').valueAsDate;
+  const s=localDate(sd)||today; const dd=localDate(ddEl);
   const r=[
-    [`${fmt(addBiz(s,2))}–${fmt(addBiz(s,3))}`,'VFS tracker first changes','Two or three working days after it arrives. Don\'t call before this.'],
+    [`${fmt(addBiz(s,2))}–${fmt(addBiz(s,3))}`,'VFS tracker first changes','Two or three weekdays after it arrives. Don\'t call before this.'],
     ...(dd?[[`by ${fmt(addDays(dd,7))}`,'Send what they asked for','You have 7 days from their email. At 20 days they drop it and you start over.']]:[['only if VFS emails you','If they say something is missing','The 7 days start from their email, not from when you sent. Put that date above if you get one.']]),
-    [`${fmt(addBiz(addBiz(s,3),7))}–${fmt(addBiz(addBiz(s,3),21))}`,'Certificate comes back','2 to 4 weeks after it reaches the consulate, not counting their holidays. Scan it the day it arrives.'],
+    [`${fmt(addBiz(addBiz(s,3),7))}–${fmt(addBiz(addBiz(s,3),21))}`,'Certificate comes back','2 to 4 weeks after it reaches the consulate. Counts weekdays only; Indian and US holidays add days. Scan it the day it arrives.'],
     [`from ${fmt(addBiz(addBiz(s,3),7))}`,'Get the OCI papers ready','Photos (light background), PDFs under 500 KB, notarized letters, an address proof less than 3 months old. Not the form yet.'],
     [`~${fmt(addDays(addBiz(addBiz(s,3),21),-5))} onward`,'Fill the OCI form','The week you send it. It expires 90 days after you fill it.'],
     [`${fmt(addDays(addBiz(addBiz(s,3),21),56))}–${fmt(addDays(addBiz(addBiz(s,3),21),70))}`,'OCI granted','About 8 to 10 weeks after VFS gets it. There is no card any more. Download the PDF from ociservices.gov.in when it says Granted.']
@@ -660,20 +678,23 @@ const GK='desiclerk.gtd';
 function gload(){try{return JSON.parse(localStorage.getItem(GK)||'{}')}catch(e){return {}}}
 function gsave(o){try{localStorage.setItem(GK,JSON.stringify(o))}catch(e){}}
 function gtd(){
-  const st=gload(); const s=sd.valueAsDate||new Date(); const dd=document.getElementById('ddate').valueAsDate;
-  const oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked;
+  const st=gload(); const s=localDate(sd)||today; const dd=localDate(ddEl);
+  const oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked, sur=document.getElementById('g_sur').checked;
   const certBack=addBiz(addBiz(s,3),21);
-  const na=[
+  const na=[]; const wf=[];
+  if(sur) na.push(
     ['s1','Fill the form at mportal.passportindia.gov.in. Present address = your US address'],
-    ['s2','Print it from Safari, after the photo shows. One side only'],
+    ['s2','Print it after the photo shows on the PDF. One side only'],
     ['s3','Two 2 × 2 photos, white background'],
     ['s4','Fill and sign the VFS certificate form, twice. If it cuts off your text, retype it in Word'],
     ['s5','If your name is different from your Indian passport: a notarized letter saying both names are you'],
     ['s6','Register and pay on the VFS site. Print the receipt'],
     ['s7','Put the papers in checklist order, checklist on top. Send it or hand it in'],
-  ];
-  const wf=[['w1','Certificate and cancelled passport back in the post',`by ${fmt(certBack)}`]];
+  );
+  if(sur) wf.push(['w1','Certificate and cancelled passport back in the post',`by ${fmt(certBack)}`]);
   if(dd) wf.unshift(['w0','Your reply to the missing-item email reaches VFS',`by ${fmt(addDays(dd,7))}`]);
+  if(oci) na.push(['o0','Have the certificate from Step 1 in hand. Without it, nothing else can be filed']);
+  if(minor&&!oci) na.push(['m0','Have your own cancelled Indian passport or OCI in hand. That is her proof of Indian origin']);
   if(oci||minor){
     na.push(['o1','Photo file (light background) and signature file, checked above']);
     na.push(['o2','Scan every paper to PDF, under 500 KB, one file per type']);
@@ -692,12 +713,12 @@ function gtd(){
     na.push(['m5','Child\'s OCI form, once your cancelled passport or OCI is in hand']);
     wf.push(['w3','Child\'s OCI says Granted',`${fmt(addDays(certBack,56))}–${fmt(addDays(certBack,70))}`]);
   }
-  const row=(k,t,d)=>`<li class="${st[k]?'done':''}"><input type="checkbox" data-k="${k}" ${st[k]?'checked':''}><span>${t}</span>${d?`<em class="due">${d}</em>`:''}</li>`;
-  document.getElementById('na').innerHTML=na.map(([k,t])=>row(k,t)).join('');
-  document.getElementById('wf').innerHTML=wf.map(([k,t,d])=>row(k,t,d)).join('');
+  const row=(k,t,d)=>`<li class="${st[k]?'done':''}"><label><input type="checkbox" data-k="${k}" ${st[k]?'checked':''}><span>${t}</span></label>${d?`<em class="due">${d}</em>`:''}</li>`;
+  document.getElementById('na').innerHTML=na.length?na.map(([k,t])=>row(k,t)).join(''):'<li><span>Tick what you are doing, above.</span></li>';
+  document.getElementById('wf').innerHTML=wf.length?wf.map(([k,t,d])=>row(k,t,d)).join(''):'<li><span>Nothing yet.</span></li>';
   document.querySelectorAll('#gtd input[data-k]').forEach(c=>c.addEventListener('change',()=>{const o=gload();o[c.dataset.k]=c.checked;gsave(o);c.closest('li').classList.toggle('done',c.checked)}));
 }
-['g_oci','g_minor'].forEach(id=>document.getElementById(id).addEventListener('change',gtd));
+['g_sur','g_oci','g_minor'].forEach(id=>document.getElementById(id).addEventListener('change',gtd));
 document.getElementById('g_reset').addEventListener('click',()=>{gsave({});gtd()});
 sd.addEventListener('change',gtd); document.getElementById('ddate').addEventListener('change',gtd); gtd();
 </script>

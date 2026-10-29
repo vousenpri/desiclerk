@@ -1,6 +1,6 @@
 # Fresh OCI — former Indian national, now foreign citizen by naturalization (USA, via VFS)
 
-Verified 2026-10-27 against the VFS USA one-pager and the "New OCI – Adult – Foreign National by Naturalization" checklist.
+Verified 2026-10-27 against the VFS USA one-pager and the "New OCI – Adult – Foreign National by Naturalization" checklist; re-checked 2026-10-29 against the **September 2026** adult checklist (Adult-Foreign-national-previously-Indian-passport-holder-adult-sep-2026.pdf), which supersedes it.
 
 ## Fee (2026-10-27)
 | Item | USD |
@@ -13,7 +13,7 @@ Card +3.75%. Money order / cashier's check payable to "VFS Services (USA) Inc." 
 
 ## Preconditions (before opening ociservices.gov.in)
 - Renunciation/surrender certificate in hand (if passport surrendered after 31 May 2010). **Cannot apply for OCI and surrender together.**
-- US passport valid ≥ 6 months at submission.
+- US passport valid **≥ 9 months** at submission (Sep 2026 checklist; the older checklist said 6).
 - Photo and signature JPEGs already made to spec (see `photo-specs.md`). The portal asks for them mid-form.
 - All supporting documents already scanned to PDF ≤ 500 KB, one file per category.
 - Date of birth on US passport must match last Indian passport exactly. Mismatch = rejection, no fix.

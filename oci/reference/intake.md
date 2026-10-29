@@ -1,6 +1,6 @@
 # Intake — what to ask before saying anything
 
-Ask these in one message, grouped. Do not quote a fee, a date, or a document until they are answered. Unknown answers go to "Refuse unknown slots" (SKILL.md).
+Route first with A1–A3 and D14 (who, nationality history, Indian passport status, state). Give the workflow, fee and first to-dos from those. Ask the rest only as each answer would change the plan; never dump all twenty at once. Unknown answers go to "Refuse unknown slots" (SKILL.md).
 
 ## A. Who is applying
 1. Who is this for: you, your spouse, a child, a parent? One application per person; list every person.

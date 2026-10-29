@@ -3,12 +3,21 @@
 Verified 2026-10-27. VFS Global is the sole provider since Nov 2020 (CKGS before that; CKGS-era records of renunciation certificates were not kept by consulates).
 
 ## Consulate jurisdiction (by state of residence; this decides which mission processes you)
-- **New York**: CT, ME, MA, NH, **NJ**, NY, OH, PA, RI, VT (visa/OCI also PR, USVI).
-- **Washington DC (Embassy)**: DE, DC, KY, MD, NC, VA, WV, Bermuda.
-- **Chicago**: IL, IN, IA, MI, MN, MO, ND, SD, WI (verify current list).
-- **Houston**: AR, CO, KS, LA, NE, NM, OK, TX.
-- **Atlanta**: AL, FL, GA, MS, SC, TN (verify).
-- **San Francisco**: AK, AZ, CA, GU, HI, ID, MT, NV, OR, UT, WA, WY (SF/Seattle/LA split has changed since 2012; Seattle now covers AK, ID, MT, NE, ND, OR, SD, WA, WY; LA covers southern CA — verify on the VFS attend-centre page).
+Source: Consulate General of India, Chicago, "Consular Jurisdiction" PDF, **effective 15 July 2025** (https://www.cgichicago.gov.in/content/Consular-Jurisdiction-Sep-2025.docx.pdf), read 2026-10-29. Nine missions. Earlier tables (MA under New York, DE under Washington, CO under Houston) are obsolete.
+
+| Mission | Covers |
+|---|---|
+| **Embassy, Washington DC** | DC, Kentucky, Maryland, North Carolina, Virginia, West Virginia, Bermuda |
+| **CGI Atlanta** | Alabama, Florida, Georgia, Mississippi, South Carolina, Tennessee, Puerto Rico, US Virgin Islands |
+| **CGI Boston** | Maine, Massachusetts, New Hampshire, Rhode Island, Vermont |
+| **CGI Chicago** | Illinois, Indiana, Iowa, Michigan, Minnesota, Missouri, Wisconsin |
+| **CGI Houston** | Arkansas, Kansas, Louisiana, Oklahoma, Texas |
+| **CGI Los Angeles** | Southern California (Los Angeles, Orange, San Diego, Imperial, Riverside, San Bernardino, Ventura, Santa Barbara, Kern, San Luis Obispo counties), Arizona, Nevada, New Mexico |
+| **CGI New York** | Connecticut, Delaware, New Jersey, New York, Ohio, Pennsylvania |
+| **CGI San Francisco** | Northern California (the other 48 counties), Guam, Hawaii, Utah, Colorado, Wyoming |
+| **CGI Seattle** | Alaska, Idaho, Montana, Nebraska, North Dakota, South Dakota, Oregon, Washington |
+
+Agent rule: ask the state (and county, if California) before naming a mission or centre. Any VFS centre in the mission's jurisdiction can receive the application; the mission decides.
 
 ## VFS Indian Consular Application Centres (16 as of Aug 2025, 17 with Los Angeles)
 Original: Washington DC, New York, Chicago, Houston, Atlanta, San Francisco, Seattle (+ Bellevue). Added 2025: Boston, Columbus, Dallas, Detroit, **Edison**, Orlando, Raleigh, San Jose. Added later: Los Angeles.

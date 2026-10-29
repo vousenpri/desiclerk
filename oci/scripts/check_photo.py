@@ -36,7 +36,10 @@ def border_stats(img):
     """Mean brightness and saturation of a 6% border ring, as 0-255."""
     g = img.convert("RGB")
     w, h = g.size
+    if w < 8 or h < 8:
+        return 0.0, 0.0  # too small to have a border; caller fails it on size anyway
     b = max(2, int(min(w, h) * 0.06))
+    b = min(b, (min(w, h) - 1) // 2)  # never let the ring cover the whole image
     px = []
     for x in range(w):
         for y in list(range(b)) + list(range(h - b, h)):
@@ -76,7 +79,12 @@ def main():
     ap.add_argument("--out", default=None)
     a = ap.parse_args()
 
-    src = Image.open(a.photo)
+    try:
+        src = Image.open(a.photo)
+        src.load()
+    except (OSError, ValueError) as e:
+        print(f"FAIL  cannot read {a.photo}: {e}. Not an image, or a corrupt file.")
+        sys.exit(2)
     fmt = (src.format or "").upper()
     src = ImageOps.exif_transpose(src)
     w, h = src.size
@@ -113,9 +121,11 @@ def main():
     sq = squarify(src.convert("RGB"))
     up = sq.resize((UPLOAD_PX, UPLOAD_PX), Image.LANCZOS)
     up_bytes, q = to_jpeg_under(up, UPLOAD_MAX_BYTES)
+    too_big = len(up_bytes) > UPLOAD_MAX_BYTES
     up_path = os.path.join(out, f"{base}_upload.jpg")
-    with open(up_path, "wb") as f:
-        f.write(up_bytes)
+    if not too_big:
+        with open(up_path, "wb") as f:
+            f.write(up_bytes)
 
     pr = sq.resize((UPLOAD_PX, UPLOAD_PX), Image.LANCZOS)
     pr_path = os.path.join(out, f"{base}_print_2x2.jpg")
@@ -131,10 +141,13 @@ def main():
     if not fails:
         print("PASS  as submitted")
     print()
-    print(f"wrote {up_path}  ({len(up_bytes)//1024} KB, q={q})  -> upload to portal")
-    print(f"wrote {pr_path}  (600 px @ 300 DPI = 2x2 in) -> print on photo paper")
-    if len(up_bytes) > UPLOAD_MAX_BYTES:
-        print("WARN  could not get upload under 30 KB; try a plainer background or crop tighter")
+    if too_big:
+        print(f"FAIL  could not get the upload under 30 KB (best was {len(up_bytes)//1024} KB at q={q}). No upload file written. Busy backgrounds and patterned clothing do this; retake against a plain wall.")
+        fails.append("upload cannot be made under 30 KB")
+    else:
+        print(f"wrote {up_path}  ({len(up_bytes)//1024} KB, q={q})  -> upload to portal")
+    print(f"wrote {pr_path}  (600 px @ 300 DPI = 2x2 in) -> print on photo paper; at the kiosk choose 'actual size' / 2x2, never 'fit to page'")
+    print("NOTE  background check reads the border pixels only; it cannot judge the face, the crop, or shadows. The portal does.")
     if fails and any("background" in m for m in fails):
         print("NOTE  background fails cannot be fixed by resizing; retake against the right backdrop")
     sys.exit(1 if fails else 0)

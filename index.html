@@ -336,6 +336,19 @@ ol.stack .d{grid-column:2}
 .signup .btn.dark{background:var(--ink);border-color:var(--ink);color:var(--bg);flex:none}
 .signup .start-note{display:block;margin-top:10px}
 @media (max-width:520px){.signup .row{flex-direction:column}.signup .btn.dark{width:100%}}
+
+/* floating skill-up card */
+.float{position:fixed;right:18px;bottom:18px;z-index:50;width:300px;background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:14px 16px 14px;box-shadow:0 12px 32px rgba(22,23,11,.14);font-family:var(--serif)}
+.float[hidden]{display:none}
+.float b{display:block;font-size:1.35rem;font-weight:600;line-height:1.1;margin-right:22px}
+.float span{display:block;color:var(--ink-soft);font-size:.98rem;line-height:1.35;margin:4px 0 10px}
+.float form{display:flex;gap:6px}
+.float input[type=email]{flex:1;min-width:0;font:inherit;font-size:.98rem;padding:8px 12px;border:1px solid var(--rule);border-radius:999px;background:var(--paper);color:var(--ink)}
+.float input[type=email]:focus{outline:2px solid var(--stamp);outline-offset:1px}
+.float .btn.dark{background:var(--ink);border-color:var(--ink);color:var(--bg);padding:8px 14px;flex:none}
+.float .x{position:absolute;top:8px;right:10px;background:none;border:0;font-size:20px;line-height:1;color:var(--ink-soft);cursor:pointer;padding:2px 6px}
+@media (max-width:560px){.float{left:10px;right:10px;bottom:10px;width:auto}}
+@media print{.float{display:none}}
 </style>
 </head>
 <body>
@@ -493,6 +506,16 @@ ol.stack .d{grid-column:2}
 </main>
 </div>
 
+<aside class="float" id="float" hidden aria-label="Skill up">
+  <button class="x" type="button" id="floatX" aria-label="Close">×</button>
+  <b>Skill up.</b>
+  <span>New skills for admin you need done properly. One email when something lands.</span>
+  <form action="https://buttondown.com/api/emails/embed-subscribe/desiclerk" method="post" target="_blank">
+    <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" aria-label="Your email">
+    <input type="hidden" name="tag" value="desiclerk-float">
+    <button class="btn dark" type="submit">Skill up</button>
+  </form>
+</aside>
 <script>
 const DATA = {
   surrender: {
@@ -746,6 +769,18 @@ function gtd(){
 ['g_sur','g_oci','g_minor'].forEach(id=>document.getElementById(id).addEventListener('change',gtd));
 document.getElementById('g_reset').addEventListener('click',()=>{gsave({});gtd()});
 sd.addEventListener('change',gtd); document.getElementById('ddate').addEventListener('change',gtd); gtd();
+
+/* ---------- floating skill-up ---------- */
+(function(){const FK='desiclerk.float.closed';const el=document.getElementById('float');if(!el)return;
+  let closed=false;try{closed=localStorage.getItem(FK)==='1'}catch(e){}
+  if(closed)return;
+  const show=()=>{if(window.scrollY>600){el.hidden=false;window.removeEventListener('scroll',show)}};
+  window.addEventListener('scroll',show,{passive:true}); show();
+  document.getElementById('floatX').addEventListener('click',()=>{el.hidden=true;try{localStorage.setItem(FK,'1')}catch(e){}});
+  el.querySelector('form').addEventListener('submit',()=>{setTimeout(()=>{el.hidden=true;try{localStorage.setItem(FK,'1')}catch(e){}},300)});
+})();
 </script>
+
+
 </body>
 </html>

@@ -26,7 +26,7 @@ When two sources at the same level disagree, state both, name the sources, and r
 ## Workflow
 
 1. **Classify.** Mail-in (default at most centres: VFS courier label or UPS/USPS prepaid with no expiry, FedEx refused, one application per envelope, return address must match address proof) or walk-in (appointment required). Recommend walk-in for a first application, any name variation, or a minor: the desk checks the stack in front of the user and gaps get fixed at the counter instead of becoming a deficiency email and a 7-day clock. Recommend courier for a clean repeat. Which application: surrender (with / without passport, adult / minor), fresh OCI (former Indian national / born abroad / spouse / minor), OCI re-issue, OCI passport upload, Entry (X) visa for a non-Indian spouse or child. Which centre. Walk-in or mail.
-2. **Preconditions first.** Read `reference/photo-specs.md` and `reference/gotchas.md`. Tell the user what must be true before they open any form: which photo(s), which browser, which files at which sizes, what must be notarized and whether that is actually required at their centre.
+2. **Preconditions first.** Read `reference/photo-specs.md`, `reference/apostille.md` and `reference/gotchas.md`. Tell the user what must be true before they open any form: which photo(s), which browser, which files at which sizes, what must be notarized and whether that is actually required at their centre.
 3. **Stack.** Produce the document list from the matching `reference/*.md`, in intake order, with original vs copy and copy counts. Mark anything condition-based as such.
 4. **Validate.** Run `scripts/check_photo.py` on the user's photo file. Report pass/fail per spec. Produce the upload file and the 2x2 print sheet from it.
 5. **Print check.** Before the user leaves: application printed in portrait, single-sided, photo visibly rendered on the Passport Seva / OCI printout, no staples, checklist printed as cover page, confirmation receipt enclosed.
@@ -41,6 +41,7 @@ When two sources at the same level disagree, state both, name the sources, and r
 - `reference/oci-reissue.md` — OCI Misc Services re-issue stack (age 20, name change, lost/damaged, particulars); original card goes in.
 - `reference/oci-spouse.md` — foreign-origin spouse: 2-year rule, interview, joint affidavit, lifelong passport-upload duty, s.7D(f) loss.
 - `reference/visa-spouse.md` — Entry (X) visa for a non-Indian spouse/child when OCI is barred or too slow; renunciation proof of the Indian-origin spouse.
+- `reference/apostille.md` — which papers need an apostille (US birth and marriage certificates: yes; naturalization certificate and passports: no), the NYC three-office chain, other states, and the rule to send self-attested copies never originals.
 - `reference/photo-specs.md` — the two incompatible photo specs and the upload specs.
 - `reference/centres.md` — jurisdictions and the Edison / NY centres.
 - `reference/gotchas.md` — per-desk observations, dated and attributed. Append to this after every real visit.

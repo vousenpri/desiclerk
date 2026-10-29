@@ -1,4 +1,5 @@
 SKILL.md
+reference/apostille.md
 reference/centres.md
 reference/gotchas.md
 reference/household-obligations.md

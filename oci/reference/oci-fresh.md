@@ -28,8 +28,8 @@ Card +3.75%. Money order / cashier's check payable to "VFS Services (USA) Inc." 
 4. Last Indian passport — copy of first 2 and last 2 pages. If unavailable, the documents used for the renunciation.
 5. Renunciation / surrender certificate — copy (or cancelled passport with "cancelled on acquiring foreign citizenship" stamp if surrendered on or before 31 May 2010).
 6. Naturalization certificate — copy, signed at the designated space. Via parents → their certificates + notarized affidavit by both parents.
-7. Proof of marital status — marriage certificate / divorce decree / spouse's death certificate; notarized affidavit if unavailable.
-8. Name change document — notarized affidavit or court order. Condition-based but very commonly triggered.
+7. Proof of marital status — marriage certificate (civil registrar; **apostilled if issued outside India**, so a US marriage certificate needs the state apostille; self-attested copy, never the original) / divorce decree / spouse's death certificate; notarized affidavit if unavailable. See `apostille.md`.
+8. Name change document — notarized one-and-the-same-person affidavit or court order. Condition-based but very commonly triggered. A chain of changes (maiden name on the Indian passport → married name → middle name re-added at naturalization) is covered by the marriage certificate + naturalization certificate + **one** affidavit listing every version; enter the Indian-passport name as "previous name" on the form.
 9. Employment / work letter (or self-employment proof, retirement proof, admission letter, or a written statement if never employed).
 10. OCI cards of parents and spouse — copies if any.
 11. Previous Indian visa — copy if any.

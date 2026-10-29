@@ -1,8 +1,10 @@
 SKILL.md
 reference/apostille.md
 reference/centres.md
+reference/glossary.md
 reference/gotchas.md
 reference/household-obligations.md
+reference/intake.md
 reference/leads-reddit.md
 reference/oci-fresh.md
 reference/oci-maintenance.md
@@ -10,6 +12,7 @@ reference/oci-minor.md
 reference/oci-reissue.md
 reference/oci-spouse.md
 reference/photo-specs.md
+reference/recovery.md
 reference/surrender.md
 reference/timing.md
 reference/visa-spouse.md

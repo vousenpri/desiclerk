@@ -2,6 +2,14 @@
 
 Verified 2026-10-27. There are **three different photo requirements** across surrender and OCI, and two of them contradict each other. Surface all of this before the user books a photo.
 
+## Easiest way to get the photo (tell the user this first)
+Stand in front of a plain wall and take a selfie. That's it.
+- Wall: white for the surrender photo; pale blue, pale grey or cream for OCI. No wall the right colour? Hang a plain bedsheet.
+- Daylight from a window in front of you, no flash, no shadow behind you. Phone at eye level, arm's length or have someone hold it a step back. Dark top. Hair off the face, no glasses glare, mouth closed, look at the lens.
+- Take five. Pick the one with the plainest background. Run it through the check (desiclerk.com or `scripts/check_photo.py`); it crops to square, makes the upload file and the 2 × 2 print file.
+- Print the 2 × 2 file at a pharmacy kiosk from your phone. Don't use the kiosk's own passport-photo mode; it will give you a white-background 2 × 2 that is not your upload file.
+- Children: same, sitting against the wall or lying on a pale sheet, shot from above.
+
 ## 1. Surrender / renunciation — physical print
 - 2 copies, 2 x 2 inch, colour, front pose, **white background only**, photographic paper, under 6 months old.
 - Source: VFS adult with-passport checklist (2026-10-20).

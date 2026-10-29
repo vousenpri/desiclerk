@@ -38,7 +38,10 @@ When two sources at the same level disagree, state both, name the sources, and r
 
 ## Reference files
 
-- `reference/surrender.md` — surrender / renunciation, fees, checklist, affidavits.
+- `reference/intake.md` — the 20 questions to ask first, and the decision tree that picks the workflow. Start here.
+- `reference/recovery.md` — on hold / returned / rejected, re-upload by file reference number, travel to India mid-process (X visa), tracking, lost documents, refunds.
+- `reference/glossary.md` — plain words for every official term; use the plain words with the user.
+- `reference/surrender.md` — surrender / renunciation, fees, checklist, affidavits, desk-observed blockers.
 - `reference/oci-fresh.md` — fresh OCI for a former Indian national; rejection causes.
 - `reference/oci-maintenance.md` — re-issue vs upload-only rules by age and passport; household triggers.
 - `reference/oci-minor.md` — fresh OCI for a US-born minor; parental authorization, thumb rule, birth-certificate rules.
@@ -62,3 +65,29 @@ When two sources at the same level disagree, state both, name the sources, and r
 - "Just follow the steps on the VFS site." The steps are not the problem.
 - A fee from memory. Fetch the live one-pager or ask for the receipt.
 - That a notarized affidavit is required without checking `reference/gotchas.md` for the centre.
+
+## Calendar events the agent creates (names fixed, so the user recognises them)
+| Event | When | Description carries |
+|---|---|---|
+| `Desi Clerk · Passport handed in` | the day | VFS reference number |
+| `Desi Clerk · VFS tracker should move` | +3 working days | "Don't call before this" |
+| `Desi Clerk · Certificate back (earliest)` / `(latest)` | +7 / +21 working days after it reaches the consulate | "Scan it the day it arrives" |
+| `Desi Clerk · Reply to VFS by` | +7 calendar days from a deficiency email | the exact document named; "VFS may close the file at 20 days" |
+| `Desi Clerk · Apostille back (expected)` | per the state's stated turnaround | which certificate, which office |
+| `Desi Clerk · Fill OCI form` | the week of planned submission | "expires 90 days after filling" |
+| `Desi Clerk · OCI form expires` | +90 days from filling | "refill if not submitted" |
+| `Desi Clerk · OCI granted (expected)` | +8 to +10 weeks from VFS receipt | "download e-OCI PDF from ociservices.gov.in" |
+| `Desi Clerk · Upload new passport to OCI by` | +3 months from each new passport | which person; upload vs re-issue per `oci-maintenance.md` |
+| `Desi Clerk · OCI re-issue due` | first passport issued after age 20; once after 50 | which person |
+Every event: all-day, no attendees, description ends with the consequence of missing it. One event per person per clock.
+
+## Worked example (anonymised, the shape most households have)
+Adult naturalized 2024, Indian passport name "A B", married name "A C", naturalization re-added the middle name "A B C". US-born child aged 4. New York jurisdiction.
+1. Intake finds: name chain (3 versions), child under 5 (thumbprint), NYC birth certificate short form only, US marriage certificate not apostilled.
+2. To do, in order: order long-form birth certificate with letter of exemplification (reason: apostille) → County Clerk → Dept of State; apostille the marriage certificate (same chain, County Clerk of the issuing county); notarize one one-and-the-same-person affidavit listing A B / A C / A B C; two photos of the adult (white for surrender, pale for OCI) and one of the child (pale); scan everything to PDF ≤ 500 KB.
+3. File surrender (walk-in recommended: first time + name variation). Calendar: tracker +3 wd, certificate +7/+21 wd.
+4. While waiting: nothing on the OCI portal yet. Papers ready.
+5. Certificate back → fill both OCI forms the same week; adult's previous name = "A B"; child's parent name exactly as on the mother's current US passport, with marriage certificate explaining the birth-certificate version.
+6. Waiting for: OCI granted +8–10 weeks, both. Calendar.
+7. After grant: child's passport renews every 5 years → upload within 3 months each time; first renewal after 20 → re-issue. Adult: once after 50.
+

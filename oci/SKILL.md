@@ -3,7 +3,7 @@ name: india-consular
 description: Use whenever the user is preparing, filing, or maintaining a Government of India consular application from the USA via VFS Global — Indian passport surrender/renunciation, fresh OCI, OCI re-issue or passport upload, minor OCI — or asks about photo specs, fees, or what to bring to a VFS centre. Loads a precondition-first method and verified checklists so the answer is a correct stack, not a walkthrough.
 ---
 
-Fetching this skill by URL: every file is served under https://desiclerk.com/skill/ and `FILES.txt` there lists all of them. Or download https://desiclerk.com/skill.zip.
+Fetching this skill by URL: every file is served under https://desiclerk.com/oci/ and `FILES.txt` there lists all of them. Or download https://desiclerk.com/oci.zip.
 
 # India consular (USA / VFS) — specialist method
 

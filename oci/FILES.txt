@@ -1,4 +1,3 @@
-FILES.txt
 SKILL.md
 reference/centres.md
 reference/gotchas.md

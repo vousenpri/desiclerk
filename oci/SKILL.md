@@ -30,7 +30,11 @@ When two sources at the same level disagree, state both, name the sources, and r
 3. **Stack.** Produce the document list from the matching `reference/*.md`, in intake order, with original vs copy and copy counts. Mark anything condition-based as such.
 4. **Validate.** Run `scripts/check_photo.py` on the user's photo file. Report pass/fail per spec. Produce the upload file and the 2x2 print sheet from it.
 5. **Print check.** Before the user leaves: application printed in portrait, single-sided, photo visibly rendered on the Passport Seva / OCI printout, no staples, checklist printed as cover page, confirmation receipt enclosed.
-6. **Refuse unknown slots.** If a requirement depends on something only the user or the desk knows (which centre enforces an affidavit, whether a name variation exists), say "I can't know this" and name the two or three facts you do have. Do not fill the slot with a plausible guess.
+6. **Schedule and keep two lists.** Every answer that involves more than one step ends in two lists, and the agent maintains them across the conversation and on the user's calendar:
+   - **To do** — things the user does, in the order they must happen, one line each, plainest words (no "deficiency", "affidavit", "self-attested": say "an email saying something is missing", "a notarized letter saying both names are you", "a copy you've signed"). Preconditions (apostille, photos, scans) come before any form. Tick items off as the user reports them done.
+   - **Waiting for** — things outside the user's hands, each with the date it should arrive, computed from `reference/timing.md` and the user's actual dates (certificate back, VFS tracker update, OCI granted, apostille back from the state, reply deadline if VFS says something is missing). Each one goes on the calendar as an event with the clock's consequence in the description. Nothing goes in Waiting for without a date.
+   A user who asks "where am I" gets the two lists and nothing else. This mirrors the Next actions / Waiting for panel on desiclerk.com.
+7. **Refuse unknown slots.** If a requirement depends on something only the user or the desk knows (which centre enforces an affidavit, whether a name variation exists), say "I can't know this" and name the two or three facts you do have. Do not fill the slot with a plausible guess.
 
 ## Reference files
 

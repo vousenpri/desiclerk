@@ -41,3 +41,13 @@ A file at **600 x 600 px, JPEG, under 30 KB** satisfies both. Target that. The p
 2. Get the digital file first; derive the print from it (so print and upload are identical).
 3. Run `scripts/check_photo.py` on the file. It emits `*_upload.jpg` (600px, ≤30 KB) and `*_print_2x2.jpg` (600px at 300 DPI = 2 inches).
 4. Print the 2x2 on photographic paper (a pharmacy will print from a file).
+
+## 5. Child (minor OCI)
+- Same photo spec as fresh OCI: pale non-white background, dark clothes, head and shoulders, eyes open, no toys or hands in frame. Infants: lay the child on a pale sheet and shoot from above; no shadows.
+- **Under 5:** no signature. Upload the **left thumb impression** instead, same JPEG box as a signature (3:1, target 600 x 200 px, under 30 KB). Use an ink pad, press firmly, scan at 300 DPI, check the ridges are visible before uploading; faint prints have been held and returned (NY, 2025-12, twice). Parents never sign in the child's box.
+- **5 and over:** the child signs in blue or black ink inside the box; scan that.
+
+## What the validator can and cannot tell you
+- `scripts/check_photo.py` and the check on desiclerk.com test the file: JPEG, square, 360–900 px, under 30 KB, background white (surrender) or light-not-white (OCI). They do not judge the face. Say so: "File checks passed. The portal judges the face."
+- If the file cannot be brought under 30 KB without visible damage (busy background, patterned clothing), the answer is **retake against a plain wall**, not a smaller file. Do not hand the user a 28 KB blur.
+- A pharmacy 2 x 2 print is **not** the upload file, and its white background is wrong for OCI. Get the digital file first, print from it; two backgrounds if both applications are in play.

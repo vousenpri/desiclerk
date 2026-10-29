@@ -36,6 +36,7 @@ Card +3.75%. Money order / cashier's check payable to "VFS Services (USA) Inc." 
 12. Proof of address — one of state ID, driver's licence (uncropped), utility bill ≤ 3 months, lease, mortgage, tax return, dorm letter. PO Box refused.
 13. Affidavit in lieu of originals — notarized (VFS format).
 14. Undertaking by the OCI applicant (VFS format).
+14a. **Undertaking for surrender of Indian voter card and ration card** (separate VFS form). Not on the fresh-adult checklist, but applications have been held for it (immihelp, 2025-06). Sign it even if the user never held either.
 15. Consent letter authorising the consulate to correct errors (VFS format). Not a guarantee of correction.
 16. VFS application confirmation / payment receipt. Courier: UPS or USPS label with no expiry; FedEx refused. Return address must match address proof.
 17. Checklist printed and signed as cover page.

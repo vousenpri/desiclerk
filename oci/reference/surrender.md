@@ -54,3 +54,9 @@ In intake order, as the checklist lists them:
 
 ## Not required (common generic-agent error)
 - A notarized "personal appearance" or signature-change affidavit is **not** on the VFS checklist. See `gotchas.md` for the New York vs Edison observation.
+
+## Desk-observed blockers (2026-10, see gotchas.md)
+- **Present address must be the US address.** Passport Seva prompts for an Indian one; Houston has rejected applications over it. Put the US address.
+- **The VFS Surrender Certificate PDF truncates long fields.** Retype in Word, print, sign in blue ink. One form per applicant; two signed copies.
+- **Print the Passport Seva form from Safari/Firefox after the photo renders.** Chrome prints a blank photo box. Portrait, single-sided, no staples, nothing handwritten.
+- **Name variation of any kind** (middle name dropped at naturalization, surname at marriage) is the most repeated surrender blocker. Bring a notarized one-and-the-same-person affidavit plus the marriage certificate / court order.

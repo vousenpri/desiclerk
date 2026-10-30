@@ -46,6 +46,7 @@ h1 em,h2 em{font-style:italic;color:var(--copper);font-weight:500}
 .start{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0 4px}
 .btn{font-family:var(--sans);font-size:14px;font-weight:500;padding:11px 20px;border-radius:999px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;line-height:1.2}
 .btn:hover{border-color:var(--ink)}
+.btn-quiet{border-style:dashed;color:var(--ink-soft)}
 .start .btn[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .start-note{font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);flex-basis:100%}
 .centre{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 0;font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
@@ -372,21 +373,22 @@ ol.stack .d{grid-column:2}
 </g>
 </svg>
   <h1>Call my <em>agent</em>.</h1>
-  <p class="lede">Getting OCI? Give this to your AI agent so nothing gets missed.</p>
+  <p class="lede">Getting OCI? Give this to your AI agent so nothing gets missed. Born here and never had an Indian passport? Covered.</p>
   <div class="paste"><code id="pasteline">Load the skill at <a href="https://desiclerk.com/oci/SKILL.md">desiclerk.com/oci/SKILL.md</a> and do my Indian passport surrender and OCI, for me and my child. Tell me what to get first. Put every date on my calendar and book VFS around it.</code><button class="btn" type="button" id="copyBtn" aria-live="polite">Copy</button></div>
   <p class="small">Your documents stay with your agent. Free, no account.</p>
   <div class="start" style="margin-top:28px">
-    <span class="start-note">No agent? Pick one</span>
-    <button class="btn" type="button" data-app="surrender" aria-pressed="true">Give back my Indian passport</button>
-    <button class="btn" type="button" data-app="oci" aria-pressed="false">OCI for me</button>
-    <button class="btn" type="button" data-app="minor" aria-pressed="false">OCI for my child</button>
+    <span class="start-note">No agent? Who is the OCI for?</span>
+    <button class="btn" type="button" data-app="oci" aria-pressed="true">Me. I had an Indian passport</button>
+    <button class="btn" type="button" data-app="descent" aria-pressed="false">Me. I was born here</button>
+    <button class="btn" type="button" data-app="minor" aria-pressed="false">My child</button>
+    <button class="btn btn-quiet" type="button" data-app="surrender" aria-pressed="false">Just the passport surrender</button>
   </div>
   <div class="centre">Centre
     <label><input type="radio" name="centre" value="nyc" checked>New York</label>
     <label><input type="radio" name="centre" value="edison">New Jersey</label>
     <label><input type="radio" name="centre" value="other">Elsewhere</label>
   </div>
-  <select id="app" hidden><option value="surrender" selected>s</option><option value="oci">o</option><option value="minor">m</option></select>
+  <select id="app" hidden><option value="surrender">s</option><option value="oci" selected>o</option><option value="minor">m</option><option value="descent">d</option></select>
 </header>
 
 <main>
@@ -444,8 +446,8 @@ ol.stack .d{grid-column:2}
   <p class="lede">Easiest: stand in front of a plain wall and take a selfie. White wall for the passport surrender. Light wall, not white, for OCI. Daylight, no flash. Drop it here and get the file to upload and the file to print. It checks the size, the dimensions and the background; the portal judges the face.</p>
   <label class="drop" id="drop" tabindex="0"><input type="file" id="file" accept="image/*"><b>Drop a photo</b> or tap to choose. JPEG or PNG, straight from the camera is fine.</label>
   <div class="pur">
-    <label><input type="radio" name="pur" value="oci"> OCI</label>
-    <label><input type="radio" name="pur" value="surrender" checked> Surrender</label>
+    <label><input type="radio" name="pur" value="oci" checked> OCI</label>
+    <label><input type="radio" name="pur" value="surrender"> Surrender</label>
   </div>
   <div class="res" id="res" aria-live="polite"></div>
 </section>
@@ -466,7 +468,7 @@ ol.stack .d{grid-column:2}
     <div class="col"><h4>Next actions</h4><ul id="na"></ul></div>
     <div class="col"><h4>Waiting for</h4><ul id="wf"></ul></div>
   </div>
-  <div class="ctl"><label><input type="checkbox" id="g_sur" checked> Give back my passport</label><label><input type="checkbox" id="g_oci"> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><button type="button" id="g_reset">Clear ticks</button></div>
+  <div class="ctl"><label><input type="checkbox" id="g_sur" checked> Give back my passport</label><label><input type="checkbox" id="g_oci" checked> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><label><input type="checkbox" id="g_desc"> OCI, born here</label><button type="button" id="g_reset">Clear ticks</button></div>
 </section>
 <section id="gotchas" class="got">
   <div class="eyebrow">Gotchas</div>
@@ -476,7 +478,7 @@ ol.stack .d{grid-column:2}
   <p><b>The passport surrender costs $62.</b> Older guides say it depends on when you became a citizen. It doesn't any more.</p>
   <p><b>VFS gives two different photo sizes.</b> A 600 × 600 JPEG under 30 KB works for both. The photo check above makes one.</p>
   <p><b>Don't fill the OCI form early.</b> You can't send it until the certificate is back, and it expires 90 days after you fill it.</p>
-  <p><b>There is no OCI card any more.</b> Since July 2026 you download a PDF when the website says Granted. Old cards still work. <a href="https://www.cgichicago.gov.in/">Consulate General of India, Chicago, notice of 9 July 2026</a>.</p>
+  <p><b>There is no OCI card any more.</b> Since July 2026 you download a PDF when the website says Granted. Old cards still work. And since October 2026 there is no re-issue when you get a new passport: you update it on the website within three months, free. Late costs $47. The VFS page still shows the old rule; Chicago's consulate has the new one. <a href="https://www.cgichicago.gov.in/">Consulate General of India, Chicago, notice of 9 July 2026</a>.</p>
   <p><b>Your child's birth certificate needs an apostille.</b> An apostille is a state's certificate that the signature on a document is real. The hospital one won't do, and the short one won't do. In New York it's three offices, all close together: get the long form at 45 Lafayette Street, Room 133 (book first, and say it's for an apostille); get the signature checked at 60 Centre Street; get the apostille at 123 William Street. Then send a signed copy, not the original. Same for your marriage certificate if it's from the US. Check the mother's name is spelled the same on the birth certificate and her passport. That mismatch is a reported reason children's OCIs get sent back.</p>
   <p><b>Any change to your name counts.</b> A dropped middle name, one letter, a new surname. Put the old name in the OCI form as your previous name and bring a notarized letter saying both names are you. Miss this and they send it back.</p>
 </section>
@@ -551,7 +553,7 @@ const DATA = {
     fee: [["Fee","$275"],["Welfare fund","$3"],["VFS charge","$19"],["Total","$297"]],
     feenote: "Pay by Visa or Mastercard (adds 3.75%), or by money order or banker's draft to VFS Services (USA) Inc. to avoid that. No personal checks, no Amex.",
     pre: [
-      "Have the certificate from Step 1 in your hand. You can't do both at once.",
+      "First give back the Indian passport (Step 1 above). When the certificate comes back, this. You can't do both at once.",
       "Your US passport must have at least nine months left.",
       "Make your photo and signature files first. Photo: light background, not white. Use the check below.",
       "Scan every document to PDF, under 500 KB each, one file per type. Upload all of them or they send it back.",
@@ -608,6 +610,36 @@ const DATA = {
       ["VFS payment receipt and courier label","orig","UPS or USPS, no expiry. FedEx refused."],
       ["The VFS checklist, printed and signed, on top","orig",""]
     ]
+  },
+  descent: {
+    fee: [["Fee","$275"],["Welfare fund","$3"],["VFS charge","$19"],["Total","$297"]],
+    feenote: "Pay by Visa or Mastercard (adds 3.75%), or by money order or banker's draft to VFS Services (USA) Inc. to avoid that. No personal checks, no Amex. You get a PDF, not a card.",
+    pre: [
+      "You were born here and never had an Indian passport. Nothing to give back. The whole thing rests on one paper: proof that a parent or grandparent was Indian.",
+      "Get a copy of that person's Indian passport, first two and last two pages. Cancelled or old is fine. If it's in a cupboard in India, start there; it's the slow part. No passport? A domicile or nativity certificate from India, or their OCI plus the papers it was issued on.",
+      "Your own birth certificate, long form, naming both parents, apostilled by the state that issued it. The hospital one won't do. An apostille is the state's certificate that the signature on a document is real.",
+      "Your parents' marriage certificate, from a registrar, apostilled if it's from the US. Temple or church certificates are refused.",
+      "Names must line up across every paper: you on your birth certificate and your passport; your parent on their Indian passport, on your birth certificate, and on their passport now. Any difference, even a maiden name, needs a notarized letter saying both names are the same person. This is the usual reason this application gets sent back.",
+      "Your US passport must have at least nine months left.",
+      "Photo: light background, not white. Scan every paper to PDF, under 500 KB, one file per type. Upload all of them before you submit. The form expires in 90 days."
+    ],
+    items: [
+      ["The printed OCI form, signed on Part B","orig","Photo stuck on. Same photo as the one you uploaded."],
+      ["Two photos, 2 × 2, light background, not white","orig","Head and shoulders, dark clothes."],
+      ["US passport photo page","copy, signed by you","Nine months left. Don't send the real passport."],
+      ["Your birth certificate, long form, apostilled","copy, signed by you","Copy the certificate and the apostille page together. Don't send the original."],
+      ["Proof your parent or grandparent was Indian","copy, signed by you","Their Indian passport, first two and last two pages. Or a domicile or nativity certificate. Or their OCI plus the papers behind it."],
+      ["Your parents' marriage certificate, apostilled if from the US","copy, signed by you","From a registrar."],
+      ["Your own marriage certificate, if married","copy","Apostilled if it's from outside India.","cond"],
+      ["Name change letter or court order","orig, notarized","Only if any name is different anywhere in the chain.","cond"],
+      ["Work letter","copy","From your employer. Self-employed, retired or a student: something that shows it. Never worked: a signed note."],
+      ["Parents' naturalization certificates and passports","copy","Only if you became a citizen through your parents, with a notarized letter.","cond"],
+      ["Parents' OCI, if they have one","copy","","cond"],
+      ["Proof of address","copy","Driver's licence (don't cut it down), state ID, a bill under three months old, lease, mortgage or tax return. No PO Box. Living with parents? Their proof plus a notarized note from them."],
+      ["The three VFS letters: copies are true, undertaking, consent","orig","VFS has the wording. You just sign them. Copies-are-true gets notarized."],
+      ["VFS payment receipt and courier label","orig","UPS or USPS, no expiry. FedEx refused."],
+      ["The VFS checklist, printed and signed, on top","orig",""]
+    ]
   }
 };
 const CENTRE = {
@@ -616,11 +648,11 @@ const CENTRE = {
   other: "The list and the fees are the same everywhere. What each desk actually asks for isn't. If you learn something at yours, tell us."
 };
 const $ = s => document.querySelector(s);
-const TITLES={surrender:'Give back your Indian passport',oci:'OCI for you',minor:'OCI for your child'};
+const TITLES={surrender:'Just the passport surrender',oci:'OCI, after you had an Indian passport',minor:'OCI for your child',descent:'OCI, born here'};
 document.querySelectorAll('.start .btn').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.start .btn').forEach(x=>x.setAttribute('aria-pressed','false'));t.setAttribute('aria-pressed','true');$('#app').value=t.dataset.app;render();syncPlan(t.dataset.app);document.getElementById('stack').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}));
 /* one choice drives the stack, the photo purpose and the plan */
-function syncPlan(app){const o=document.getElementById('g_oci'),m=document.getElementById('g_minor'),su=document.getElementById('g_sur');
-  su.checked=(app==='surrender'||app==='oci'); o.checked=(app==='oci'); m.checked=(app==='minor');
+function syncPlan(app){const o=document.getElementById('g_oci'),m=document.getElementById('g_minor'),su=document.getElementById('g_sur'),de=document.getElementById('g_desc');
+  su.checked=(app==='surrender'||app==='oci'); o.checked=(app==='oci'); m.checked=(app==='minor'); de.checked=(app==='descent');
   const pur=document.querySelector(`input[name=pur][value=${app==='surrender'?'surrender':'oci'}]`); if(pur) pur.checked=true;
   if(typeof gtd==='function') gtd()}
 document.querySelectorAll('input[name=centre]').forEach(r=>r.addEventListener('change',render));
@@ -717,7 +749,7 @@ function tl(){
     const r2=[
       [`${fmt(addBiz(s,2))}–${fmt(addBiz(s,3))}`,'VFS tracker first changes','Two or three weekdays after it arrives. Don\'t call before this.'],
       ...(dd?[[`by ${fmt(addDays(dd,7))}`,'Send what they asked for','You have 7 days from their email. At 20 days they drop it and you start over.']]:[['only if VFS emails you','If they say something is missing','The 7 days start from their email, not from when you sent. Put that date above if you get one.']]),
-      [`${fmt(addDays(addBiz(s,3),56))}–${fmt(addDays(addBiz(s,3),70))}`,(minor&&!oci)?'Child\'s OCI granted':'OCI granted','About 8 to 10 weeks after VFS gets it. There is no card any more. Download the PDF from ociservices.gov.in when it says Granted.']
+      [`${fmt(addDays(addBiz(s,3),56))}–${fmt(addDays(addBiz(s,3),70))}`,(minor&&!oci&&!desc)?'Child\'s OCI granted':'OCI granted','About 8 to 10 weeks after VFS gets it. There is no card any more. Download the PDF from ociservices.gov.in when it says Granted.']
     ];
     $('#tl').innerHTML=r2.map(([d,t,n])=>`<li><b>${d}</b><div>${t}<i>${n}</i></div></li>`).join(''); return;
   }
@@ -741,13 +773,13 @@ function gload(){try{return JSON.parse(localStorage.getItem(GK)||'{}')}catch(e){
 function gsave(o){try{localStorage.setItem(GK,JSON.stringify(o))}catch(e){}}
 const SK='desiclerk.state';
 function sload(){try{return JSON.parse(localStorage.getItem(SK)||'{}')}catch(e){return {}}}
-function ssave(){try{localStorage.setItem(SK,JSON.stringify({s:sd.value,d:ddEl.value,sur:document.getElementById('g_sur').checked,oci:document.getElementById('g_oci').checked,minor:document.getElementById('g_minor').checked,app:$('#app').value}))}catch(e){}}
-(function(){const st=sload(); if(st.s) sd.value=st.s; if(st.d) ddEl.value=st.d; ['sur','oci','minor'].forEach(k=>{if(k in st) document.getElementById('g_'+k).checked=!!st[k]});
+function ssave(){try{localStorage.setItem(SK,JSON.stringify({s:sd.value,d:ddEl.value,sur:document.getElementById('g_sur').checked,oci:document.getElementById('g_oci').checked,minor:document.getElementById('g_minor').checked,desc:document.getElementById('g_desc').checked,app:$('#app').value}))}catch(e){}}
+(function(){const st=sload(); if(st.s) sd.value=st.s; if(st.d) ddEl.value=st.d; ['sur','oci','minor','desc'].forEach(k=>{if(k in st) document.getElementById('g_'+k).checked=!!st[k]});
   if(st.app){const t=document.querySelector(`.start .btn[data-app=${st.app}]`); if(t){document.querySelectorAll('.start .btn').forEach(x=>x.setAttribute('aria-pressed','false'));t.setAttribute('aria-pressed','true');$('#app').value=st.app;render();const pur=document.querySelector(`input[name=pur][value=${st.app==='surrender'?'surrender':'oci'}]`); if(pur) pur.checked=true}}})();
 function gtd(){
   tl(); ssave();
   const st=gload(); const s=localDate(sd)||today; const dd=localDate(ddEl);
-  const oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked, sur=document.getElementById('g_sur').checked;
+  const oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked, sur=document.getElementById('g_sur').checked, desc=document.getElementById('g_desc').checked;
   const certBack=sur?addBiz(addBiz(s,3),21):addBiz(s,3);
   const na=[]; const wf=[];
   if(sur) na.push(
@@ -763,6 +795,15 @@ function gtd(){
   if(dd) wf.unshift(['w0','Your reply to the missing-item email reaches VFS',`by ${fmt(addDays(dd,7))}`]);
   if(oci) na.push(['o0','Have the certificate from Step 1 in hand. Without it, nothing else can be filed']);
   if(minor&&!oci) na.push(['m0','Have your own cancelled Indian passport or OCI in hand. That is her proof of Indian origin']);
+  if(desc){
+    na.push(['d1','Get a copy of your parent\'s or grandparent\'s Indian passport, first two and last two pages. Start here; it\'s the slow part']);
+    na.push(['d2','Your long-form birth certificate, then the state apostille']);
+    na.push(['d3','Your parents\' marriage certificate, apostilled if from the US']);
+    na.push(['d4','Line up every name across the papers. Any difference: a notarized letter saying both names are you']);
+    na.push(['d5','Photo (light background) and signature file, checked above. Scan every paper to PDF under 500 KB']);
+    na.push(['d6','Fill the OCI form the week you send it. Put your parent\'s name exactly as on their passport']);
+    wf.push(['w4','Your OCI says Granted',`${fmt(addDays(addBiz(s,3),56))}–${fmt(addDays(addBiz(s,3),70))}`]);
+  }
   if(oci||minor){
     na.push(['o1','Photo file (light background) and signature file, checked above']);
     na.push(['o2','Scan every paper to PDF, under 500 KB, one file per type']);
@@ -786,7 +827,7 @@ function gtd(){
   document.getElementById('wf').innerHTML=wf.length?wf.map(([k,t,d])=>row(k,t,d)).join(''):'<li><span>Nothing yet.</span></li>';
   document.querySelectorAll('#gtd input[data-k]').forEach(c=>c.addEventListener('change',()=>{const o=gload();o[c.dataset.k]=c.checked;gsave(o);c.closest('li').classList.toggle('done',c.checked)}));
 }
-['g_sur','g_oci','g_minor'].forEach(id=>document.getElementById(id).addEventListener('change',gtd));
+['g_sur','g_oci','g_minor','g_desc'].forEach(id=>document.getElementById(id).addEventListener('change',gtd));
 document.getElementById('g_reset').addEventListener('click',()=>{gsave({});gtd()});
 sd.addEventListener('change',gtd); document.getElementById('ddate').addEventListener('change',gtd); gtd();
 

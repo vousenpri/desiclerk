@@ -6,6 +6,7 @@ reference/gotchas.md
 reference/household-obligations.md
 reference/intake.md
 reference/leads-reddit.md
+reference/oci-descent.md
 reference/oci-fresh.md
 reference/oci-maintenance.md
 reference/oci-minor.md

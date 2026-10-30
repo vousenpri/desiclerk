@@ -44,3 +44,13 @@ This file is the ground truth no page has. Append after every real visit or port
 - **No 2025–26 report of a NY appearance / signature-change affidavit being demanded.** Edison non-requirement stands unchallenged.
 Full attributed list: `leads-reddit.md`. Reddit itself was unreachable from the research session; these are from other forums.
 - **NYC long-form birth certificate:** VitalChek is the only authorized vendor; the long form with letter of exemplification is issued only when the request reason is "Apostille/Authentication" (online, mail form page 4, or in person at 45 Lafayette St, Room 133, by appointment). The apostille IS needed for OCI (see above). $15 + vendor fee; County Clerk $3; Dept of State $10. (nyc.gov DOH birth records page, read 2026-10-28.)
+
+## 2026-10-30 · from a competitor-content audit, verified against consulates
+- **Physical OCI re-issue discontinued; no mandatory re-issue after a new passport** (CGI Chicago page, updated 27 Oct 2026). Portal update within 3 months, free; late $25+$3+$19; photo ≤ 30 days old. VFS one-pager and Embassy page still show the old rule.
+- **Voter-card/ration-card undertaking is now item 18 on the Sep 2026 fresh-adult checklist**, mandatory for all prior Indian citizens.
+- **Spouse OCI validity 5 years**, expiry triggers re-issue (CGI Chicago PDF).
+- **No need to carry the surrender certificate when travelling to India** (VFS one-pager).
+- **Infants:** under 1, eyes may be closed in the photo; under 10, relaxed expression rules (CGI SF photo guidelines).
+- **Newer surrender checklist dated 25 Oct 2026** names embassy.passportindia.gov.in (same system as mportal; the login page is mportal) and expands the address-proof list.
+- Unverified leads, do not quote: e-OCI PDF download cap 5/day; personal interview at the Mission for a lost card; 17 ICAC addresses with uniform Mon–Sat 9:00–3:30 hours (SF address confirmed; Saturday opening confirmed by VFS press release 2025-08-01).
+- Competitor sites checked 2026-10-30 were wrong on 14 of 16 points where they differed from this skill (fees, FedEx, white OCI photo, "boys left / girls right" thumb, 180-day form, old jurisdictions). Keep trusting the one-pager.

@@ -1,5 +1,7 @@
 # OCI Miscellaneous Services — re-issue of the card (USA, via VFS)
 
+> **27 Oct 2026, CGI Chicago: physical OCI card re-issuance is discontinued and the mandatory re-issue after a new passport no longer applies.** New passport → portal update within 3 months (free; late $25+$3+$19). What remains of "Misc Services" is the portal update, name/particulars changes, and lost/damaged (e-OCI reissue). The VFS one-pager still lists the old re-issue categories; treat the rest of this file as the VFS-era process and confirm with the user's consulate before quoting a re-issue fee. See `oci-maintenance.md`.
+
 Verified 2026-10-27 against:
 - VFS USA one-pager, OCI services (fees, links, courier): https://www.vfsglobal.com/one-pager/india/united-states-of-america/oci-services/
 - VFS checklist "Re-issue of OCI Card in lieu of existing OCI Card – Adult" (Aug 2025, updated): https://www.vfsglobal.com/one-pager/india/united-states-of-america/oci-services/pdf/Adult-OCI-card-in-lieu-of-Existing-OCI-Card-Aug-2025-updated.pdf

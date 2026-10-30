@@ -40,6 +40,7 @@ Route first with A1–A3 and D14 (who, nationality history, Indian passport stat
 - Naturalized ≥ 10 years ago and passport lost → Declaration of Renunciation route (`surrender.md`).
 - Surrender certificate in hand → fresh OCI (`oci-fresh.md`).
 - US-born child, parent has cancelled Indian passport or OCI → `oci-minor.md`.
+- US-born adult (18+), never held an Indian passport, parent or grandparent was Indian → `oci-descent.md`. No surrender. First question: whose Indian passport can you get a copy of?
 - Foreign-origin spouse → `oci-spouse.md` (2-year registered marriage bar) else `visa-spouse.md`.
 - OCI held, new passport → `oci-maintenance.md` (upload vs re-issue).
 - Any name or DOB mismatch → fix the paper before any form.

@@ -14,8 +14,8 @@ surrender → certificate in hand → fresh OCI. OCI cannot be filed in parallel
 | OCI processing | ~8–10 weeks | VFS intake | e-OCI granted (no physical card since 8 Jul 2026); download from portal |
 | On-hold deficiency | 7 days to supply; abandoned at 20–21 days | VFS deficiency email | abandoned = full restart, VFS fee lost |
 | VFS status update | 48–72 business hours | delivery to VFS | don't chase before this |
-| OCI passport upload | 3 months | receipt of new passport | lapse = non-compliance; travel still allowed on old number + new passport |
-| OCI re-issue trigger | once, after first passport issued after age 20 | new passport | mandatory re-issue |
+| OCI passport upload | 3 months | receipt of new passport | late = $25 + $3 + $19 through VFS (CGI Chicago/SF, 2026); photo for the update must be ≤ 30 days old |
+| OCI re-issue trigger | discontinued 2026 (CGI Chicago, 27 Oct 2026); VFS/Embassy pages lag | — | portal update instead, see above |
 | US adult passport | 10 years | issue | triggers OCI upload / re-issue |
 | US child passport | 5 years | issue | triggers OCI upload every time until 20 |
 | Photo freshness | ≤ 6 months (some consulates ≤ 30 days for uploads) | photo taken | old photo = rejection risk |

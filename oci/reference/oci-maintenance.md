@@ -1,5 +1,14 @@
 # OCI maintenance — re-issue vs upload-only
 
+## Rule change — read this first (CGI Chicago, page updated 27 Oct 2026)
+https://www.cgichicago.gov.in/page/oci-card-updation-reissuance-of-oci-cards-discontinued/ (read 2026-10-30):
+- "The provision for reissuance of Physical OCI Cards has been discontinued."
+- "The earlier requirement of mandatory OCI Card reissuance upon issuance of a new passport is no longer applicable."
+- After every new passport, any age: **update passport particulars on the OCI portal within 3 months**. Online, free, no documents to VFS, no visit.
+- **Late (after 3 months): $25 consular + $3 ICWF + $19 VFS**, paid through VFS. (CGI San Francisco advisory 2026-06-16 says the same.)
+- The update needs a photo **taken within the last 30 days**.
+**Sources disagree:** the VFS one-pager and the Embassy page (indianembassyusa.gov.in/pages/NjI) still carry the old "re-issue after the first passport after 20 / upload under 20 and once after 50" text. Follow Chicago: it is newer, cheaper, and the portal is the same for every mission. Tell the user both exist. Re-check quarterly.
+
 Verified 2026-10-27 against Indian Embassy USA, CGI San Francisco, CGI Milan, HCI Kuala Lumpur pages (all citing the 2021 MHA revision).
 
 ## Re-issue of the card is required (OCI Misc Services via VFS)
@@ -15,7 +24,7 @@ Fee: $25 + $3 ICWF + $19 VFS (lost/damaged: $100 + 3 + 19). Card +3.75%.
 - **Once** after completing age 50 on the next new passport.
 - Foreign spouse of an Indian citizen or of an OCI holder: **every** new passport, plus a declaration that the marriage subsists and copies of the Indian spouse's passport / the OCI spouse's passport and card.
 - Upload: new passport bio page + recent photo (some consulates: ≤ 30 days old). Within **3 months** of receiving the new passport. Auto-acknowledgement email; details updated in records in ~5 weeks; no new card.
-- Between 20 and 50 with no name change: **upload the new passport and a photo within 3 months** (free, portal only, no visit). The Embassy's current page (indianembassyusa.gov.in/pages/NjI, read 2026-10-29) says uploads apply each time a new passport is issued, irrespective of age; the older MHA wording (under 20 / once after 50) is superseded. Travel on the existing OCI + new passport meanwhile.
+- Between 20 and 50 with no name change: **upload the new passport and a photo within 3 months** (free, portal only, no visit). CGI Chicago (27 Oct 2026) and CGI San Francisco say uploads apply each time a new passport is issued, irrespective of age; the Embassy page NjI and the older MHA wording (under 20 / once after 50) are superseded. Late upload costs $47. Travel on the existing OCI + new passport meanwhile.
 
 ## Drift to watch
 - CGI San Francisco and the Embassy both now read the upload rule as "each time a new passport is issued", no age limits. Older MHA text said under 20 / once after 50. Rule for the agent: **upload every time**, within 3 months.

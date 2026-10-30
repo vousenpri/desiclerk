@@ -14,12 +14,12 @@ For *whether* a re-issue is needed at all (vs free upload) see `oci-maintenance.
 ## When this applies (embassy list)
 | Trigger | Service |
 |---|---|
-| New passport issued **after completing age 20**, card obtained before 20 — once | Re-issue |
+| New passport issued after age 20 — **no longer a re-issue trigger** (CGI Chicago, Oct 2026); portal update instead | Update |
 | Name change (any reason, incl. marriage) | Re-issue |
 | Change of nationality (not to Pakistan/Bangladesh) | Re-issue |
 | Error on the card / change of personal particulars needing a new card (father's name, DOB correction) | Re-issue |
 | Lost or damaged card | Re-issue, higher fee |
-| New passport under 20, or once after 50; address / occupation change; foreign-spouse new passport | **Upload only, free** — not this file |
+| New passport at any age; address / occupation change; foreign-spouse new passport | **Upload only, free** — not this file |
 
 ## Fee (one-pager, 2026-10-27)
 | Case | Consular | ICWF | VFS | Total |

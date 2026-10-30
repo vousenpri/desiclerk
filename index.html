@@ -395,7 +395,7 @@ ol.stack .d{grid-column:2}
 <section id="flow">
   <div class="eyebrow">The three websites</div>
   <h2>Three steps. One <em>order</em>.</h2>
-  <p class="lede">First give back the Indian passport. When the certificate comes back, apply for OCI. Your US passport stays with you the whole time.</p>
+  <p class="lede" id="flowLede">First give back the Indian passport. When the certificate comes back, apply for OCI. Your US passport stays with you the whole time.</p>
   <div class="side"><b>Go in person or mail it?</b> In person, they check your papers while you stand there, and you fix problems on the spot. By mail, a problem means an email a week later and 7 days to fix it. First time, a name change, or a child: go in person.</div>
   <div class="sites">
     <a href="https://mportal.passportindia.gov.in/"><img src="img/passportseva.jpg" alt=""><b>Passport Seva</b><span>Where you fill the form to give back your Indian passport.</span><i>mportal.passportindia.gov.in</i></a>
@@ -442,7 +442,7 @@ ol.stack .d{grid-column:2}
 
 <section id="photo">
   <div class="eyebrow">Photo check</div>
-  <h2>You need two <em>different</em> photos.</h2>
+  <h2 id="photoH">You need two <em>different</em> photos.</h2>
   <p class="lede">Easiest: stand in front of a plain wall and take a selfie. White wall for the passport surrender. Light wall, not white, for OCI. Daylight, no flash. Drop it here and get the file to upload and the file to print. It checks the size, the dimensions and the background; the portal judges the face.</p>
   <label class="drop" id="drop" tabindex="0"><input type="file" id="file" accept="image/*"><b>Drop a photo</b> or tap to choose. JPEG or PNG, straight from the camera is fine.</label>
   <div class="pur">
@@ -617,6 +617,7 @@ const DATA = {
     pre: [
       "You were born in the US and never had an Indian passport. Nothing to give back. The whole thing rests on one paper: proof that a parent or grandparent was Indian.",
       "Get a copy of that person's Indian passport, first two and last two pages. Cancelled or old is fine. If it's in a cupboard in India, start there; it's the slow part. No passport? A domicile or nativity certificate from India, or their OCI plus the papers it was issued on.",
+      "Through a parent: their Indian passport plus your birth certificate naming them is the whole chain. Through a grandparent: you also need the paper that links your parent to them, usually your parent's birth certificate naming the grandparent, or your parent's own old passport showing the grandparent's name.",
       "Your own birth certificate, long form, naming both parents, apostilled by the state that issued it. The hospital one won't do. An apostille is the state's certificate that the signature on a document is real.",
       "Your parents' marriage certificate, from a registrar, apostilled if it's from the US. Temple or church certificates are refused.",
       "Names must line up across every paper: you on your birth certificate and your passport; your parent on their Indian passport, on your birth certificate, and on their passport now. Any difference, even a maiden name, needs a notarized letter saying both names are the same person. This is the usual reason this application gets sent back.",
@@ -629,6 +630,7 @@ const DATA = {
       ["US passport photo page","copy, signed by you","Nine months left. Don't send the real passport."],
       ["Your birth certificate, long form, apostilled","copy, signed by you","Copy the certificate and the apostille page together. Don't send the original."],
       ["Proof your parent or grandparent was Indian","copy, signed by you","Their Indian passport, first two and last two pages. Or a domicile or nativity certificate. Or their OCI plus the papers behind it."],
+      ["The link from you to that person","copy, signed by you","Through a parent: your birth certificate does it. Through a grandparent: add your parent's birth certificate or old passport naming the grandparent.","cond"],
       ["Your parents' marriage certificate, apostilled if from the US","copy, signed by you","From a registrar."],
       ["Your own marriage certificate, if married","copy","Apostilled if it's from outside India.","cond"],
       ["Name change letter or court order","orig, notarized","Only if any name is different anywhere in the chain.","cond"],
@@ -656,8 +658,15 @@ function syncPlan(app){const o=document.getElementById('g_oci'),m=document.getEl
   const pur=document.querySelector(`input[name=pur][value=${app==='surrender'?'surrender':'oci'}]`); if(pur) pur.checked=true;
   if(typeof gtd==='function') gtd()}
 document.querySelectorAll('input[name=centre]').forEach(r=>r.addEventListener('change',render));
+const COPY={
+  surrender:{lede:'Give back the Indian passport. Your US passport stays with you the whole time. OCI, if you want it, comes after the certificate is back.',photo:'One photo, white background.',paste:'Load the skill at desiclerk.com/oci/SKILL.md and do my Indian passport surrender. Tell me what to get first. Put every date on my calendar and book VFS around it.'},
+  oci:{lede:'First give back the Indian passport. When the certificate comes back, apply for OCI. Your US passport stays with you the whole time.',photo:'You need two <em>different</em> photos.',paste:'Load the skill at desiclerk.com/oci/SKILL.md and do my Indian passport surrender and OCI. Tell me what to get first. Put every date on my calendar and book VFS around it.'},
+  minor:{lede:'Your child has nothing to give back. Her proof of Indian origin is your cancelled Indian passport or your OCI, so if you still hold an Indian passport, Step 1 is yours, then Step 3 is hers.',photo:'One photo for her, light background.',paste:'Load the skill at desiclerk.com/oci/SKILL.md and do my child\'s OCI. She was born in the US. Tell me what to get first, including the apostille. Put every date on my calendar and book VFS around it.'},
+  descent:{lede:'Born in the US and never had an Indian passport: nothing to give back, so skip Step 1. Everything rests on proving a parent or grandparent was Indian.',photo:'One photo, light background, not white.',paste:'Load the skill at desiclerk.com/oci/SKILL.md and do my OCI. I was born in the US and never had an Indian passport; my parent was Indian. Tell me what to get first, starting with proof of their Indian origin and the apostilles. Put every date on my calendar and book VFS around it.'}
+};
 function render(){
   const a = DATA[$('#app').value];
+  const c=COPY[$('#app').value]; if(c){document.getElementById('flowLede').textContent=c.lede; document.getElementById('photoH').innerHTML=c.photo; const pl=document.getElementById('pasteline'); pl.innerHTML=c.paste.replace('desiclerk.com/oci/SKILL.md','<a href="https://desiclerk.com/oci/SKILL.md">desiclerk.com/oci/SKILL.md</a>')}
   $('#fee').innerHTML = a.fee.map(([k,v])=>`<div>${k}<strong>${v}</strong></div>`).join('') + `<div class="fn">${a.feenote}</div>`;
   $('#pre').innerHTML = a.pre.map(t=>`<li>${t}</li>`).join('');
   $('#list').innerHTML = a.items.map(([t,k,d,c])=>`<li class="${c||''}"><span class="t">${t}</span><span class="k ${/orig/.test(k)?'orig':''}">${k}</span>${d?`<span class="d">${d}</span>`:''}</li>`).join('');
@@ -743,7 +752,7 @@ function addDays(d,n){const x=new Date(d);x.setDate(x.getDate()+n);return x}
 const fmt=d=>d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
 function tl(){
   const s=localDate(sd)||today; const dd=localDate(ddEl);
-  const sur=document.getElementById('g_sur').checked, oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked;
+  const sur=document.getElementById('g_sur').checked, oci=document.getElementById('g_oci').checked, minor=document.getElementById('g_minor').checked, desc=document.getElementById('g_desc').checked;
   document.querySelector('label[for=sdate]').textContent=sur?'Passport sent or handed in on':'OCI sent or handed in on';
   if(!sur){
     const r2=[
@@ -753,6 +762,7 @@ function tl(){
     ];
     $('#tl').innerHTML=r2.map(([d,t,n])=>`<li><b>${d}</b><div>${t}<i>${n}</i></div></li>`).join(''); return;
   }
+  const onlySur=!oci&&!minor&&!desc;
   const r=[
     [`${fmt(addBiz(s,2))}–${fmt(addBiz(s,3))}`,'VFS tracker first changes','Two or three weekdays after it arrives. Don\'t call before this.'],
     ...(dd?[[`by ${fmt(addDays(dd,7))}`,'Send what they asked for','You have 7 days from their email. At 20 days they drop it and you start over.']]:[['only if VFS emails you','If they say something is missing','The 7 days start from their email, not from when you sent. Put that date above if you get one.']]),
@@ -761,7 +771,8 @@ function tl(){
     [`~${fmt(addDays(addBiz(addBiz(s,3),21),-5))} onward`,'Fill the OCI form','The week you send it. It expires 90 days after you fill it.'],
     [`${fmt(addDays(addBiz(addBiz(s,3),21),56))}–${fmt(addDays(addBiz(addBiz(s,3),21),70))}`,'OCI granted','About 8 to 10 weeks after VFS gets it. There is no card any more. Download the PDF from ociservices.gov.in when it says Granted.']
   ];
-  $('#tl').innerHTML=r.map(([d,t,n])=>`<li><b>${d}</b><div>${t}<i>${n}</i></div></li>`).join('');
+  const rr=onlySur?r.filter(x=>!/OCI/.test(x[1])):r;
+  $('#tl').innerHTML=rr.map(([d,t,n])=>`<li><b>${d}</b><div>${t}<i>${n}</i></div></li>`).join('');
 }
 sd.addEventListener('change',tl); document.getElementById('ddate').addEventListener('change',tl);
 

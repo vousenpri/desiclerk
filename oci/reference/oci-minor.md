@@ -82,4 +82,4 @@ Non-English documents: certified translation by an authorized translator.
 Consulate figures: CGI Chicago lists new OCI at 5–6 weeks from consular registration, subject to MHA clearance. VFS states none. Plan 8–10 weeks end to end (see `timing.md`). e-OCI appears on the portal at "Granted"; nothing is mailed back except the documents you sent.
 
 ## After grant — maintenance for a minor
-Each new passport before age 20 → free upload within 3 months (`oci-maintenance.md`). First passport after age 20 → paid re-issue (`oci-reissue.md`).
+Each new passport, at any age → free portal update within 3 months, photo under 30 days old (`oci-maintenance.md`). No re-issue at 20 any more (CGI Chicago, Oct 2026).

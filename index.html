@@ -373,13 +373,13 @@ ol.stack .d{grid-column:2}
 </g>
 </svg>
   <h1>Call my <em>agent</em>.</h1>
-  <p class="lede">Getting OCI? Give this to your AI agent so nothing gets missed. Born here and never had an Indian passport? Covered.</p>
+  <p class="lede">Getting OCI? Give this to your AI agent so nothing gets missed. Born in the US and never had an Indian passport? Covered.</p>
   <div class="paste"><code id="pasteline">Load the skill at <a href="https://desiclerk.com/oci/SKILL.md">desiclerk.com/oci/SKILL.md</a> and do my Indian passport surrender and OCI, for me and my child. Tell me what to get first. Put every date on my calendar and book VFS around it.</code><button class="btn" type="button" id="copyBtn" aria-live="polite">Copy</button></div>
   <p class="small">Your documents stay with your agent. Free, no account.</p>
   <div class="start" style="margin-top:28px">
     <span class="start-note">No agent? Who is the OCI for?</span>
     <button class="btn" type="button" data-app="oci" aria-pressed="true">Me. I had an Indian passport</button>
-    <button class="btn" type="button" data-app="descent" aria-pressed="false">Me. I was born here</button>
+    <button class="btn" type="button" data-app="descent" aria-pressed="false">Me. Born in the US</button>
     <button class="btn" type="button" data-app="minor" aria-pressed="false">My child</button>
     <button class="btn btn-quiet" type="button" data-app="surrender" aria-pressed="false">Just the passport surrender</button>
   </div>
@@ -468,7 +468,7 @@ ol.stack .d{grid-column:2}
     <div class="col"><h4>Next actions</h4><ul id="na"></ul></div>
     <div class="col"><h4>Waiting for</h4><ul id="wf"></ul></div>
   </div>
-  <div class="ctl"><label><input type="checkbox" id="g_sur" checked> Give back my passport</label><label><input type="checkbox" id="g_oci" checked> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><label><input type="checkbox" id="g_desc"> OCI, born here</label><button type="button" id="g_reset">Clear ticks</button></div>
+  <div class="ctl"><label><input type="checkbox" id="g_sur" checked> Give back my passport</label><label><input type="checkbox" id="g_oci" checked> OCI for me</label><label><input type="checkbox" id="g_minor"> OCI for my child</label><label><input type="checkbox" id="g_desc"> OCI, born in the US</label><button type="button" id="g_reset">Clear ticks</button></div>
 </section>
 <section id="gotchas" class="got">
   <div class="eyebrow">Gotchas</div>
@@ -615,7 +615,7 @@ const DATA = {
     fee: [["Fee","$275"],["Welfare fund","$3"],["VFS charge","$19"],["Total","$297"]],
     feenote: "Pay by Visa or Mastercard (adds 3.75%), or by money order or banker's draft to VFS Services (USA) Inc. to avoid that. No personal checks, no Amex. You get a PDF, not a card.",
     pre: [
-      "You were born here and never had an Indian passport. Nothing to give back. The whole thing rests on one paper: proof that a parent or grandparent was Indian.",
+      "You were born in the US and never had an Indian passport. Nothing to give back. The whole thing rests on one paper: proof that a parent or grandparent was Indian.",
       "Get a copy of that person's Indian passport, first two and last two pages. Cancelled or old is fine. If it's in a cupboard in India, start there; it's the slow part. No passport? A domicile or nativity certificate from India, or their OCI plus the papers it was issued on.",
       "Your own birth certificate, long form, naming both parents, apostilled by the state that issued it. The hospital one won't do. An apostille is the state's certificate that the signature on a document is real.",
       "Your parents' marriage certificate, from a registrar, apostilled if it's from the US. Temple or church certificates are refused.",
@@ -648,7 +648,7 @@ const CENTRE = {
   other: "The list and the fees are the same everywhere. What each desk actually asks for isn't. If you learn something at yours, tell us."
 };
 const $ = s => document.querySelector(s);
-const TITLES={surrender:'Just the passport surrender',oci:'OCI, after you had an Indian passport',minor:'OCI for your child',descent:'OCI, born here'};
+const TITLES={surrender:'Just the passport surrender',oci:'OCI, after you had an Indian passport',minor:'OCI for your child',descent:'OCI, born in the US'};
 document.querySelectorAll('.start .btn').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.start .btn').forEach(x=>x.setAttribute('aria-pressed','false'));t.setAttribute('aria-pressed','true');$('#app').value=t.dataset.app;render();syncPlan(t.dataset.app);document.getElementById('stack').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}));
 /* one choice drives the stack, the photo purpose and the plan */
 function syncPlan(app){const o=document.getElementById('g_oci'),m=document.getElementById('g_minor'),su=document.getElementById('g_sur'),de=document.getElementById('g_desc');
